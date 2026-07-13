@@ -7,8 +7,8 @@
 | รายการ | รายละเอียด |
 |---|---|
 | กลุ่ม | Group 2 |
-| ชื่อโครงงาน | [ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ ] / [Classroom & Laboratory Maintenance Reporting System)] |
-| Case Card | [หมายเลขและชื่อ Case Card ที่อาจารย์มอบหมาย] |
+| ชื่อโครงงาน | [ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ ] / [Classroom & Laboratory Maintenance Reporting System] |
+| Case Card | [02] |
 | Repository URL | [git@github.com:Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting.git] |
 | ช่องทางสื่อสารหลัก | [Discord] |
 | วันประชุมประจำ | [วันอาทิตย์ / เวลา 20.00 น.] |
