@@ -20,9 +20,7 @@
 | รหัสนักศึกษา | ชื่อ-นามสกุล | บทบาทหลัก | รับผิดชอบเริ่มต้น | หลักฐานการทำงานที่คาดหวัง |
 |---|---|---|---|---|
 | [68543210077-2] | [นายสันติ ปัญญาหน้อย ] | Facilitator / Stakeholder Mapper | วิเคราะห์โจทย์ สรุปบริบทและ Pain Points / วิเคราะห์ Stakeholders และ Open Questions | บันทึกการประชุม / Stakeholder Mapping |
-
 | [68543210066-5] | [นายธีรนัย ไชยกันทะ ] | Scribe | เขียน Facts / Assumptions / Scope | Google Docs version history |
-
 | [68543210032-7] | [นายบูรพา ประทีปรัตน์] | Reviewer / Submission | ตรวจความสอดคล้อง ตั้งชื่อไฟล์ และส่ง PDF | Peer Review Checklist และ PDF Final |
 
 ## กติกาทีม
