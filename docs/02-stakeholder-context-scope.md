@@ -58,8 +58,7 @@
 ---
 
 # 2. Stakeholder Inventory and Map
-
-![Stakeholder Map](../diagrams/stakeholders/diagrams/stakeholders/w02-system-context.png)
+![Stakeholder Map](../diagrams/stakeholders/w02-stakeholder-map.png)
 
 > **Source:** `diagrams/stakeholders/w02-stakeholder-map.drawio`
 
