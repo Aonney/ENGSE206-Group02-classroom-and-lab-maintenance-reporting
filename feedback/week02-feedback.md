@@ -1,6 +1,4 @@
-# Week 02 — Peer Feedback
-
-> **หมายเหตุ:** ตัวอย่างนี้ใช้ชื่อทีมสมมติเพื่อแสดงรูปแบบการบันทึก feedback
+# Week 02 — Peer Feedback - Classroom & Lab Maintenance Reporting
 
 | Reviewer Team | Reviewed Team | One strength | One question / suggestion | Action decided by reviewed team |
 |---|---|---|---|---|
