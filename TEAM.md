@@ -6,12 +6,12 @@
 
 | รายการ | รายละเอียด |
 |---|---|
-| กลุ่ม | Group XX |
-| ชื่อโครงงาน | [ชื่อระบบภาษาไทย] / [English Project Name] |
+| กลุ่ม | Group 2 |
+| ชื่อโครงงาน | [ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ ] / [Classroom & Laboratory Maintenance Reporting System)] |
 | Case Card | [หมายเลขและชื่อ Case Card ที่อาจารย์มอบหมาย] |
-| Repository URL | [วาง URL GitHub] |
-| ช่องทางสื่อสารหลัก | [เช่น LINE / Discord / Microsoft Teams] |
-| วันประชุมประจำ | [วัน/เวลา] |
+| Repository URL | [git@github.com:Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting.git] |
+| ช่องทางสื่อสารหลัก | [Discord] |
+| วันประชุมประจำ | [วันอาทิตย์ / เวลา 20.00 น.] |
 
 ## สมาชิกและบทบาท
 
@@ -19,10 +19,10 @@
 
 | รหัสนักศึกษา | ชื่อ-นามสกุล | บทบาทหลัก | รับผิดชอบเริ่มต้น | หลักฐานการทำงานที่คาดหวัง |
 |---|---|---|---|---|
-| [ID] | [ชื่อ] | Team Coordinator | ประสานงาน/ติดตามความคืบหน้า | meeting notes, worklog |
-| [ID] | [ชื่อ] | Requirements Lead | elicitation / backlog / SRS | requirement docs |
-| [ID] | [ชื่อ] | Design Lead | diagrams / architecture / detailed design | design docs, diagrams |
-| [ID] | [ชื่อ] | UX & Evidence Lead | prototype / usability / evidence | evidence, prototype |
+| [ID] | [นายสันติ ปัญญาหน้อย ] | Facilitator / Stakeholder Mapper | -วิเคราะห์โจทย์ สรุปบริบทและ Pain Points/วิเคราะห์ Stakeholders และ Open Questions
+ | บันทึกการประชุม/Stakeholder Mapping |
+| [ID] | [นายธีรนัย ไชยกันทะ ] | Scribe | เขียน Facts / Assumptions / Scope | Google Docs version history |
+| [ID] | [นายบูรพา ประทีปรัตน์] | Reviewer / Submission | ตรวจความสอดคล้อง ตั้งชื่อไฟล์ และส่ง PDF | Peer Review Checklist และ PDF Final |
 
 ## กติกาทีม
 
