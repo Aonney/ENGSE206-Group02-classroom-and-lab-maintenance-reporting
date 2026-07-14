@@ -85,8 +85,8 @@
 
 # 6. Definition of Done
 
-- [x] มีวิธีเก็บข้อมูลที่เหมาะกับอย่างน้อย 2 Stakeholder Roles
-- [x] มีคำถามที่ช่วยค้นหา Pain Points, Workflow, Exceptions และ Priority
-- [x] มี Opening Script และ Closing Questions
-- [x] มีแผนการขอความยินยอมและคุ้มครองข้อมูลส่วนบุคคล
-- [x] มีผู้รับผิดชอบและกำหนดช่วงเวลาในการเก็บข้อมูล
+- [ ] มีวิธีเก็บข้อมูลที่เหมาะกับอย่างน้อย 2 Stakeholder Roles
+- [ ] มีคำถามที่ช่วยค้นหา Pain Points, Workflow, Exceptions และ Priority
+- [ ] มี Opening Script และ Closing Questions
+- [ ] มีแผนการขอความยินยอมและคุ้มครองข้อมูลส่วนบุคคล
+- [ ] มีผู้รับผิดชอบและกำหนดช่วงเวลาในการเก็บข้อมูล
