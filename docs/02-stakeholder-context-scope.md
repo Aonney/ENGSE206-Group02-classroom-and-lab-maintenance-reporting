@@ -1,7 +1,7 @@
 # Week 02 — Stakeholder, Context and Scope
 
 > **Team:** Group 02 — Classroom & Lab Maintenance Reporting
-> **Case:** ระบบแจ้งซ่อมและติดตามการบำรุงรักษาห้องเรียนและห้องปฏิบัติการในมหาวิทยาลัย  
+> **Case:** ระบบแจ้งซ่อมและติดตามการบำรุงรักษาห้องเรียนและห้องปฏิบัติการ
 > **Version:** v0.1 (Draft)  
 > **Last updated:** 13/07/2026  
 > **Diagram source of truth:** Draw.io files in `diagrams/`
