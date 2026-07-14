@@ -1,7 +1,7 @@
 # Team Worklog (Week 02 - Week 03)
 
 ## ข้อมูลภาพรวมของทีม
-- **โครงงาน:** ระบบรายงานการซ่อมแซมห้องเรียนและห้องปฏิบัติการ (Classroom & Laboratory Maintenance Reporting System)
+- **โครงงาน:** ระบบรายงานการซ่อมแซมห้องเรียนและห้องปฏิบัติการ (Classroom & Laboratory Maintenance Reporting)
 - **กลุ่มที่:** Group 2
 - **สมาชิกประจำกลุ่ม:** 
   - นายสันติ ปัญญาหน้อย  (เจ้าของ Repository)
