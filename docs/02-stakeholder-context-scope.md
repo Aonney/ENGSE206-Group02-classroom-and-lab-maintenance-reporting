@@ -1,6 +1,6 @@
 # Week 02 — Stakeholder, Context and Scope
 
-> **Team:** Group 02 — Classroom & Lab Maintenance Reporting System (CLMRS)  
+> **Team:** Group 02 — Classroom & Lab Maintenance Reporting
 > **Case:** ระบบแจ้งซ่อมและติดตามการบำรุงรักษาห้องเรียนและห้องปฏิบัติการในมหาวิทยาลัย  
 > **Version:** v0.1 (Draft)  
 > **Last updated:** 13/07/2026  
