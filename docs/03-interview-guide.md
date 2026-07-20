@@ -15,6 +15,10 @@
 
 ## 2. Interview Questions
 
+![Interview Question Map](../diagrams/w03-interview-question-map.png)
+
+> **Source:** [`w03-interview-question-map.drawio`](../diagrams/w03-interview-question-map.drawio)
+
 | ID | Main / Follow-up Question | Type | Why this question is asked | Open Question / Assumption | Expected Evidence |
 |---|---|---|---|---|---|
 | Q-01 | **[Student / Teacher]** ปัจจุบันเมื่อพบอุปกรณ์เสีย คุณแจ้งปัญหาผ่านช่องทางใด และมีขั้นตอนอย่างไร? | Open | ศึกษา Workflow ปัจจุบันโดยไม่ชี้นำวิธีแก้ไข | OQ-03 | ขั้นตอนการแจ้งปัญหา ช่องทางที่ใช้ และผู้เกี่ยวข้อง |
