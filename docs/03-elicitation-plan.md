@@ -1,57 +1,105 @@
-# Week 04 — Evidence Log & Initial Requirement Candidates
+# Week 03 — Elicitation Plan
 
-> **Team:** Group 02 — Classroom & Laboratory Maintenance Reporting System
->
-> **Case:** ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ
->
-> **Status:** Initial evidence and requirement candidates collected during Week 04.
-> **สถานะ:** หลักฐานและ Candidate Requirements เบื้องต้นที่ได้จากการเก็บข้อมูลใน Week 04
->
-> **These are not yet approved requirements or an SRS.**
-> **ยังไม่ใช่ Requirement ที่ได้รับการยืนยันหรือเอกสาร SRS**
->
-> **Week 05 will validate, categorize, and refine these requirements.**
-> **Week 05 จะนำหลักฐานมาวิเคราะห์ จัดหมวดหมู่ และปรับปรุง Requirement ให้สมบูรณ์**
+> **Team:** Group 02 — Classroom & Laboratory Maintenance Reporting System (CLMRS)  
+> **Case:** ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ  
+> **Version:** v0.1  
+> **Last updated:** 20/07/2026
 
 ---
 
-# 1. Evidence Log
+## 1. Learning Goals
 
-| Evidence ID | Source | Statement / Observation | Type | Related OQ | Initial Interpretation |
-|---|---|---|---|---|---|
-| E-01 | Student Interview | เมื่อพบอุปกรณ์เสีย ส่วนใหญ่จะแจ้งอาจารย์ผู้สอนหรือเจ้าหน้าที่ด้วยวาจา ทำให้ข้อมูลไม่ถูกบันทึกเป็นระบบ | Observation | OQ-03 | ควรมีระบบกลางสำหรับรับแจ้งปัญหาและลดการแจ้งซ้ำ |
-| E-02 | Technician Interview | งานที่กระทบต่อความปลอดภัย หรือทำให้ห้องเรียนใช้งานไม่ได้ จะได้รับการดำเนินการก่อน | Statement | OQ-01 | จำเป็นต้องมีเกณฑ์กำหนดระดับความเร่งด่วนของงาน |
-| E-03 | Technician Interview | เมื่อซ่อมเสร็จ เจ้าหน้าที่เป็นผู้บันทึกผล แต่บางกรณีอาจต้องให้อาจารย์หรือผู้แจ้งตรวจสอบก่อนปิดงาน | Statement | OQ-02 | ขั้นตอนการยืนยันการปิดงานยังต้องตรวจสอบเพิ่มเติม |
-| E-04 | Student Interview | หลังแจ้งปัญหา ผู้ใช้งานต้องการทราบสถานะงาน แต่ยังไม่แน่ใจว่าควรแจ้งผ่านช่องทางใด | Observation | OQ-04 | ต้องศึกษาช่องทางแจ้งเตือนที่เหมาะสม |
-| E-05 | Manager Interview | ผู้บริหารต้องการรายงานจำนวนงานแจ้งซ่อม งานที่ดำเนินการเสร็จ และงานค้าง เพื่อใช้วางแผนงบประมาณ | Statement | OQ-05 | ระบบควรสามารถจัดทำรายงานสรุปได้ |
-| E-06 | Technician Interview | หากงานต้องส่งต่อหลายหน่วยงาน การติดตามสถานะทำได้ยาก เพราะไม่มีจุดรวมข้อมูลกลาง | Observation | OQ-06 | ควรมีการติดตามสถานะของงานที่ถูกส่งต่อระหว่างหน่วยงาน |
+ใน Week 02 ทีมได้ระบุ Open Questions หลายประเด็นเกี่ยวกับกระบวนการแจ้งซ่อมและติดตามงานบำรุงรักษา งานของ Week 03 คือการวางแผนเก็บข้อมูล โดยกำหนด **ผู้ให้ข้อมูล วิธีการเก็บข้อมูล หลักฐานที่คาดว่าจะได้รับ และผู้รับผิดชอบ** เพื่อให้สามารถตรวจสอบและยืนยันความต้องการของระบบได้ใน Week 04
 
----
-
-# 2. Initial Requirement Candidates
-
-| ID | Candidate Type | Candidate Requirement | Evidence | Confidence | Open Validation |
-|---|---|---|---|---|---|
-| RC-F-01 | Functional | ระบบควรสามารถกำหนดระดับความเร่งด่วนของงานแจ้งซ่อมได้ | E-02 | Medium | ต้องยืนยันเกณฑ์ Urgent (OQ-01) |
-| RC-F-02 | Functional | ระบบควรให้เจ้าหน้าที่บันทึกผลการซ่อมและรองรับการยืนยันการปิดงาน | E-03 | Medium | ต้องยืนยันผู้รับผิดชอบในการปิดงาน (OQ-02) |
-| RC-F-03 | Functional | ระบบควรช่วยลดการแจ้งปัญหาซ้ำ และสามารถเชื่อมโยงรายการที่เกี่ยวข้องได้ | E-01 | Low | ต้องยืนยันแนวทางจัดการรายการแจ้งซ้ำ (OQ-03) |
-| RC-F-04 | Functional | ระบบควรแจ้งความคืบหน้าของงานซ่อมให้ผู้ใช้งานทราบ | E-04 | Medium | ต้องยืนยันช่องทางการแจ้งเตือน (OQ-04) |
-| RC-F-05 | Functional | ระบบควรจัดทำรายงานและสถิติงานซ่อมสำหรับผู้บริหาร | E-05 | Medium | ต้องยืนยันรูปแบบรายงานที่ต้องการ (OQ-05) |
-| RC-F-06 | Functional | ระบบควรติดตามสถานะงานที่ถูกส่งต่อระหว่างหลายหน่วยงานได้ | E-06 | Medium | ต้องยืนยัน Workflow การส่งต่องาน (OQ-06) |
+| ID | Open Question / Assumption | Why it matters | Priority |
+|---|---|---|---|
+| OQ-01 | เกณฑ์ใดใช้กำหนดว่างานเป็นงานเร่งด่วน (Urgent)? | ใช้กำหนดลำดับความสำคัญของงานซ่อม | High |
+| OQ-02 | ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงานซ่อม? | ใช้กำหนด Workflow และบทบาทของผู้ใช้งาน | High |
+| OQ-03 | หากพบการแจ้งปัญหาซ้ำ ระบบควรจัดการอย่างไร? | ลดงานซ้ำและเพิ่มประสิทธิภาพการดำเนินงาน | High |
+| OQ-04 | ผู้ใช้งานต้องการรับการแจ้งเตือนผ่านช่องทางใด? | ออกแบบการติดตามสถานะงาน | Medium |
+| OQ-05 | ผู้บริหารต้องการรายงานหรือสถิติประเภทใดบ้าง? | สนับสนุนการวางแผนและการตัดสินใจ | Medium |
+| OQ-06 | กรณีส่งต่องานไปหลายหน่วยงาน ควรติดตามสถานะอย่างไร? | รองรับ Workflow การประสานงาน | Medium |
 
 ---
 
-# 3. Conflict / Unknown
+## 2. Elicitation Plan
 
-| ID | Issue | Evidence | Related OQ | Next Question |
-|---|---|---|---|---|
-| CU-01 | ยังไม่มีข้อสรุปว่าหากมีผู้ใช้งานหลายคนแจ้งปัญหาเดียวกัน ระบบควรรวมรายการเดิมหรือสร้างรายการใหม่ | E-01 | OQ-03 | ใครเป็นผู้ตัดสินใจจัดการรายการแจ้งซ้ำ และควรมีหลักเกณฑ์อย่างไร |
+![Elicitation Flow](../diagrams/w03-elicitation-flow.png)
+
+> **Source:** [`w03-elicitation-flow.drawio`](../diagrams/w03-elicitation-flow.drawio)
+
+
+| ID | Stakeholder / Source | Method | Goal | Expected Evidence | Team Role | Timing | Risk & Mitigation |
+|---|---|---|---|---|---|---|---|
+| EP-01 | เจ้าหน้าที่เทคนิค | Semi-structured Interview + Workflow Walkthrough | ศึกษาขั้นตอนรับแจ้งซ่อม การจัดลำดับงาน และการปิดงาน | Workflow การทำงาน เกณฑ์ Priority และตัวอย่างงานจริง | Member A: Interviewer<br>Member B: Note-taker | Week 04 | เตรียมคำถาม Follow-up และขอตัวอย่างเหตุการณ์จริง |
+| EP-02 | นักศึกษา / ผู้ใช้งานห้อง | Interview | ศึกษาวิธีแจ้งปัญหา Pain Points และความต้องการติดตามสถานะ | ขั้นตอนการแจ้งปัญหา ช่องทางที่ใช้ และปัญหาที่พบ | Member B: Interviewer<br>Member C: Note-taker | Week 04 | เริ่มจากประสบการณ์จริงก่อนเสนอแนวทางแก้ไข |
+| EP-03 | อาจารย์ผู้สอน | Interview | ศึกษาผลกระทบต่อการเรียนการสอนและความเร่งด่วนของปัญหา | ตัวอย่างเหตุการณ์ ผลกระทบ และความต้องการติดตามงาน | Member C: Interviewer<br>Member A: Note-taker | Week 04 | ใช้คำถามปลายเปิดเพื่อหลีกเลี่ยงการชี้นำ |
+| EP-04 | ผู้ดูแลอาคาร / ผู้บริหาร | Interview + Document Review | ศึกษาการติดตามภาพรวมงานซ่อม รายงาน และตัวชี้วัดที่ต้องการ | KPI รายงาน สถิติ และเกณฑ์การประเมินผล | Member D: Interviewer<br>Member B: Note-taker | Week 04 | หากข้อมูลไม่ครบ ให้บันทึกเป็น Open Issue |
+| EP-05 | Interview Notes + Team Discussion | Workshop / Cross-check | เปรียบเทียบข้อมูลจาก Stakeholders ทุกกลุ่ม | ข้อขัดแย้ง ข้อยกเว้น และ Requirement Candidates | ทุกคน | หลังการสัมภาษณ์ | แยก Fact, Opinion และ Assumption ก่อนสรุปผล |
 
 ---
 
-# 4. Notes
+## 3. Technique Selection Rationale
 
-- Requirement Candidates ทุกข้อยังเป็นข้อเสนอเบื้องต้น (Candidate Requirements)
-- หลักฐานที่เก็บได้จะถูกนำไปตรวจสอบและยืนยันเพิ่มเติมใน Week 05
-- หากมี Evidence ใหม่ ให้เพิ่ม Evidence ID และปรับระดับ Confidence ตามข้อมูลที่ได้รับ
-- หากพบข้อมูลที่ขัดแย้งกัน ให้บันทึกไว้ในส่วน Conflict / Unknown ก่อนสรุปเป็น Requirement
+### Why Interview?
+
+การสัมภาษณ์เหมาะสำหรับการค้นหาขั้นตอนการทำงานจริง (Workflow) ปัญหาที่พบ (Pain Points) เหตุผลในการตัดสินใจ และข้อยกเว้นต่าง ๆ ซึ่งไม่สามารถทราบได้จากเอกสารเพียงอย่างเดียว
+
+### Why Document Review?
+
+การศึกษาประกาศ ระเบียบ หรือเอกสารที่เกี่ยวข้องกับการแจ้งซ่อมและการบำรุงรักษา ช่วยตรวจสอบความถูกต้องของข้อมูลที่ได้รับจากการสัมภาษณ์ และค้นหากฎหรือข้อกำหนดที่มีอยู่เดิม
+
+### Why Workflow Walkthrough?
+
+การให้ Stakeholder อธิบายเหตุการณ์จริงตั้งแต่เริ่มแจ้งปัญหาจนถึงการปิดงาน ช่วยให้ทีมเข้าใจลำดับขั้นตอน จุดตัดสินใจ และข้อยกเว้นที่อาจเกิดขึ้นระหว่างการดำเนินงาน
+
+### Why not use Questionnaire as the main technique?
+
+แบบสอบถามเหมาะกับการเก็บข้อมูลจากผู้ใช้จำนวนมาก แต่ในช่วงเริ่มต้นทีมยังต้องเข้าใจ Workflow และรายละเอียดของกระบวนการทำงาน จึงเลือกการสัมภาษณ์เป็นวิธีหลัก
+
+---
+
+## 4. Readiness for Week 04 Simulation
+
+### Stakeholder Roles Needed
+
+1. นักศึกษา / ผู้ใช้งานห้อง
+2. อาจารย์ผู้สอน
+3. เจ้าหน้าที่เทคนิค
+4. ผู้ดูแลอาคาร / ผู้บริหาร
+
+### Material Needed
+
+- Stakeholder Role Cards
+- Open Questions จาก Week 02
+- Interview Guide จาก Week 03
+- ตัวอย่างสถานการณ์ เช่น
+  - แจ้งอุปกรณ์เสียระหว่างการเรียน
+  - การแจ้งปัญหาซ้ำ
+  - งานเร่งด่วน
+  - การส่งต่องานหลายหน่วยงาน
+
+### Planned Note-taking Format
+
+- Evidence ID
+- Stakeholder
+- Statement / Observation
+- Evidence Type
+- Related Open Question
+- Initial Interpretation
+
+โดยแยกข้อมูลเป็น
+
+- Fact
+- Opinion
+- Assumption
+- Suggestion
+
+อย่างชัดเจน
+
+### Team Agreement
+
+- Interviewer ใช้คำถามตาม Interview Guide และสามารถถาม Follow-up ได้เมื่อจำเป็น
+- Note-taker บันทึกข้อมูลตามข้อเท็จจริงโดยไม่ตีความเป็น Requirement
+- ทุกคนช่วยตรวจสอบว่าคำถามไม่เป็นคำถามชี้นำ (Leading Question)
+- ก่อนจบการสัมภาษณ์ จะสรุปข้อมูลกลับให้ผู้ให้สัมภาษณ์ยืนยันความถูกต้อง
