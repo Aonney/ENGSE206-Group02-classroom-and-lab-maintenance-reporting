@@ -18,13 +18,17 @@ flowchart LR
 
 ## 2. Requirement Candidate Table
 
-| RC-ID | Requirement Candidate | Stakeholder / Need | Evidence E-ID(s) | Status | Follow-up |
-|---|---|---|---|---|---|
-| RC-01 | The system should show availability status for rooms and learning equipment before a user submits a booking request. | Student Requester / N-01 | E-01 | Candidate | Verify source of availability status |
-| RC-02 | The system should allow users to search and filter resources by resource type and availability so that they can choose a suitable resource before requesting it. | Student Requester / N-02 | E-02 | Candidate | Confirm search/filter fields |
-| RC-03 | The system should display expected return date/time for borrowed equipment to both requester and resource officer. | Student Requester, Resource Officer / N-03 | E-03 | Candidate | Confirm due-date rule |
-| RC-04 | The system should require minimum booking information before a request can be submitted for review. | Resource Officer / N-04 | E-04 | Candidate | Confirm required fields |
-| RC-05 | The system should mark urgent or schedule-conflicting requests as needing manager/instructor validation before approval. | Resource Officer / N-05 | E-05 | Needs Validation | Confirm approval authority |
+| RC-ID | ข้อกำหนดระบบเบื้องต้น | ผู้มีส่วนได้ส่วนเสีย / ความต้องการ | หลักฐานอ้างอิง | สถานะ |
+| :--- | :--- | :--- | :--- | :--- |
+| **RC-01** | แจ้งซ่อมผ่านระบบ | นศ., อาจารย์ | E-01 | Candidate |
+| **RC-02** | บังคับระบุข้อมูล | ช่าง | E-02, E-03 | Candidate |
+| **RC-03** | จัดลำดับความสำคัญ | ช่าง, บริหาร | E-04 | Needs Validation |
+| **RC-04** | ติดตามสถานะงาน | นศ., อาจารย์ | E-05 | Candidate |
+| **RC-05** | บันทึกผลและปิดงาน | ช่าง | E-03 | Needs Validation |
+| **RC-06** | จัดการงานซ้ำซ้อน | ช่าง | E-01, E-03 | Needs Validation |
+| **RC-07** | ติดตามงานโอนย้าย | ช่าง, บริหาร | E-06 | Needs Validation |
+| **RC-08** | ออกรายงานและสถิติ | บริหาร | E-07 | Needs Validation |
+
 
 ## 3. Why These Are Candidates, Not Final Requirements
 
