@@ -31,18 +31,6 @@ flowchart LR
 | **RC-07** | ติดตามงานโอนย้าย | ช่าง, บริหาร | E-06 | Needs Validation |
 | **RC-08** | ออกรายงานและสถิติ | บริหาร | E-07 | Needs Validation |
 
-| RC-ID | Requirement Candidate | Stakeholder / Need | Evidence E-ID(s) | Status | Follow-up |
-|---|---|---|---|---|---|
-| RC-01 | The system should allow students and instructors to submit maintenance requests through a standardized reporting system. | Student, Teacher / N-01 | E-01 | Candidate | ตรวจสอบข้อมูลที่จำเป็นในแบบฟอร์ม |
-| RC-02 | The system should require users to provide essential maintenance information such as building, room, problem description, and supporting photo (if available). | Technician / N-02 | E-02, E-03 | Candidate | ยืนยันว่าข้อมูลใดเป็นข้อมูลบังคับ |
-| RC-03 | The system should support prioritizing maintenance requests based on urgency criteria. | Technician, Manager / N-03 | E-04 | Needs Validation | ยืนยันเกณฑ์การกำหนดงาน Urgent (OQ-01) |
-| RC-04 | The system should allow users to track the status of their maintenance requests. | Student, Teacher / N-04 | E-05 | Candidate | ยืนยันสถานะที่ผู้ใช้ต้องการเห็น (OQ-04) |
-| RC-05 | The system should allow technicians to record repair results and close maintenance requests. | Technician / N-05 | E-03 | Needs Validation | ยืนยันผู้รับผิดชอบการปิดงาน (OQ-02) |
-| RC-06 | The system should support handling duplicate maintenance reports for the same problem. | Technician / N-06 | E-01, E-03 | Needs Validation | ยืนยันแนวทางจัดการรายการแจ้งซ้ำ (OQ-03) |
-| RC-07 | The system should support tracking maintenance requests that are transferred between multiple departments. | Technician, Manager / N-07 | Needs Validation | Needs Validation | ยืนยัน Workflow การส่งต่องาน (OQ-06) |
-| RC-08 | The system should provide maintenance reports and statistics to support management decision-making. | Manager / N-08 | Needs Validation | Needs Validation | ยืนยันประเภทของรายงานที่ต้องการ (OQ-05) |
-
----
 
 ## 3. Why These Are Candidates, Not Final Requirements
 
