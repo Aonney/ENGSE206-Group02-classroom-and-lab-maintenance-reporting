@@ -9,9 +9,9 @@
 
 | Name     | Role                                       | Contribution                                                     |
 | -------- | ------------------------------------------ | ----------------------------------------------------------------- |
-| Member A | Interviewer                                | ดำเนินคำถาม Q-01 ถึง Q-08 กับ staff proxy                        |
-| Member B | Stakeholder proxy — เจ้าหน้าที่อาคารสถานที่ | ตอบตาม role card และยกเหตุการณ์แจ้งซ่อมที่มีจริง                 |
-| Member C | Note-taker                                  | บันทึก wording, follow-up และสิ่งที่ยังไม่ชัด                    |
+| นายบูรพา ประทีปรัตน์ | Interviewer                                | ดำเนินคำถาม Q-01 ถึง Q-08 กับ staff proxy                        |
+| นายสันติ ปัญญาหน้อย | Stakeholder proxy — เจ้าหน้าที่อาคารสถานที่ | ตอบตาม role card และยกเหตุการณ์แจ้งซ่อมที่มีจริง                 |
+| นายธีรนัย ไชยกันทะ | Note-taker                                  | บันทึก wording, follow-up และสิ่งที่ยังไม่ชัด                    |
 
 ## Rehearsal Summary
 
