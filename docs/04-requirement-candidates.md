@@ -20,11 +20,11 @@ flowchart LR
 
 | RC-ID | Requirement Candidate | Stakeholder / Need | Evidence E-ID(s) | Status | Follow-up |
 |---|---|---|---|---|---|
-| RC-01 | The system should show availability status for rooms and learning equipment before a user submits a booking request. | Student Requester / N-01 | E-01 | Candidate | Verify source of availability status |
-| RC-02 | The system should allow users to search and filter resources by resource type and availability so that they can choose a suitable resource before requesting it. | Student Requester / N-02 | E-02 | Candidate | Confirm search/filter fields |
-| RC-03 | The system should display expected return date/time for borrowed equipment to both requester and resource officer. | Student Requester, Resource Officer / N-03 | E-03 | Candidate | Confirm due-date rule |
-| RC-04 | The system should require minimum booking information before a request can be submitted for review. | Resource Officer / N-04 | E-04 | Candidate | Confirm required fields |
-| RC-05 | The system should mark urgent or schedule-conflicting requests as needing manager/instructor validation before approval. | Resource Officer / N-05 | E-05 | Needs Validation | Confirm approval authority |
+| RC-01 | ระบบควรแสดงสถานะความพร้อมใช้งานของห้องเรียนและอุปกรณ์การเรียนก่อนที่ผู้ใช้จะส่งคำขอจอง | Student Requester / N-01 | E-01 | Candidate | Verify source of availability status |
+| RC-02 | ระบบควรอนุญาตให้ผู้ใช้ค้นหาและกรองทรัพยากรตามประเภทและความพร้อมใช้งาน เพื่อให้พวกเขาสามารถเลือกทรัพยากรที่เหมาะสมก่อนที่จะร้องขอ | Student Requester / N-02 | E-02 | Candidate | Confirm search/filter fields |
+| RC-03 | ระบบควรแสดงวันที่/เวลาที่คาดว่าจะส่งคืนอุปกรณ์ที่ยืมไปให้ทั้งผู้ขอใช้และเจ้าหน้าที่ผู้รับผิดชอบ | Student Requester, Resource Officer / N-03 | E-03 | Candidate | Confirm due-date rule |
+| RC-04 | ระบบควรขอข้อมูลการจองขั้นต่ำก่อนที่จะส่งคำขอเพื่อตรวจสอบ | Resource Officer / N-04 | E-04 | Candidate | Confirm required fields |
+| RC-05 | ระบบควรระบุคำขอเร่งด่วนหรือคำขอที่มีตารางเวลาขัดแย้งว่าจำเป็นต้องได้รับการตรวจสอบจากผู้จัดการ/ผู้สอนก่อนอนุมัติ | Resource Officer / N-05 | E-05 | Needs Validation | Confirm approval authority |
 
 ## 3. Why These Are Candidates, Not Final Requirements
 
