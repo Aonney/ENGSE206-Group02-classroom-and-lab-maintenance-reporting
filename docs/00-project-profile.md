@@ -10,7 +10,7 @@
 | กลุ่ม | Group 02 |
 | ภาคการศึกษา/ปีการศึกษา | ภาคเรียนที่ 1 / ปีการศึกษา 2569 |
 | อาจารย์ผู้สอน | อาจารย์ธนิต เกตุแก้ว|
-| Repository URL |  |
+| Repository URL | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting |
 
 ---
 
