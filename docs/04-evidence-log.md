@@ -43,13 +43,13 @@
 
 | Need ID | Need statement | Based on E-ID(s) | Notes |
 |---|---|---|---|
-| N-01 | Users need a standard channel for reporting maintenance issues. | E-01 | ลดการแจ้งผ่านหลายช่องทาง |
-| N-02 | Teachers and technicians need urgent issues to be prioritized. | E-02 | ต้องกำหนดเกณฑ์ Urgent |
-| N-03 | Technicians need complete maintenance request information before accepting a job. | E-03 | ใช้กำหนดข้อมูลขั้นต่ำของแบบฟอร์ม |
-| N-04 | Technicians need duplicate maintenance reports to be identified. | E-04 | ยังต้องยืนยันวิธีจัดการ |
-| N-05 | Students and teachers need to track maintenance request status. | E-05 | ต้องกำหนดสถานะที่แสดง |
-| N-06 | Building managers need maintenance reports and statistics. | E-06 | ใช้สำหรับการวางแผนและตัดสินใจ |
-| N-07 | Technicians need to track jobs transferred between departments. | E-07 | เกี่ยวข้องกับ Workflow การส่งต่องาน |
+| N-01 | ผู้ใช้งานต้องการช่องทางมาตรฐานสำหรับการแจ้งปัญหาการซ่อม | E-01 | ลดการแจ้งผ่านหลายช่องทาง |
+| N-02 | อาจารย์ผู้สอนและเจ้าหน้าที่เทคนิคต้องการให้ระบบสามารถจัดลำดับความสำคัญของงานเร่งด่วนได้ | E-02 | ต้องกำหนดเกณฑ์ Urgent |
+| N-03 | เจ้าหน้าที่เทคนิคต้องการข้อมูลการแจ้งซ่อมที่ครบถ้วนก่อนรับดำเนินงาน | E-03 | ใช้กำหนดข้อมูลขั้นต่ำของแบบฟอร์ม |
+| N-04 | เจ้าหน้าที่เทคนิคต้องการให้ระบบสามารถตรวจสอบหรือระบุรายการแจ้งปัญหาที่ซ้ำกันได้ | E-04 | ยังต้องยืนยันวิธีจัดการ |
+| N-05 | นักศึกษาและอาจารย์ผู้สอนต้องการติดตามสถานะของรายการแจ้งซ่อมได้ | E-05 | ต้องกำหนดสถานะที่แสดง |
+| N-06 | ผู้ดูแลอาคารหรือผู้บริหารต้องการรายงานและสถิติของงานซ่อมเพื่อใช้ในการวางแผนและตัดสินใจ | E-06 | ใช้สำหรับการวางแผนและตัดสินใจ |
+| N-07 | เจ้าหน้าที่เทคนิคต้องการติดตามสถานะของงานซ่อมที่ถูกส่งต่อระหว่างหลายหน่วยงานได้ | E-07 | เกี่ยวข้องกับ Workflow การส่งต่องาน |
 
 ---
 
