@@ -1,31 +1,88 @@
-# 05 — Open Questions and Issues: Campus Resource Booking
+# 05 — Open Questions and Issues: Classroom & Laboratory Maintenance Reporting System
 
-> ไฟล์นี้แยกเรื่องที่ยังไม่รู้หรือยังไม่มี policy ออกจาก Requirement Backlog เพื่อไม่ให้นักศึกษาสร้าง requirement เกินหลักฐาน
+> ไฟล์นี้ใช้แยกประเด็นที่ยังไม่มีข้อมูลยืนยันหรือยังไม่มีข้อสรุป
+> ออกจาก Requirement Backlog เพื่อป้องกันไม่ให้ทีมสร้าง Requirement จากสมมติฐานของทีมเอง
+>
+> **Team:** Group 02 — Classroom & Laboratory Maintenance Reporting System
+>
+> **Case:** ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ
+>
+> **Status:** Open Questions and Issues v0.1
+
+---
 
 ## 1. Open Questions
 
-| OQ-ID | คำถาม | Related Evidence / Req | Owner ที่ควรถาม | ผลต่อ Week06 |
+| OQ-ID | คำถาม | Related Evidence / Requirement | Owner ที่ควรถาม | ผลต่อ Week06 |
 |---|---|---|---|---|
-| OQ-W05-01 | ข้อมูลขั้นต่ำของคำขอจองมีอะไรบ้าง | E-04, BR-SCRB-01 | Resource Officer | ต้องใช้เขียน Acceptance Criteria |
-| OQ-W05-02 | Draft request ควรเก็บได้นานเท่าไร และใครเห็นได้บ้าง | FR-SCRB-02 | Resource Officer / IT | ต้องใช้ทำ state rule |
-| OQ-W05-03 | exception request ใครมีอำนาจอนุมัติในแต่ละกรณี | FR-SCRB-03 | Course/Department authority | ต้องใช้ทำ alternate flow |
-| OQ-W05-04 | ต้องแจ้งเตือน event ใด ผ่านช่องทางใด และก่อนกี่ชั่วโมง | FR-SCRB-06 | Student requester / Officer | ต้องใช้ทำ notification AC |
-| OQ-W05-05 | identity/role data ใดมาจากระบบกลางและเก็บซ้ำได้หรือไม่ | NFR-SCRB-01 | IT / Policy owner | ต้องใช้ทำ quality scenario |
+| OQ-01 | เกณฑ์ใดใช้กำหนดว่างานเป็นงานเร่งด่วน (Urgent) และใครเป็นผู้กำหนดระดับความเร่งด่วน? | E-04, RC-F-03 | เจ้าหน้าที่เทคนิค / ผู้ดูแลอาคาร | ใช้กำหนด Priority Rule และ Acceptance Criteria |
+| OQ-02 | ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงานซ่อม? | RC-F-05 | เจ้าหน้าที่เทคนิค / ผู้ดูแลอาคาร | ใช้กำหนด Workflow และบทบาทของผู้ใช้งาน |
+| OQ-03 | หากพบการแจ้งปัญหาซ้ำของอุปกรณ์หรือห้องเดียวกัน ระบบควรจัดการอย่างไร? | CU-01, RC-F-04 | เจ้าหน้าที่เทคนิค | ใช้กำหนด Duplicate Report / Alternate Flow |
+| OQ-04 | ผู้ใช้งานต้องการรับการแจ้งเตือนผ่านช่องทางใด และต้องการทราบสถานะในช่วงเวลาใด? | E-05, RC-F-04 | นักศึกษา / อาจารย์ผู้สอน / เจ้าหน้าที่เทคนิค | ใช้กำหนด Notification Requirement |
+| OQ-05 | ผู้บริหารต้องการรายงานหรือสถิติประเภทใดบ้างเพื่อใช้ในการวางแผนและตัดสินใจ? | RC-F-06 | ผู้ดูแลอาคาร / ผู้บริหาร | ใช้กำหนด Dashboard และ Report Requirements |
+| OQ-06 | กรณีส่งต่องานไปหลายหน่วยงาน ควรติดตามสถานะอย่างไร และใครเป็นผู้รับผิดชอบในแต่ละขั้นตอน? | RC-F-07 | เจ้าหน้าที่เทคนิค / ผู้ดูแลอาคาร | ใช้กำหนด Workflow การส่งต่องานและสถานะ |
+
+---
 
 ## 2. Issues / Holds
 
 | Issue ID | เรื่องที่ต้อง Hold | เหตุผล | สิ่งที่ต้องเก็บเพิ่ม |
 |---|---|---|---|
-| ISSUE-SCRB-01 | quota, booking duration, no-show definition, penalty | ไม่มี policy source และ E-08 ระบุว่ายังไม่มีตัวเลขยืนยัน | policy document หรือ decision จากผู้มีอำนาจ |
-| ISSUE-SCRB-02 | real-time schedule integration | E-11 ยังเป็น assumption/OQ | ข้อมูลระบบกลาง/API/ความเป็นไปได้ |
-| ISSUE-SCRB-03 | mandatory photo for every handover/return | E-14 เป็น proposed solution และมี privacy concern | เหตุผลทาง accountability และ privacy review |
-| ISSUE-SCRB-04 | automatic override สำหรับกิจกรรมเรียน | เสี่ยงกระทบ fairness และ authority | authority matrix + escalation policy |
+| ISSUE-CLMRS-01 | เกณฑ์การกำหนดงานเร่งด่วน (Urgent) | ยังไม่มีหลักฐานเพียงพอว่าเหตุการณ์ประเภทใดต้องถูกจัดเป็นงานเร่งด่วน | ตัวอย่างเหตุการณ์จริง + เกณฑ์จากเจ้าหน้าที่หรือผู้ดูแลอาคาร |
+| ISSUE-CLMRS-02 | ผู้รับผิดชอบและผู้ยืนยันการปิดงาน | ยังไม่ยืนยันว่าเจ้าหน้าที่เทคนิคหรือผู้ดูแลอาคารเป็นผู้ยืนยันการปิดงาน | Workflow จริงและการยืนยันจากผู้มีอำนาจ |
+| ISSUE-CLMRS-03 | การจัดการกรณีแจ้งปัญหาซ้ำ | ยังไม่มีข้อสรุปว่าควรรวมรายการแจ้งซ่อมเดิม เชื่อมโยงรายการ หรือสร้างรายการใหม่ | ตัวอย่างเหตุการณ์แจ้งซ้ำ + แนวทางจากเจ้าหน้าที่เทคนิค |
+| ISSUE-CLMRS-04 | ช่องทางและเวลาการแจ้งเตือน | ยังไม่มีข้อมูลยืนยันว่าผู้ใช้งานต้องการแจ้งเตือนผ่านช่องทางใดและเมื่อใด | สัมภาษณ์นักศึกษา/อาจารย์/เจ้าหน้าที่ |
+| ISSUE-CLMRS-05 | รายงานและสถิติสำหรับผู้บริหาร | ยังไม่ทราบว่าผู้บริหารใช้ตัวชี้วัดใดในการประเมินงานซ่อม | ตัวอย่างรายงานหรือข้อมูลที่ผู้บริหารใช้จริง |
+| ISSUE-CLMRS-06 | การติดตามงานที่ส่งต่อหลายหน่วยงาน | ยังไม่ชัดเจนว่าใครเป็นเจ้าของงานหลักและสถานะใดควรแสดงต่อผู้ใช้งาน | Workflow การส่งต่องาน + Role/Responsibility |
+
+---
 
 ## 3. Follow-up Plan
 
 | Action | Output ที่ต้องได้ | ใช้ต่อใน Week06 อย่างไร |
 |---|---|---|
-| สัมภาษณ์ Resource Officer เพิ่ม 10 นาที | required fields + draft rule | AC และ use case precondition |
-| ขอ policy/decision เรื่อง exception | authority matrix | alternate flow / extension |
-| ถาม IT เรื่อง identity/role | data boundary | quality scenario และ constraint |
-| เก็บข้อมูล no-show/cancel ถ้ามี | policy evidence | ยังไม่ใช้จนกว่าจะมี owner ยืนยัน |
+| สัมภาษณ์เจ้าหน้าที่เทคนิคเกี่ยวกับงานเร่งด่วน | เกณฑ์ Urgent + ตัวอย่างเหตุการณ์ | Priority Rule + Acceptance Criteria |
+| สอบถามผู้รับผิดชอบการปิดงาน | ผู้มีอำนาจยืนยันการปิดงาน + ขั้นตอน | Use Case + Workflow |
+| จำลองเหตุการณ์แจ้งปัญหาซ้ำ | แนวทางจัดการ Duplicate Report | Alternate Flow / Business Rule |
+| สัมภาษณ์นักศึกษาและอาจารย์เกี่ยวกับการติดตามงาน | ช่องทางและช่วงเวลาที่ต้องการทราบสถานะ | Notification Requirement |
+| สัมภาษณ์ผู้ดูแลอาคาร/ผู้บริหาร | รายงานและ KPI ที่ต้องใช้จริง | Dashboard / Report Requirement |
+| จำลองกรณีส่งต่องานหลายหน่วยงาน | ผู้รับผิดชอบแต่ละขั้นตอน + สถานะ | Workflow + State Transition |
+
+---
+
+## 4. Rule for Handling Unknowns
+
+ทีมจะไม่เปลี่ยน Open Question หรือ Issue ให้เป็น Requirement ที่ยืนยันแล้วจนกว่าจะมีหลักฐานจาก Stakeholder หรือแหล่งข้อมูลที่เหมาะสม
+
+หากพบข้อมูลใหม่:
+
+1. เพิ่ม Evidence ID
+2. ระบุแหล่งที่มาของข้อมูล
+3. เชื่อมโยง Evidence กับ OQ/Issue ที่เกี่ยวข้อง
+4. ตรวจสอบว่าข้อมูลยืนยันหรือขัดแย้งกับข้อมูลเดิม
+5. หากข้อมูลเพียงพอ จึงปรับ Candidate Requirement
+6. หากข้อมูลยังไม่เพียงพอ ให้คงสถานะเป็น `Needs Validation` หรือ `Hold`
+
+---
+
+## 5. Week06 Handoff
+
+| Week06 Artefact | Input ที่ควรใช้ |
+|---|---|
+| Use Case | OQ-02, OQ-03, OQ-06 หลังได้รับการยืนยัน |
+| User Story | OQ-04 หลังยืนยันความต้องการด้านการติดตามสถานะ |
+| Acceptance Criteria | OQ-01 และ OQ-02 หลังยืนยันกฎ |
+| Business Rule | OQ-01, OQ-03 |
+| Notification Requirement | OQ-04 |
+| Dashboard / Report | OQ-05 |
+| Workflow / State Diagram | OQ-02, OQ-06 |
+
+---
+
+## 6. Important Note
+
+> **ยังไม่กำหนดช่องทางแจ้งเตือนเป็น LINE หรือ LINE Notify**
+
+ทีมจะยังไม่ระบุช่องทางเฉพาะ เช่น LINE, Email หรือแอปพลิเคชันใด จนกว่าจะมี Evidence จาก Stakeholder ว่าช่องทางใดเหมาะสมและจำเป็นจริง
+
+คำถามใน OQ-04 จึงควรเริ่มจาก **“ผู้ใช้งานต้องการรับการแจ้งเตือนผ่านช่องทางใด และเมื่อใด?”** โดยไม่เสนอ Solution ล่วงหน้า
