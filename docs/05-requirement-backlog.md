@@ -63,24 +63,7 @@
 
 ---
 
-# 4. Requirement Traceability Summary
-
-| Requirement | Evidence | Need | Open Question |
-|---|---|---|---|
-| FR-CLMRS-01 | E-01 | N-01 | - |
-| FR-CLMRS-02 | E-02, E-03 | N-03 | Required Fields |
-| FR-CLMRS-03 | E-04 | N-02 | OQ-01 |
-| FR-CLMRS-04 | E-05 | N-05 | Status ที่ต้องแสดง |
-| FR-CLMRS-05 | OQ-03 | N-04 | วิธีจัดการรายการซ้ำ |
-| FR-CLMRS-06 | OQ-02 | N-02 | ผู้ยืนยันการปิดงาน |
-| FR-CLMRS-07 | OQ-06 | N-07 | ผู้รับผิดชอบหลังส่งต่อ |
-| FR-CLMRS-08 | OQ-04 | N-05 | ช่องทางแจ้งเตือน |
-| FR-CLMRS-09 | OQ-05 | N-06 | รายงาน / KPI |
-| NFR-CLMRS-01 | Stakeholder / Context | Access Control | Role / Permission |
-
----
-
-# 5. Priority Summary
+# 4. Priority Summary
 
 | Priority | Count | Requirement IDs | เหตุผลรวม |
 |---|---:|---|---|
@@ -93,62 +76,7 @@
 
 ---
 
-# 6. Open Questions ที่ต้องติดตาม
-
-| OQ-ID | Open Question | Related Requirement | Priority |
-|---|---|---|---|
-| **OQ-01** | เกณฑ์ใดใช้กำหนดว่างานเป็นงานเร่งด่วน (Urgent)? | FR-CLMRS-03 | High |
-| **OQ-02** | ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงานซ่อม? | FR-CLMRS-06 | High |
-| **OQ-03** | หากพบการแจ้งปัญหาซ้ำ ระบบควรจัดการอย่างไร? | FR-CLMRS-05 | High |
-| **OQ-04** | ผู้ใช้งานต้องการรับการแจ้งเตือนผ่านช่องทางใด? | FR-CLMRS-08 | Medium |
-| **OQ-05** | ผู้บริหารต้องการรายงานหรือสถิติประเภทใดบ้าง? | FR-CLMRS-09 | Medium |
-| **OQ-06** | กรณีส่งต่องานไปหลายหน่วยงาน ควรติดตามสถานะอย่างไร? | FR-CLMRS-07 | Medium |
-
-> **หมายเหตุ:** OQ-04 ยังเป็นคำถามเปิด จึงยังไม่ได้กำหนดช่องทางเฉพาะ เช่น LINE หรือช่องทางอื่น
-
----
-
-# 7. Conflict / Unknown
-
-## CU-01 — การแจ้งปัญหาซ้ำ
-
-ยังไม่มีหลักฐานเพียงพอที่จะสรุปว่าระบบควรจัดการรายการแจ้งปัญหาซ้ำด้วยวิธีใด
-
-### สถานการณ์ตัวอย่าง
-
-นักศึกษาหลายคนพบว่าโปรเจกเตอร์ในห้องเดียวกันเสีย และมีการแจ้งปัญหาเดียวกันหลายครั้ง
-
-ยังไม่ทราบว่า:
-
-- ระบบควรรวมรายการแจ้งซ่อมเข้าด้วยกันหรือไม่
-- ระบบควรเชื่อมรายการใหม่กับรายการเดิมหรือไม่
-- ควรสร้างรายการใหม่แต่ระบุว่าเป็นรายการซ้ำหรือไม่
-- ใครเป็นผู้ตัดสินใจว่ารายการใดเป็นรายการเดียวกัน
-
-**Related:** OQ-03 / FR-CLMRS-05
-
-**Status:** Needs Validation
-
----
-
-## CU-02 — เกณฑ์ Urgent
-
-ยังไม่มีหลักฐานเพียงพอที่จะกำหนดเกณฑ์ตายตัวว่าเหตุการณ์ใดเป็นงานเร่งด่วน
-
-ตัวอย่างปัญหาที่ต้องตรวจสอบ:
-
-- อุปกรณ์ที่กระทบต่อการเรียนการสอน
-- ระบบไฟฟ้าหรืออุปกรณ์ที่อาจมีความเสี่ยง
-- ปัญหาที่ทำให้ไม่สามารถใช้งานห้องได้
-- ปัญหาที่สามารถรอการซ่อมตามลำดับปกติได้
-
-**Related:** OQ-01 / FR-CLMRS-03
-
-**Status:** Needs Validation
-
----
-
-# 8. Ready / Follow-up / Hold
+# 5. Ready / Follow-up / Hold
 
 | Status | Requirement IDs | สิ่งที่ต้องทำต่อ |
 |---|---|---|
@@ -158,8 +86,17 @@
 | **Issue / Unknown** | CU-01, CU-02 | ห้ามนำไปเขียนเป็น Final Requirement จนกว่าจะมี Evidence เพิ่ม |
 
 ---
+# 6. Review Checklist
 
-# 9. Week06 Handoff
+- [x] ทุก requirement มี Source RC หรือ Evidence source
+- [x] ทุก requirement อ้าง Evidence / Need Trace
+- [x] Type แยกเป็น Functional / NFR / Business Rule / Constraint / Issue
+- [x] Priority มี rationale จาก value/risk/urgency/dependency
+- [x] Unknown หรือ policy issue ไม่ถูกยกระดับเป็น requirement โดยไม่มีหลักฐาน
+- [x] มี Week06 Use สำหรับรายการที่พร้อมทำ model
+
+---
+# 7. Week06 Handoff
 
 Requirement ที่พร้อมนำไปทำงานต่อใน Week06:
 
@@ -174,45 +111,4 @@ Requirement ที่พร้อมนำไปทำงานต่อใน W
 | **Use Case Extension** | FR-CLMRS-07 — การส่งต่องาน |
 | **Report Use Case** | FR-CLMRS-09 หลังยืนยันข้อมูลที่ผู้บริหารต้องการ |
 | **Quality Scenario** | NFR-CLMRS-01 — Role / Access Control |
-
 ---
-
-# 10. Review Checklist
-
-- [x] ทุก Requirement มี Source หรือ Evidence ที่เกี่ยวข้อง
-- [x] ทุก Requirement เชื่อมโยงกับ User Need หรือ Open Question
-- [x] แยก Functional / Non-functional / Business Rule / Issue แล้ว
-- [x] Priority มีเหตุผลจาก Value, Risk, Urgency และ Dependency
-- [x] Open Questions ถูกแยกออกจาก Final Requirements
-- [x] การแจ้งปัญหาซ้ำยังถูกเก็บเป็นประเด็นที่ต้องตรวจสอบ
-- [x] เกณฑ์ Urgent ยังไม่ถูกกำหนดเองโดยทีม
-- [x] ช่องทางการแจ้งเตือนยังไม่กำหนดเป็น LINE หรือช่องทางใดโดยไม่มี Evidence
-- [x] Requirement ที่พร้อมสามารถนำไปสร้าง User Story / Use Case ใน Week06 ได้
-
----
-
-# 11. Week05 Summary
-
-จาก Evidence และ Need ที่เก็บใน Week 04 ทีมสามารถจัดทำ Requirement Backlog เบื้องต้นได้
-
-### Core Requirements
-
-1. แจ้งปัญหาผ่านช่องทางมาตรฐาน
-2. บันทึกข้อมูลการแจ้งซ่อมที่จำเป็น
-3. จัดลำดับความสำคัญของงาน
-4. ติดตามสถานะงานซ่อม
-5. จัดการรายการแจ้งปัญหาซ้ำ
-6. ปิดงานและบันทึกผลการดำเนินงาน
-7. ติดตามงานที่ส่งต่อ
-8. สนับสนุนรายงานสำหรับผู้บริหาร
-
-### สิ่งที่ยังต้องตรวจสอบ
-
-- เกณฑ์ Urgent
-- ผู้ยืนยันการปิดงาน
-- วิธีจัดการแจ้งปัญหาซ้ำ
-- ช่องทางและช่วงเวลาการแจ้งเตือน
-- รายงานที่ผู้บริหารต้องการ
-- Workflow เมื่อส่งต่องานหลายหน่วยงาน
-
-> **หลักสำคัญ:** Requirement ที่ยังไม่มี Evidence เพียงพอจะยังคงเป็น `Needs Follow-up` หรือ `Issue / Unknown` และจะไม่ถูกยกระดับเป็น Final Requirement จนกว่าจะมีหลักฐานสนับสนุน
