@@ -32,10 +32,10 @@
 
 | Dimension | วิธีใช้กับระบบ |
 |---|---|
-| **Value** | Requirement ช่วยให้ผู้ใช้งานหรือเจ้าหน้าที่ทำงานหลักได้ดีขึ้นหรือไม่ |
-| **Risk** | หากไม่มี Requirement นี้ จะทำให้ข้อมูลสูญหาย งานล่าช้า หรือเกิดงานซ้ำหรือไม่ |
+| **Value** | Requirement ช่วยให้ผู้ใช้งาน เจ้าหน้าที่ หรือผู้ดูแลระบบทำงานหลักได้ดีขึ้นหรือไม่ |
+| **Risk** | หากไม่มี Requirement นี้ จะทำให้ข้อมูลไม่ครบ งานล่าช้า งานซ้ำ หรือเกิดปัญหาในการติดตามหรือไม่ |
 | **Urgency** | จำเป็นต่อการทำงานของระบบในรุ่นแรกหรือสามารถพัฒนาในภายหลังได้ |
-| **Dependency** | Requirement นี้ต้องรอการยืนยันจาก Stakeholder, Policy หรือข้อมูลอื่นหรือไม่ |
+| **Dependency** | Requirement นี้ต้องรอการยืนยันจาก Stakeholder, Policy, Workflow หรือข้อมูลอื่นหรือไม่ |
 
 ### MoSCoW
 
@@ -54,10 +54,10 @@
 | **FR-CLMRS-02** | RC-F-02 | E-02, E-03 → N-03 | ระบบต้องให้ผู้แจ้งบันทึกข้อมูลที่จำเป็น เช่น อาคาร ห้อง รายละเอียดปัญหา และข้อมูลประกอบที่เกี่ยวข้องก่อนส่งคำขอ | Functional | **Must** | ข้อมูลไม่ครบทำให้เจ้าหน้าที่ต้องสอบถามเพิ่มเติมและทำให้งานล่าช้า | Needs Follow-up | ต้องยืนยัน Required Fields กับเจ้าหน้าที่เทคนิค | Use Case + Acceptance Criteria |
 | **FR-CLMRS-03** | RC-F-03 | E-04 → N-02 | ระบบต้องสนับสนุนการจัดลำดับความสำคัญของงานซ่อมตามระดับความเร่งด่วนที่กำหนด | Functional | **Must** | งานที่กระทบต่อการเรียนการสอนควรได้รับการจัดลำดับอย่างเหมาะสม | Needs Follow-up | เกณฑ์ใดใช้กำหนดงาน Urgent และใครเป็นผู้กำหนด | Use Case + Business Rule |
 | **FR-CLMRS-04** | RC-F-04 | E-05 → N-05 | ระบบต้องให้ผู้ใช้งานสามารถตรวจสอบสถานะของรายการแจ้งซ่อมของตนเองได้ | Functional | **Must** | ลดปัญหาผู้ใช้งานต้องสอบถามเจ้าหน้าที่หลายครั้ง | Ready for Week06 | ต้องยืนยันสถานะที่ผู้ใช้งานต้องเห็น | User Story + Use Case |
-| **FR-CLMRS-05** | RC-F-05 | OQ-02 → N-04 | ระบบควรช่วยให้เจ้าหน้าที่สามารถตรวจสอบและจัดการรายการแจ้งปัญหาที่ซ้ำกันได้ | Functional | **Should** | ช่วยลดงานซ้ำและป้องกันการดำเนินการกับปัญหาเดียวกันหลายครั้ง | Needs Follow-up | หากพบรายการซ้ำควรรวม เชื่อม หรือปิดรายการอย่างไร | Alternate Flow |
-| **FR-CLMRS-06** | RC-F-06 | OQ-02 → N-02 | ระบบควรให้เจ้าหน้าที่บันทึกผลการดำเนินงานและปิดงานซ่อม โดยมีผู้รับผิดชอบหรือผู้ยืนยันตาม Workflow ที่กำหนด | Functional + Business Rule | **Should** | จำเป็นต่อการติดตามวงจรงานซ่อมตั้งแต่รับงานจนปิดงาน | Needs Follow-up | ใครเป็นผู้ยืนยันการปิดงาน | Use Case + Business Rule |
+| **FR-CLMRS-05** | RC-F-05 | E-04 → N-04 | ระบบควรช่วยให้เจ้าหน้าที่สามารถตรวจสอบและจัดการรายการแจ้งปัญหาที่ซ้ำกันได้ | Functional | **Should** | ช่วยลดงานซ้ำและป้องกันการดำเนินการกับปัญหาเดียวกันหลายครั้ง | Needs Follow-up | หากพบรายการซ้ำควรรวม เชื่อม หรือปิดรายการอย่างไร | Alternate Flow |
+| **FR-CLMRS-06** | RC-F-06 | OQ-02 → N-02 | ระบบควรให้เจ้าหน้าที่บันทึกผลการดำเนินงานและปิดงานซ่อม โดยมีผู้รับผิดชอบหรือผู้ยืนยันตาม Workflow ที่กำหนด | Functional + Business Rule | **Should** | จำเป็นต่อการติดตามวงจรงานซ่อมตั้งแต่รับงานจนปิดงาน | Needs Follow-up | ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงาน | Use Case + Business Rule |
 | **FR-CLMRS-07** | RC-F-07 | OQ-06 → N-07 | ระบบควรให้เจ้าหน้าที่สามารถติดตามสถานะของงานที่ถูกส่งต่อระหว่างหน่วยงานได้ | Functional | **Should** | รองรับกรณีที่งานไม่สามารถดำเนินการโดยหน่วยงานเดียว | Needs Follow-up | เมื่อส่งต่อแล้วใครเป็นผู้รับผิดชอบหลักและใครเป็นผู้ปิดงาน | Use Case Extension |
-| **FR-CLMRS-08** | OQ-04 | OQ-04 → N-05 | ระบบควรแจ้งให้ผู้ใช้งานทราบเมื่อสถานะของงานซ่อมมีการเปลี่ยนแปลงตามช่องทางที่ได้รับการยืนยัน | Functional | **Could** | ช่วยให้ผู้ใช้งานติดตามงานได้สะดวกขึ้น แต่ช่องทางและช่วงเวลายังไม่ยืนยัน | Needs Follow-up | ใช้ช่องทางใด และควรแจ้งในสถานะใดบ้าง | Event / Notification Rule |
+| **FR-CLMRS-08** | OQ-04 | OQ-04 → N-05 | ระบบควรแจ้งให้ผู้ใช้งานทราบเมื่อสถานะของงานซ่อมมีการเปลี่ยนแปลงตามช่องทางและเงื่อนไขที่ได้รับการยืนยัน | Functional | **Could** | ช่วยให้ผู้ใช้งานติดตามงานได้สะดวกขึ้น แต่ช่องทางและช่วงเวลายังไม่ยืนยัน | Needs Follow-up | ใช้ช่องทางใด และควรแจ้งในสถานะใดบ้าง | Event / Notification Rule |
 | **FR-CLMRS-09** | OQ-05 | OQ-05 → N-06 | ระบบควรสนับสนุนรายงานและสถิติพื้นฐานของงานซ่อมสำหรับผู้ดูแลอาคารหรือผู้บริหาร | Functional | **Should** | ช่วยในการวางแผนและติดตามภาพรวมของงานซ่อม | Needs Follow-up | ผู้บริหารต้องการรายงานและตัวชี้วัดใด | Report Use Case |
 | **NFR-CLMRS-01** | Project Scope / Access Control | Stakeholder & Context Analysis | ระบบต้องควบคุมสิทธิ์การเข้าถึงข้อมูลตามบทบาทของผู้ใช้งาน เช่น นักศึกษา อาจารย์ เจ้าหน้าที่เทคนิค และผู้ดูแลอาคาร/ผู้บริหาร | NFR / Constraint | **Must** | ข้อมูลและความสามารถของแต่ละบทบาทไม่ควรเข้าถึงได้เหมือนกันทั้งหมด | Needs Validation | ต้องยืนยัน Role และ Permission Matrix | Quality Scenario + Access Rule |
 
@@ -67,12 +67,10 @@
 
 | Priority | Count | Requirement IDs | เหตุผลรวม |
 |---|---:|---|---|
-| **Must** | 4 | FR-CLMRS-01, FR-CLMRS-02, FR-CLMRS-03, FR-CLMRS-04, NFR-CLMRS-01 | เป็นแกนหลักของการแจ้งและติดตามงานซ่อม |
+| **Must** | 5 | FR-CLMRS-01, FR-CLMRS-02, FR-CLMRS-03, FR-CLMRS-04, NFR-CLMRS-01 | เป็นแกนหลักของการแจ้งซ่อม การเก็บข้อมูล การจัดลำดับ การติดตามสถานะ และการควบคุมสิทธิ์ |
 | **Should** | 4 | FR-CLMRS-05, FR-CLMRS-06, FR-CLMRS-07, FR-CLMRS-09 | มีคุณค่าสูง แต่ยังต้องยืนยัน Workflow หรือข้อมูลเพิ่มเติม |
-| **Could** | 1 | FR-CLMRS-08 | มีประโยชน์ แต่ช่องทางแจ้งเตือนยังไม่ยืนยัน |
-| **Won't yet** | 0 | - | ยังไม่มี Requirement ที่ถูกตัดออกทั้งหมดในรอบนี้ |
-
-> **หมายเหตุ:** NFR-CLMRS-01 ถูกนับเป็น Must แม้ Priority Summary จะมี 5 รายการในกลุ่ม Must เนื่องจากเป็นข้อกำหนดด้านสิทธิ์การเข้าถึงที่สำคัญต่อระบบ
+| **Could** | 1 | FR-CLMRS-08 | มีประโยชน์ แต่ช่องทางและเงื่อนไขการแจ้งเตือนยังไม่ยืนยัน |
+| **Won't yet** | 0 | - | ยังไม่มี Requirement ที่ถูกตัดออกจากรอบนี้ |
 
 ---
 
@@ -82,20 +80,23 @@
 |---|---|---|
 | **Ready for Week06** | FR-CLMRS-01, FR-CLMRS-04 | เริ่มทำ User Story / Use Case |
 | **Needs Follow-up** | FR-CLMRS-02, FR-CLMRS-03, FR-CLMRS-05, FR-CLMRS-06, FR-CLMRS-07, FR-CLMRS-08, FR-CLMRS-09, NFR-CLMRS-01 | เก็บ Evidence เพิ่มและยืนยัน Open Questions |
-| **Hold** | - | ยังไม่มี Requirement ที่ต้องหยุดทั้งหมด |
-| **Issue / Unknown** | CU-01, CU-02 | ห้ามนำไปเขียนเป็น Final Requirement จนกว่าจะมี Evidence เพิ่ม |
+| **Hold** | - | ยังไม่มี Requirement ที่ต้องหยุดไว้ทั้งหมด |
+| **Issue / Unknown** | CU-01 | เก็บประเด็นที่ยังไม่ทราบวิธีจัดการกรณีแจ้งปัญหาซ้ำ และห้ามสรุปเป็นกฎจนกว่าจะมี Evidence เพิ่ม |
 
 ---
+
 # 6. Review Checklist
 
-- [x] ทุก requirement มี Source RC หรือ Evidence source
-- [x] ทุก requirement อ้าง Evidence / Need Trace
-- [x] Type แยกเป็น Functional / NFR / Business Rule / Constraint / Issue
-- [x] Priority มี rationale จาก value/risk/urgency/dependency
-- [x] Unknown หรือ policy issue ไม่ถูกยกระดับเป็น requirement โดยไม่มีหลักฐาน
-- [x] มี Week06 Use สำหรับรายการที่พร้อมทำ model
+- [x] ทุก Requirement มี Source RC หรือ Evidence source
+- [x] ทุก Requirement อ้าง Evidence / Need Trace
+- [x] Type แยกเป็น Functional / NFR / Business Rule / Constraint
+- [x] Priority มี rationale จาก Value / Risk / Urgency / Dependency
+- [x] Unknown หรือ Policy issue ไม่ถูกยกระดับเป็น Requirement โดยไม่มีหลักฐาน
+- [x] ช่องทางแจ้งเตือนยังไม่ถูกกำหนดเป็น LINE หรือช่องทางใดช่องทางหนึ่งโดยไม่มี Evidence
+- [x] มี Week06 Use สำหรับรายการที่พร้อมทำ Model
 
 ---
+
 # 7. Week06 Handoff
 
 Requirement ที่พร้อมนำไปทำงานต่อใน Week06:
@@ -109,6 +110,9 @@ Requirement ที่พร้อมนำไปทำงานต่อใน W
 | **Business Rule** | FR-CLMRS-03 หลังยืนยันเกณฑ์ Urgent |
 | **Alternate Flow** | FR-CLMRS-05 — การแจ้งปัญหาซ้ำ |
 | **Use Case Extension** | FR-CLMRS-07 — การส่งต่องาน |
+| **Close Work Use Case** | FR-CLMRS-06 — การปิดงานซ่อม |
+| **Notification Rule** | FR-CLMRS-08 หลังยืนยันช่องทางและเงื่อนไขการแจ้งเตือน |
 | **Report Use Case** | FR-CLMRS-09 หลังยืนยันข้อมูลที่ผู้บริหารต้องการ |
 | **Quality Scenario** | NFR-CLMRS-01 — Role / Access Control |
+
 ---
