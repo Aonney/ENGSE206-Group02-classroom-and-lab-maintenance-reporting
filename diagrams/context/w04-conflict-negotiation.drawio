@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="หน้า-1" id="CQMk4cxAm-cPLARPaq_O">
+    <mxGraphModel dx="1734" dy="885" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="posA" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;A: Student&lt;/b&gt;&lt;br&gt;&amp;quot;ยื่นไว ข้อมูลน้อย&amp;quot;&lt;br&gt;&lt;br&gt;Interest:&lt;br&gt;ลดเวลา • ไม่พลาดกำหนด" vertex="1">
+          <mxGeometry height="230" width="170" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="posB" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;B: Officer&lt;/b&gt;&lt;br&gt;&amp;quot;ข้อมูลครบเพื่อซ่อม&amp;quot;&lt;br&gt;&lt;br&gt;Interest:&lt;br&gt;ลดถามกลับ • ซ่อมถูกจุด" vertex="1">
+          <mxGeometry height="230" width="170" x="460" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Common criteria&lt;/b&gt;&lt;br&gt;• Usability / Effort&lt;br&gt;• Fairness / Traceability&lt;br&gt;• Feasibility&lt;br&gt;&lt;br&gt;Evidence: E-01, E-03" vertex="1">
+          <mxGeometry height="260" width="210" x="230" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="optA" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;A · รับข้อมูลน้อย&lt;/b&gt;&lt;br&gt;ส่งไว แต่ช่างต้อง&lt;br&gt;ถามกลับซ้ำ" vertex="1">
+          <mxGeometry height="140" width="170" x="40" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="optB" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;B · บังคับข้อมูลขั้นต่ำ&lt;/b&gt;&lt;br&gt;อาคาร/ห้อง/ประเภทอุปกรณ์&lt;br&gt;บังคับ (ภาพไม่บังคับ)" vertex="1">
+          <mxGeometry height="150" width="210" x="230" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="badge" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;arcSize=50;" value="PROVISIONAL" vertex="1">
+          <mxGeometry height="26" width="110" x="280" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="optC" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;C · ข้อมูลครบทั้งหมด&lt;/b&gt;&lt;br&gt;แม่นยำ แต่ผู้ใช้&lt;br&gt;อาจเลิกใช้งาน" vertex="1">
+          <mxGeometry height="140" width="170" x="460" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;align=center;verticalAlign=middle;spacing=6;" value="Decision: Provisional (Option B) · Derived: RC-F-01, RC-F-02" vertex="1">
+          <mxGeometry height="70" width="600" x="40" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeA" edge="1" parent="1" source="posA" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="cc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeB" edge="1" parent="1" source="posB" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="cc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeC" edge="1" parent="1" source="cc" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="optB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
