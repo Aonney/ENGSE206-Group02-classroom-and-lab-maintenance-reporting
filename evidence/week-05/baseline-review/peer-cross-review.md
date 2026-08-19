@@ -1,7 +1,7 @@
 # ใบตรวจข้ามทีม (Peer Cross-Review Form) — Baseline Review v1.0
 
 > **Case Project:** Classroom & Laboratory Maintenance Reporting System (Case No.02)
-> **Review Date:** 19 สิงหาคม 2569
+> **Review Date:** 18 สิงหาคม 2569
 > **Reviewing Sub-team / Peer Group:** Internal Baseline Review (Group 02)
 > **Target Artefacts Reviewed:** `docs/04-evidence-log.md`, `docs/04-requirement-candidates.md`, `docs/05-requirement-backlog.md`, `docs/05-open-questions-and-issues.md`
 
