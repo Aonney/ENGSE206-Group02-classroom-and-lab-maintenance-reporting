@@ -4,7 +4,7 @@
 
 | Field | Detail |
 |---|---|
-| Student ID | [กรอก Student ID] |
+| Student ID | [68543210032-7] |
 | Name | นายบูรพา ประทีปรัตน์ |
 | Primary Role(s) | Requirement Analysis / Review |
 
