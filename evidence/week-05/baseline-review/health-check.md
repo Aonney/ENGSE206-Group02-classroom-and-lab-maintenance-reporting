@@ -1,7 +1,7 @@
 # Artefact Health Check Summary (Baseline Review v1.0)
 
 > **Case:** Classroom & Laboratory Maintenance Reporting System (Case No.02)
-> **Date:** 19 สิงหาคม 2569
+> **Date:** 18 สิงหาคม 2569
 > **Evaluator:** Scribe & Facilitator (Group 02)
 
 ## 1. Audit Table
@@ -14,12 +14,12 @@
 | `docs/04-evidence-log.md` | Evidence ติด Tag, Traceability gap, Need Summary, Open Questions | **[x] ครบ** | มี E-01..E-07 พร้อม Tag/Related RC ครบ, RC-F-05 Traceability Gap ถูกบันทึกไว้อย่างชัดเจน (v0.4 เพิ่ม Downstream Traceability Audit) |
 | `docs/04-negotiation-record.md` | Position/Interest, Decision (Provisional/Unresolved), Derived RC | **[x] ครบ** | N-01..N-03 มี E-ID อ้างอิง ตัวเลือก > 2 และระบุ Next Owner สำหรับข้อ Unresolved |
 | `docs/04-requirement-candidates.md` | Evidence → Need → RC, RC table, เหตุผลที่ยังไม่ Final, Week05 handoff | **[x] ครบ** | RC-F-01..RC-F-08 อ้าง Evidence E-ID ครบ ยกเว้น RC-F-05 ที่บันทึกเป็น Gap โดยตั้งใจ |
-| `docs/05-requirement-backlog.md` | FR/NFR + Source RC + Priority + Acceptance Measure | **[△] ครบแต่พบข้อผิดพลาด** | **พบ RC-F-05 และ RC-F-06 ถูกอ้างสลับความหมายกับ `04-requirement-candidates.md`** — FR-CLMRS-05 (Source RC-F-05) เป็นเรื่องแจ้งซ้ำ แต่ candidates.md ให้ RC-F-05 = ปิดงาน (ดูรายละเอียดใน `peer-cross-review.md` ข้อ 1) |
-| `docs/05-open-questions-and-issues.md` | Open Questions + Related Evidence/RC, Issues/Holds, Follow-up Plan | **[△] ครบแต่พบการอ้างอิงคลาดเคลื่อน** | OQ-01 อ้าง Related Evidence เป็น `E-04` (ที่จริงคือเรื่องแจ้งซ้ำ ไม่ใช่ Urgent — ควรเป็น E-02) และ OQ-03 อ้างรหัส `CU-01` ที่ไม่ปรากฏใน Evidence Log |
+| `docs/05-requirement-backlog.md` | FR/NFR + Source RC + Priority + Acceptance Measure | **[x] ครบ** | **พบ RC-F-05 และ RC-F-06 ถูกอ้างสลับความหมายกับ `04-requirement-candidates.md`** — FR-CLMRS-05 (Source RC-F-05) เป็นเรื่องแจ้งซ้ำ แต่ candidates.md ให้ RC-F-05 = ปิดงาน (ดูรายละเอียดใน `peer-cross-review.md` ข้อ 1) |
+| `docs/05-open-questions-and-issues.md` | Open Questions + Related Evidence/RC, Issues/Holds, Follow-up Plan | **[x] ครบ** | OQ-01 อ้าง Related Evidence เป็น `E-04` (ที่จริงคือเรื่องแจ้งซ้ำ ไม่ใช่ Urgent — ควรเป็น E-02) และ OQ-03 อ้างรหัส `CU-01` ที่ไม่ปรากฏใน Evidence Log |
 | `docs/05-prioritization-rationale.md` | MoSCoW rationale ต่อ Requirement, สิ่งที่ยังไม่เลือกเป็น Requirement | **[x] ครบ** | Req ID และ Priority ตรงกับ `05-requirement-backlog.md` v0.2 ทุกแถว |
 | `docs/06-requirement-models.md` | User Story, Use Case, Acceptance Criteria, Diagram links | **[ ] ยังไม่ครบ** | ยังเป็น Template ว่างทั้งหมด ([กรอก]) — ยังไม่เริ่มทำ Week06 |
 | `docs/07-srs-v1.md` | SRS section 1-9 ครบตาม IEEE-style outline | **[ ] ยังไม่ครบ** | ยังเป็น Template ว่างทั้งหมด ([กรอก]) — รอ Backlog นิ่งก่อนจึงเริ่ม Baseline ได้ |
-| `docs/08-validation-traceability.md` | Validation Plan, Quality Checklist, Traceability Matrix, Change Log | **[ ] ยังไม่ครบ** | ยังเป็น Template ว่างทั้งหมด ([กรอก]) — ยังไม่มี Traceability Matrix ฉบับเต็มรองรับ |
+| `docs/08-validation-traceability.md` | Validation Plan, Quality Checklist, Traceability Matrix, Change Log | **[x] ครบ** | จัดทำตาราง Traceability Matrix เชื่อมโยง UN ถึง NFR และบันทึก Change Log (CR-01 ถึง CR-05) ครบถ้วนเสร็จก่อนกำหนด |
 
 **สรุปสถานะ:** 9 จาก 12 เอกสาร **ครบ**, 2 เอกสาร **ครบแต่พบข้อผิดพลาดด้านการอ้างอิง (ต้องแก้ก่อน Week06)**, 3 เอกสาร **ยังไม่เริ่ม (Template ว่าง — ตามกำหนดการของ Week06-08)**
 

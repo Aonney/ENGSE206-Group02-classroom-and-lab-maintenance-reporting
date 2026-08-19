@@ -1,7 +1,7 @@
 # รายการช่องว่างและคำถามค้าง (Gap & Open Questions Log) — Baseline Review v1.0
 
 > **Case:** Classroom & Laboratory Maintenance Reporting System (Case No.02)
-> **Date:** 19 สิงหาคม 2569
+> **Date:** 18 สิงหาคม 2569
 > **Target:** รวบรวมประเด็นสงสัย ช่องว่างเชิงนโยบาย และข้อจำกัดทางเทคนิค เพื่อปรึกษาอาจารย์/ผู้มีส่วนได้ส่วนเสียใน Week 06
 
 ---
