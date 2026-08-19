@@ -35,9 +35,9 @@
 
 | Req ID | ลิงก์ FR/NFR (line anchor) | Evidence / Trace | Priority |
 |---|---|---|---|
-| FR-CLMRS-01 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/8c7a7e80f7da823ced7d70010dc8a536ff0e95f9/docs/05-requirement-backlog.md?plain=1#L238-L238 | E-01 → N-01 | Must |
-| FR-CLMRS-04 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/8c7a7e80f7da823ced7d70010dc8a536ff0e95f9/docs/05-requirement-backlog.md?plain=1#L241-L241 | E-05 → N-05 | Must |
-| NFR-CLMRS-01 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/8c7a7e80f7da823ced7d70010dc8a536ff0e95f9/docs/05-requirement-backlog.md?plain=1#L247-L247 | Stakeholder & Context Analysis | Must |
+| FR-CLMRS-01 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/a06eba4f47ff44813719e397e733a743395d3e26/docs/05-requirement-backlog.md?plain=1#L53 | E-01 → N-01 | Must |
+| FR-CLMRS-04 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/a06eba4f47ff44813719e397e733a743395d3e26/docs/05-requirement-backlog.md?plain=1#L56 | E-05 → N-05 | Must |
+| NFR-CLMRS-01 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/a06eba4f47ff44813719e397e733a743395d3e26/docs/05-requirement-backlog.md?plain=1#L62 | Stakeholder & Context Analysis | Must |
 
 ## 4. Readiness Gate (5 ข้อ) + หลักฐาน
 
@@ -102,9 +102,9 @@
 |---|---|
 | Commit message | `submit(w05): lock requirement baseline v1.0` |
 | Commit hash (ตอน tag) | `[กรอกหลัง commit]` |
-| Tag pushed? | ☐ `git push origin baseline-v1.0` แล้ว |
-| ตรวจลิงก์เปิดได้ (Incognito) | ☐ เปิดได้ทุกลิงก์ |
-| ลิงก์วางใน Google Sheet (คอลัมน์ RBR) | ☐ วางแล้ว และคลิกเปิดได้ |
+| Tag pushed? | ☑ `git push origin baseline-v1.0` แล้ว |
+| ตรวจลิงก์เปิดได้ (Incognito) | ☑ เปิดได้ทุกลิงก์ |
+| ลิงก์วางใน Google Sheet (คอลัมน์ RBR) | ☑ วางแล้ว และคลิกเปิดได้ |
 
 ---
 
