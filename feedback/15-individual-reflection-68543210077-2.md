@@ -4,7 +4,7 @@
 
 | Field | Detail |
 |---|---|
-| Student ID | 68543210077-2 |
+| Student ID | [68543210077-2] |
 | Name | นายสันติ ปัญญาหน้อย |
 | Primary Role(s) | Stakeholder Analysis / Requirements Analyst / Documentation |
 
