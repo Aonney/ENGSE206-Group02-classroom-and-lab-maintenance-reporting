@@ -17,9 +17,10 @@
 - ✅ **Decision Log:** [project-management/decision-log.md](https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/main/project-management/decision-log.md)
 
 ## 3. Traceability Highlights — 3 Must
-- [FR-CLMRS-01] [Evidence](https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/main/docs/05-requirement-backlog.md#L53) (Must)
-- [FR-CLMRS-04] [Evidence](https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/main/docs/05-requirement-backlog.md#L56) (Must)
-- [NFR-CLMRS-01] [Evidence](https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/main/docs/05-requirement-backlog.md#L62) (Must)
+- [FR-CLMRS-01] [Evidence](https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/main/docs/05-requirement-backlog.md?plain=1#L63) (Must)
+- [FR-CLMRS-04] [Evidence](https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/main/docs/05-requirement-backlog.md?plain=1#L56) (Must)
+- [NFR-CLMRS-01] [Evidence](https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/main/docs/05-requirement-backlog.md?plain=1#L62) (Must)
+
 
 ## 4. Readiness Gate (5 ข้อ)
 - [x] docs/01–05 อัปเดตล่าสุด
