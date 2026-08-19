@@ -1,6 +1,7 @@
 # 04 — Evidence Log: Classroom & Laboratory Maintenance Reporting System
 
-> **Version:** v0.2 (แก้คอลัมน์ Related RC ให้ตรงกับ Evidence E-ID(s) ใน `04-requirement-candidates.md` v0.2 — พบว่า E-01/E-02 สลับ RC กัน และ E-04/E-06/E-07 เคยผูกกับ RC ผิดหัวข้อ)
+> Version: v0.3  
+> หมายเหตุ: ปรับ Traceability ของ RC-F-05 ให้ชัดเจน โดยยังไม่สร้าง Evidence ขึ้นมาเอง เนื่องจากปัจจุบัน RC-F-05 มีที่มาจาก Negotiation N-03 เท่านั้น และยังต้องเก็บ Evidence เพิ่มเติม
 
 ## 1. Source Summary
 
@@ -27,17 +28,20 @@
 
 ---
 
-## 3. How the Team Derived Needs
+## 3. RC-F-05 Traceability Gap
 
-| Evidence | ทำไมถือเป็น Need/Constraint | Need ที่ได้ |
-|---|---|---|
-| E-01 | ผู้ใช้ไม่ทราบช่องทางแจ้งซ่อมที่เป็นมาตรฐาน | N-01 ผู้ใช้งานต้องมีช่องทางแจ้งซ่อมที่ชัดเจน |
-| E-02 | การเรียนการสอนได้รับผลกระทบโดยตรง | N-02 ระบบต้องรองรับการจัดลำดับความเร่งด่วนของงาน |
-| E-03 | เจ้าหน้าที่ไม่สามารถเริ่มงานได้หากข้อมูลไม่ครบ | N-03 ระบบต้องเก็บข้อมูลขั้นต่ำก่อนรับแจ้ง |
-| E-04 | การแจ้งซ้ำทำให้เกิดงานซ้ำและเสียเวลา | N-04 ระบบต้องช่วยจัดการรายการแจ้งปัญหาซ้ำ |
-| E-05 | ผู้แจ้งไม่ทราบความคืบหน้าของงาน | N-05 ผู้แจ้งต้องสามารถติดตามสถานะงานได้ |
-| E-06 | ผู้บริหารใช้ข้อมูลในการวางแผน | N-06 ผู้บริหารต้องเห็นรายงานและสถิติการซ่อม |
-| E-07 | การส่งต่องานหลายหน่วยงานติดตามได้ยาก | N-07 ระบบต้องติดตามสถานะการส่งต่องานได้ |
+| Item | รายละเอียด |
+|---|---|
+| RC-ID | RC-F-05 |
+| Requirement Candidate | ระบบควรให้เจ้าหน้าที่บันทึกผลการดำเนินงานและปิดงานซ่อมได้ |
+| Current Source | Negotiation N-03 |
+| Evidence E-ID | **ยังไม่มี** |
+| Status | **Open Question / Needs Evidence** |
+| Gap | ยังไม่มี Evidence จาก Technician หรือ Building Manager ที่ยืนยันความต้องการนี้โดยตรง |
+| Next Action | เก็บ Evidence เพิ่มเติมจาก Technician / Building Manager |
+| Related Question | OQ-02: ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงานซ่อม? |
+
+> **หมายเหตุ:** RC-F-05 จะยังไม่ถือว่า Traceable จนกว่าจะมี Evidence E-ID ที่ยืนยันโดยตรง
 
 ---
 
@@ -60,9 +64,8 @@
 | OQ-ID | Question | Why it matters | Who/what can verify |
 |---|---|---|---|
 | OQ-01 | เกณฑ์ใดใช้กำหนดว่างานเป็นงานเร่งด่วน (Urgent)? | ใช้กำหนด Priority ของงานซ่อม | Technician / Building Manager |
-| OQ-02 | ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงานซ่อม? | ใช้ออกแบบ Workflow การปิดงาน | Technician / Building Manager |
+| OQ-02 | ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงานซ่อม? | ใช้ออกแบบ Workflow การปิดงาน และยืนยันที่มาของ RC-F-05 | Technician / Building Manager |
 | OQ-03 | หากพบการแจ้งปัญหาซ้ำ ระบบควรจัดการอย่างไร? | ลดงานซ้ำและเพิ่มประสิทธิภาพ | Technician |
 | OQ-04 | ผู้ใช้งานต้องการรับการแจ้งเตือนผ่านช่องทางใด? | ใช้ออกแบบการติดตามสถานะ | Student / Teacher |
 | OQ-05 | ผู้บริหารต้องการรายงานหรือสถิติประเภทใดบ้าง? | ใช้ออกแบบ Dashboard และรายงาน | Building Manager |
 | OQ-06 | กรณีส่งต่องานไปหลายหน่วยงาน ควรติดตามสถานะอย่างไร? | รองรับ Workflow การประสานงาน | Technician / Building Manager |
-| OQ-02 (note) | RC-F-05 (บันทึกผลดำเนินงาน/ปิดงาน) ยังไม่มี Evidence E-ID ใดใน Log นี้รองรับโดยตรง — ที่มาปัจจุบันคือ Negotiation N-03 เท่านั้น (`04-negotiation-record.md`) ต้องเก็บ Evidence เพิ่มจาก Technician/Manager เพื่อยืนยัน | Traceability ของ RC-F-05 ยังไม่ครบสาย Evidence → Need → RC | Technician / Building Manager |
