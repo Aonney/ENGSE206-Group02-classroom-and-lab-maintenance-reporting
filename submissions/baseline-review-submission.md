@@ -21,7 +21,7 @@
 |---:|---|---|---|:--:|
 | 1 | Backlog ที่แก้แล้ว | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md | สันติ | ☑ |
 | 2 | Traceability + Gap | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/08-validation-traceability.md | สันติ | ☑ |
-| 3 | Health Check + Cross-Review | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/tree/baseline-v1.0/evidence/week-05/baseline-review/ | บูรพา | ☑ |
+| 3 | Health Check + Cross-Review | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/evidence/week-05/baseline-review/peer-cross-review.md | บูรพา | ☑ |
 | 4 | Decision log | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/project-management/decision-log.md | ธีรนัย | ☑ |
 | 5 | Team worklog | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/project-management/team-worklog.md | ธีรนัย | ☑ |
 | 6 | Reflection รายคน | - https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210077-2.md<br>- https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210066-5.md<br>- https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210032-7.md | บูรพา | ☑ |
