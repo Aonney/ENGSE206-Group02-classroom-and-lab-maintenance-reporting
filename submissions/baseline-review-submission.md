@@ -10,7 +10,7 @@
 | Assignment ID | `W05-RBR-v1.0` |
 | Case ID / Case URL | `Case No.02 — Classroom & Laboratory Maintenance Reporting System` |
 | Baseline tag | `baseline-v1.0` |
-| Tag URL | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/releases/tag/baseline-v1.0` |
+| Tag URL | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting |
 | Submitted at | `2026-08-19 18:xx` |
 
 ---
@@ -19,12 +19,12 @@
 
 | # | ชิ้นงาน | ลิงก์ (permalink ที่ baseline-v1.0) | Owner | ✔ |
 |---:|---|---|---|:--:|
-| 1 | Backlog ที่แก้แล้ว | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md` | สันติ | ☐ |
-| 2 | Traceability + Gap | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/08-validation-traceability.md` | สันติ | ☐ |
-| 3 | Health Check + Cross-Review | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/tree/baseline-v1.0/evidence/week-05/baseline-review/` | บูรพา | ☐ |
-| 4 | Decision log | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/project-management/decision-log.md` | ธีรนัย | ☐ |
-| 5 | Team worklog | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/project-management/team-worklog.md` | ธีรนัย | ☐ |
-| 6 | Reflection รายคน | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210077-2.md`<br>`https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210066-5.md`<br>`https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210032-7.md` | บูรพา | ☐ |
+| 1 | Backlog ที่แก้แล้ว | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md | สันติ | ☑ |
+| 2 | Traceability + Gap | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/08-validation-traceability.md | สันติ | ☑ |
+| 3 | Health Check + Cross-Review | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/tree/baseline-v1.0/evidence/week-05/baseline-review/ | บูรพา | ☑ |
+| 4 | Decision log | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/project-management/decision-log.md | ธีรนัย | ☑ |
+| 5 | Team worklog | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/project-management/team-worklog.md | ธีรนัย | ☑ |
+| 6 | Reflection รายคน | - https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210077-2.md<br>- https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210066-5.md<br>- https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/feedback/15-individual-reflection-68543210032-7.md | บูรพา | ☑ |
 
 ---
 
@@ -35,9 +35,9 @@
 
 | Req ID | ลิงก์ FR/NFR (line anchor) | Evidence / Trace | Priority |
 |---|---|---|---|
-| FR-CLMRS-01 | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md?plain=1#L238` | E-01 → N-01 | Must |
-| FR-CLMRS-04 | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md?plain=1#L241` | E-05 → N-05 | Must |
-| NFR-CLMRS-01 | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md?plain=1#L247` | Stakeholder & Context Analysis | Must |
+| FR-CLMRS-01 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md?plain=1#L238 | E-01 → N-01 | Must |
+| FR-CLMRS-04 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md?plain=1#L241 | E-05 → N-05 | Must |
+| NFR-CLMRS-01 | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md?plain=1#L247 | Stakeholder & Context Analysis | Must |
 
 ---
 
@@ -45,11 +45,11 @@
 
 | # | เกณฑ์ | ผ่าน? | ลิงก์หลักฐาน |
 |---:|---|:--:|---|
-| 1 | docs/01–05 ครบและอัปเดตล่าสุด | ☑ | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/tree/baseline-v1.0/docs` |
-| 2 | ทุก Must มี Traceability ไปยัง Evidence / Need และ Stakeholder | ☑ | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md` |
-| 3 | FR/NFR ทุกข้อมีแนวทางตรวจรับหรือทดสอบ และหลีกเลี่ยงถ้อยคำกำกวม | ☑ | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md` |
-| 4 | ผ่าน Peer Cross-Review 1 รอบ | ☑ | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/tree/baseline-v1.0/evidence/week-05/baseline-review/` |
-| 5 | commit + tag `baseline-v1.0` แล้ว | ☑ | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/releases/tag/baseline-v1.0` |
+| 1 | docs/01–05 ครบและอัปเดตล่าสุด | ☑ | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/tree/baseline-v1.0/docs |
+| 2 | ทุก Must มี Traceability ไปยัง Evidence / Need และ Stakeholder | ☑ | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md |
+| 3 | FR/NFR ทุกข้อมีแนวทางตรวจรับหรือทดสอบ และหลีกเลี่ยงถ้อยคำกำกวม | ☑ | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/blob/baseline-v1.0/docs/05-requirement-backlog.md |
+| 4 | ผ่าน Peer Cross-Review 1 รอบ | ☑ | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/tree/baseline-v1.0/evidence/week-05/baseline-review/` |
+| 5 | commit + tag `baseline-v1.0` แล้ว | ☑ | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/releases/tag/baseline-v1.0 |
 
 > **หมายเหตุ:** Requirement บางข้อยังมี `Needs Follow-up` และ Open Questions
 > แต่ไม่ได้หมายความว่า Requirement เหล่านั้นถูกลบออกจาก Baseline
@@ -61,9 +61,9 @@
 
 | Member | Role | Evidence |
 |---|---|---|
-| นายสันติ ปัญญาหน้อย | Scribe / Checker | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/commits?author=Aonney` |
-| นายธีรนัย ไชยกันทะ | Facilitator / Timekeeper | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/commits?author=film1023` |
-| นายบูรพา ประทีปรัตน์ | Auditor / Checker | `https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/commits?author=Burapa2025` |
+| นายสันติ ปัญญาหน้อย | Scribe / Checker | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/commits?author=Aonney |
+| นายธีรนัย ไชยกันทะ | Facilitator / Timekeeper | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/commits?author=film1023 |
+| นายบูรพา ประทีปรัตน์ | Auditor / Checker | https://github.com/Aonney/ENGSE206-Group02-classroom-and-lab-maintenance-reporting/commits?author=Burapa2025 |
 
 ---
 
