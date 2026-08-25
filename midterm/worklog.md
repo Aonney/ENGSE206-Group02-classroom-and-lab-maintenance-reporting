@@ -6,18 +6,18 @@
 ## บทบาทในทีมวันนี้
 | สมาชิก | บทบาท (Facilitator / Scribe / Interviewer / Reporter) |
 |---|---|
-| | |
-| | |
-| | |
+| นาย สันติ ปัญญาหน้อย 68543210077-2| Facilitator |
+| นาย ธีรนัย ไชยกันทะ 68543210066-5| Scribe |
+| นาย บูรพา ประทีปรัตน์ 68543210032-7| Interviewer / Reporter|
 
 ## ใครทำอะไรในแต่ละช่วง
 | ช่วง | เวลา | สิ่งที่ทำ | ผู้รับผิดชอบหลัก |
 |---|---|---|---|
-| Setup | | เปิด branch, สร้างโฟลเดอร์ | |
-| Frame + Scope | | | |
-| AI Interview | | | |
-| Analyze | | | |
-| Commit + PR | | | |
+| Setup | | เปิด branch, สร้างโฟลเดอร์ |สันติ|
+| Frame + Scope |13:00 - 13:15 | วิเคราะห์โจทย์ Core Twist กำหนด In/Out Scope และระบุ Stakeholder|สันติ |
+| AI Interview |13:15 - 13:30|พิมพ์ Prompt สัมภาษณ์ AI ในบทบาท พร้อมคัดแยก Evidence / จับผิด AI| บูรพา|
+| Analyze | |นำข้อมูลมาเขียน Requirement 4 ข้อ พร้อมจัด Priority (MoSCoW) และทำ Mini Twist |ธีรนัย|
+| Commit + PR | | ตรวจสอบความถูกต้อง จัดหน้าเอกสาร Commit โค้ด และเปิด Pull Request| สันติ|
 
 ## Peer contribution (แต่ละคนกรอกของตัวเอง)
 > ให้คะแนนเพื่อนร่วมกลุ่มการมีส่วนร่วม 1–5 (ไม่รวมตัวเอง) พร้อมเหตุผลสั้น 1 บรรทัด
