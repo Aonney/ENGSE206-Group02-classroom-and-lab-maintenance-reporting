@@ -116,7 +116,8 @@
 | Related Requirements | FR-CLMRS-06 |
 
 ---
-
+![Use Case Diagram](../diagrams/use-case/Use%20Case%20Diagram%20V2.png)
+---
 ## 5. Requirement Models / Diagrams
 
 - Use Case Diagram: [link](../diagrams/use-case/README.md)
