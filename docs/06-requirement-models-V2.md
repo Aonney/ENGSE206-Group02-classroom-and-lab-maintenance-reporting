@@ -4,7 +4,7 @@
 
 ---
 
-## 0. Baseline Functional Requirements (นี้คือ Requirements ต้นแบบที่เลือกมาใช้)
+## 0. Baseline Functional Requirements (นี้คือ Requirements ต้นแบบที่เลือกมาใช้ 6 Req)
 
 | Req ID | Requirement Statement (ข้อกำหนดทางระบบ) | Type | Priority | Acceptance Measure Target |
 |---|---|---|---|---|
@@ -16,7 +16,7 @@
 
 ---
 
-## 1. User Stories (Core Scope)
+## 1. User Stories (Core Scope มี 6 US)
 
 | US-ID | Role | Goal | Value | User Story | Priority | Linked FR / Req ID | Acceptance Criteria |
 |---|---|---|---|---|---|---|---|
@@ -31,7 +31,7 @@
 
 ---
 
-## 2. Acceptance Criteria
+## 2. Acceptance Criteria (8 AC)
 
 ### AC-01 — การส่งคำขอแจ้งซ่อมสำเร็จ (FR-CLMRS-01)
 - **Given** ผู้ใช้งาน (นักศึกษา/อาจารย์ผู้สอน) เข้าสู่ระบบ CLMRS และอยู่ในหน้า "แจ้งซ่อมอุปกรณ์/ห้องเรียน"
@@ -70,7 +70,7 @@
 
 ---
 
-## 3. Use Case List (Core Scope)
+## 3. Use Case List (Core Scope 5 UC)
 
 | ID | Use Case | Primary Actor | Goal | Related FR / Req ID |
 |---|---|---|---|---|
