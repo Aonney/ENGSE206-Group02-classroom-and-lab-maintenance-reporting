@@ -238,6 +238,8 @@
 | Postconditions | ผู้ใช้งานเข้าถึงข้อมูลและฟังก์ชันตามสิทธิ์ |
 | Related Requirements | NFR-CLMRS-01 |
 
+![Use Case Diagram](../diagrams/use-case/Use%20Case%20Diagram%20V2.png)
+
 ---
 
 ## 5. Requirement Models / Diagrams
