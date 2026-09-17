@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="หน้า-1" id="GPAsYsTS8agYEgQv0JuS">
+    <mxGraphModel dx="614" dy="885" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" value="Activity Diagram: กระบวนการแจ้งซ่อมและดำเนินการระบบ CLMRS" vertex="1">
+          <mxGeometry height="30" width="400" x="380" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pool" parent="1" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=0;horizontal=0;horizontalChildWidth=1;whiteSpace=wrap;fillColor=none;strokeColor=#404040;" value="" vertex="1">
+          <mxGeometry height="720" width="1000" x="80" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_reporter" parent="pool" style="swimlane;html=1;startSize=40;horizontal=0;fillColor=#e1f5fe;strokeColor=#0288d1;fontStyle=1;" value="ผู้แจ้งซ่อม&#xa;(Student / Teacher)" vertex="1">
+          <mxGeometry height="180" width="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="node_start" parent="lane_reporter" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="70" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="act_fill_form" parent="lane_reporter" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#0288d1;" value="กรอกข้อมูลฟอร์มแจ้งซ่อม&#xa;(อาคาร, ห้อง, รายละเอียด)" vertex="1">
+          <mxGeometry height="50" width="140" x="140" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_view_ticket" parent="lane_reporter" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#0288d1;" value="รับเลข Ticket ID &amp;&#xa;ติดตามสถานะผ่าน Dashboard" vertex="1">
+          <mxGeometry height="50" width="160" x="420" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="node_end" parent="lane_reporter" style="ellipse;html=1;shape=doubleEllipse;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="920" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_system" parent="pool" style="swimlane;html=1;startSize=40;horizontal=0;fillColor=#e8f5e9;strokeColor=#388e3c;fontStyle=1;" value="ระบบ CLMRS&#xa;(System)" vertex="1">
+          <mxGeometry height="200" width="1000" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_validate" parent="lane_system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#388e3c;" value="ตรวจสอบ&#xa;ข้อมูลบังคับ?" vertex="1">
+          <mxGeometry height="70" width="100" x="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="act_create_ticket" parent="lane_system" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#388e3c;" value="บันทึกข้อมูล &amp;&#xa;สร้าง Ticket ID" vertex="1">
+          <mxGeometry height="50" width="120" x="300" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_auto_prio" parent="lane_system" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#388e3c;" value="จัดลำดับงานอัตโนมัติ&#xa;(Urgent / Normal Queue)" vertex="1">
+          <mxGeometry height="50" width="140" x="440" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_notify" parent="lane_system" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#388e3c;" value="ส่งการแจ้งเตือนเปลี่ยนสถานะ&#xa;(Notification)" vertex="1">
+          <mxGeometry height="50" width="150" x="750" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_tech" parent="pool" style="swimlane;html=1;startSize=40;horizontal=0;fillColor=#fff3e0;strokeColor=#f57c00;fontStyle=1;" value="เจ้าหน้าที่เทคนิค&#xa;(Technician)" vertex="1">
+          <mxGeometry height="180" width="1000" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tech_review" parent="lane_tech" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#f57c00;" value="รับงาน &amp; ตรวจสอบงานซ้ำ" vertex="1">
+          <mxGeometry height="50" width="140" x="440" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act_tech_repair" parent="lane_tech" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#f57c00;" value="ดำเนินการซ่อมแซม / บันทึกผลการดำเนินงาน" vertex="1">
+          <mxGeometry height="50" width="150" x="610" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_verifier" parent="pool" style="swimlane;html=1;startSize=40;horizontal=0;fillColor=#f3e5f5;strokeColor=#7b1fa2;fontStyle=1;" value="ผู้ยืนยันการปิดงาน&#xa;(Work Verifier)" vertex="1">
+          <mxGeometry height="160" width="1000" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_verify" parent="lane_verifier" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b1fa2;" value="ตรวจสอบ&#xa;ผลการซ่อม?" vertex="1">
+          <mxGeometry height="70" width="100" x="635" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act_close_work" parent="lane_verifier" style="html=1;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#7b1fa2;" value="อนุมัติปิดงานซ่อม&#xa;(Status: Closed)" vertex="1">
+          <mxGeometry height="50" width="130" x="760" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="pool" source="node_start" target="act_fill_form">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="pool" source="act_fill_form" target="dec_validate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="pool" source="dec_validate" target="act_fill_form" value="ไม่ครบ (Show Error)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="pool" source="dec_validate" target="act_create_ticket" value="ครบถ้วน">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="pool" source="act_create_ticket" target="act_view_ticket">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="pool" source="act_create_ticket" target="act_auto_prio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="pool" source="act_auto_prio" target="act_tech_review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="pool" source="act_tech_review" target="act_tech_repair">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="pool" source="act_tech_repair" target="dec_verify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="pool" source="dec_verify" target="act_tech_repair" value="ต้องแก้ไขเพิ่ม">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="pool" source="dec_verify" target="act_close_work" value="ผ่านเกณฑ์">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="pool" source="act_close_work" target="act_notify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="pool" source="act_notify" target="node_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
