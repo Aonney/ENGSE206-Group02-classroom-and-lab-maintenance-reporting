@@ -4,6 +4,18 @@
 
 ---
 
+## 0. Baseline Functional Requirements (นี้คือ Requirements ต้นแบบที่เลือกมาใช้)
+
+| Req ID | Requirement Statement (ข้อกำหนดทางระบบ) | Type | Priority | Acceptance Measure Target |
+|---|---|---|---|---|
+| **FR-CLMRS-01** | ระบบต้องให้ผู้ใช้งานสามารถแจ้งปัญหาอุปกรณ์หรือห้องเรียน/ห้องปฏิบัติการที่ชำรุดผ่านช่องทางมาตรฐานของระบบได้ | Functional | **Must** | บันทึกคำขอและแสดงเลข Ticket ID บนหน้าจอภายใน **3 วินาที** |
+| **FR-CLMRS-02** | ระบบต้องให้ผู้แจ้งบันทึกข้อมูลที่จำเป็น เช่น อาคาร ห้อง รายละเอียดปัญหา และข้อมูลประกอบที่เกี่ยวข้องก่อนส่งคำขอ | Functional | **Must** | บังคับกรอก 4 ฟิลด์หลัก (*) หากไม่ครบต้องบล็อกการส่งและแสดง Pop-up เตือนภายใน **1 วินาที** |
+| **FR-CLMRS-03** | ระบบต้องสนับสนุนการจัดลำดับความสำคัญของงานซ่อมตามระดับความเร่งด่วนที่กำหนด | Functional | **Must** | งานที่เข้าเกณฑ์ Urgent ถูกจัดขึ้นอันดับแรกในคิวงานของเจ้าหน้าที่โดยอัตโนมัติ |
+| **FR-CLMRS-04** | ระบบต้องให้ผู้ใช้งานสามารถตรวจสอบสถานะของรายการแจ้งซ่อมของตนเองได้ | Functional | **Must** | หน้า Dashboard แสดงประวัติและสถานะปัจจุบัน ดึงข้อมูลเสร็จสิ้นภายใน **2 วินาที** |
+| **FR-CLMRS-06** | ระบบควรให้เจ้าหน้าที่บันทึกผลการดำเนินงานและปิดงานซ่อม โดยมีผู้รับผิดชอบหรือผู้ยืนยันตาม Workflow ที่กำหนด | Functional + Business Rule | **Should** | มีชื่อผู้ดำเนินการและผู้ยืนยันการปิดงานตาม Workflow ก่อนเปลี่ยนสถานะเป็น "ปิดงาน" |
+
+---
+
 ## 1. User Stories (Core Scope)
 
 | US-ID | Role | Goal | Value | User Story | Priority | Linked FR / Req ID | Acceptance Criteria |
@@ -116,9 +128,10 @@
 | Related Requirements | FR-CLMRS-06 |
 
 ---
-![Use Case Diagram](../diagrams/use-case/Use%20Case%20Diagram%20V2.png)
----
+
 ## 5. Requirement Models / Diagrams
+
+![Use Case Diagram](../diagrams/use-case/Use%20Case%20Diagram%20V2.png)
 
 - Use Case Diagram: [link](../diagrams/use-case/README.md)
 - Activity Diagram: [link](../diagrams/activity/README.md)
