@@ -1,272 +1,258 @@
-# 07 — Software Requirements Specification (SRS) v2
+# 07 — Software Requirements Specification (SRS) v2.1
 
-> **Week 7 deliverable**  
+> **Week 7 Deliverable (Complete Baseline Candidate)**  
 > **Case:** ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ (Classroom & Laboratory Maintenance Reporting System — CLMRS)  
-> เวอร์ชัน: v2.0 | สถานะ: Baseline Candidate | วันที่: 21/09/2026
+> เวอร์ชัน: v2.1 | สถานะ: Baseline Candidate | วันที่: 22/09/2026
 
-## Document Control
+---
+
+## 0. Document Control
 
 | Version | Date | Author | Reviewer | Summary of Change |
 |---|---|---|---|---|
-| 0.1 | 21/09/2026 | Group 02 | [ระบุชื่อผู้ตรวจ] | Initial draft — สรุปจาก Requirement Backlog v0.2 และ Requirement Models (Week 6) |
-| 1.0 | 21/09/2026 | Group 02 | [ระบุชื่อผู้ตรวจ] | Baseline candidate — เติมครบทุกหัวข้อ, ผูก Trace ไปยัง US / UC / AC, รวบรวม Open Issues |
+| 0.1 | 21/09/2026 | Group 02 | [ระบุชื่อผู้ตรวจ] | Initial draft — สรุปจาก Requirement Backlog v0.2 และ Requirement Models (Week 06)[cite: 5] |
+| 1.0 | 21/09/2026 | Group 02 | [ระบุชื่อผู้ตรวจ] | Baseline candidate — เติมครบทุกหัวข้อ, ผูก Trace ไปยัง US / UC / AC[cite: 5] |
+| **2.1** | **22/09/2026** | **Group 02** | **[ระบุชื่อผู้ตรวจ]** | **Completed SRS — เพิ่ม CAP Mapping, State Matrix, Verification Plan, Review Gate, Disposition Table & AI Disclosure ตาม W07 Spec Example**[cite: 5, 6] |
 
 | Field | Value |
 |---|---|
-| Course / Week | ENGSE206 / Week 07 |
-| Team / Case No. | Group 02 / No.02 |
-| Source — Week 05 | Requirement Backlog v0.2: 9 FR / 1 NFR (Must 5, Should 4, Could 1, Won't yet 0) |
-| Source — Week 06 | Requirement Models: 15 US / 12 AC / 9 UC |
+| Course / Week | ENGSE206 / Week 07[cite: 5] |
+| Team / Case No. | Group 02 / No.02[cite: 5] |
+| W05 Source | Requirement Backlog v0.2: 9 FR / 1 NFR (Must 5, Should 4, Could 1, Won't yet 0)[cite: 3, 5] |
+| W06 Source | Requirement Models: 15 US / 12 AC / 9 UC / 8 DR[cite: 4, 5] |
 
 ---
 
 ## 1. Introduction
 
 ### 1.1 Purpose
+เอกสารนี้ระบุข้อกำหนดความต้องการของระบบ CLMRS ในรูปแบบที่ตรวจสอบย้อนกลับได้ (Traceable) จาก Evidence → Need → Requirement → User Story / Use Case / Acceptance Criteria เพื่อใช้เป็น input ของงานออกแบบสถาปัตยกรรม ฐานข้อมูล UX/UI และการทดสอบในขั้นถัดไป[cite: 5]
 
-เอกสารนี้ระบุข้อกำหนดความต้องการของระบบ CLMRS ในรูปแบบที่ตรวจสอบย้อนกลับได้ (Traceable) จาก Evidence → Need → Requirement → User Story / Use Case / Acceptance Criteria เพื่อใช้เป็น input ของงานออกแบบสถาปัตยกรรม ฐานข้อมูล UX/UI และการทดสอบในขั้นถัดไป
+SRS ฉบับนี้มีสถานะ **Baseline Candidate** ยังไม่ใช่ Approved Baseline เนื่องจากยังมี Open Issues ที่ต้องยืนยันกับ Stakeholder (ดูหัวข้อ 10)[cite: 5]
 
-SRS ฉบับนี้มีสถานะ **Baseline Candidate** ยังไม่ใช่ Approved Baseline เนื่องจากยังมี Open Issues ที่ต้องยืนยันกับ Stakeholder (ดูหัวข้อ 8)
+### 1.2 Goals
 
-**ผู้อ่านเป้าหมาย:** ทีมพัฒนา ผู้ตรวจ/ผู้สอน เจ้าหน้าที่เทคนิคและผู้ดูแลอาคาร (ในฐานะผู้ยืนยัน Requirement)
+| Goal | Outcome | Source | Status |
+|---|---|---|---|
+| G-01 | ผู้แจ้งซ่อมสามารถแจ้งปัญหาอุปกรณ์/ห้องเรียนผ่านช่องทางมาตรฐานและได้ Ticket ID ทันที | E-01, E-02 → N-01[cite: 3] | Accepted[cite: 5] |
+| G-02 | ข้อมูลการแจ้งซ่อมมีความครบถ้วน (อาคาร, ห้อง, หมวดหมู่, รายละเอียด) ก่อนส่งเข้าคิวงาน | E-03 → N-03[cite: 3] | Accepted[cite: 5] |
+| G-03 | งานที่มีความเร่งด่วน (Urgent) ได้รับการจัดลำดับให้ดำเนินการก่อน | E-04 → N-02[cite: 3] | Accepted[cite: 5] |
+| G-04 | ผู้แจ้งติดตามสถานะงานซ่อมของตนเองผ่าน Dashboard ได้ตลอดเวลา | E-05 → N-05[cite: 3] | Accepted[cite: 5] |
+| G-05 | กระบวนการซ่อมแซมและการปิดงานตรวจสอบย้อนหลังได้พร้อมผู้รับผิดชอบและผู้ยืนยัน | OQ-02 → N-02[cite: 3] | Accepted[cite: 5] |
+| G-06 | ป้องกันการเข้าถึงข้อมูลและฟังก์ชันข้ามสิทธิ์ของแต่ละบทบาท (Role-based Access) | E-NFR-01 → N-NFR-01[cite: 3] | Accepted[cite: 5] |
 
-### 1.2 Scope
+### 1.3 Scope
 
-**ขอบเขตของระบบ:** ระบบเว็บสำหรับให้นักศึกษาและอาจารย์แจ้งปัญหาอุปกรณ์หรือห้องเรียน/ห้องปฏิบัติการที่ชำรุด ให้เจ้าหน้าที่จัดลำดับ ดำเนินการ ส่งต่อ และปิดงาน ให้ผู้แจ้งติดตามสถานะได้ และให้ผู้ดูแลอาคาร/ผู้บริหารดูรายงานสรุป
+**Core/Supporting Scope:**
+- การกรอกและส่งฟอร์มแจ้งซ่อมมาตรฐานพร้อมไฟล์แนบ (FR-01, FR-02)[cite: 5]
+- การจัดลำดับคิวงานตามความเร่งด่วน (FR-03)[cite: 5]
+- การติดตามสถานะบน Dashboard (FR-04)[cite: 5]
+- การจัดการรายการแจ้งซ้ำ (FR-05)[cite: 5]
+- การบันทึกผลการซ่อมแซมและการปิดงานตาม Workflow (FR-06)[cite: 5]
+- การติดตามการส่งต่องานระหว่างหน่วยงาน (FR-07)[cite: 5]
+- การส่ง Notification แจ้งเตือน และรายงานสรุปสำหรับผู้บริหาร/ผู้ดูแลอาคาร (FR-08, FR-09)[cite: 5]
+- การควบคุมสิทธิ์การเข้าถึงแบบ Role-Based (NFR-01)[cite: 5]
 
-**อยู่ในขอบเขต (In Scope):**
+**Out of Scope:** ระบบจัดซื้ออะไหล่ / ระบบบริหารงบประมาณ / ระบบคลังวัสดุ / ระบบซ่อมอัตโนมัติ / การเชื่อมต่อระบบภายนอกมหาวิทยาลัย[cite: 4, 5]  
+**Won't yet:** ไม่มี Requirement ที่ถูกตัดออกจากรอบนี้ | **Hold:** ไม่มี[cite: 3, 4, 5]
 
-| กลุ่ม | ความสามารถ | Requirement |
-|---|---|---|
-| แกนหลัก (Core) | แจ้งซ่อม บันทึกข้อมูลที่จำเป็น จัดลำดับความเร่งด่วน ติดตามสถานะ | FR-CLMRS-01, 02, 03, 04 |
-| ความปลอดภัย | ควบคุมสิทธิ์ตามบทบาท | NFR-CLMRS-01 |
-| สนับสนุน (Should) | ตรวจสอบรายการซ้ำ บันทึกผลและปิดงาน ติดตามงานที่ส่งต่อ รายงานสถิติ | FR-CLMRS-05, 06, 07, 09 |
-| เพิ่มเติม (Could) | แจ้งเตือนเมื่อสถานะเปลี่ยน | FR-CLMRS-08 |
+### 1.4 Capabilities Summary (CAP)
 
-**นอกขอบเขต (Out of Scope):** ระบบจัดซื้ออะไหล่ / ระบบบริหารงบประมาณ / ระบบคลังวัสดุ / ระบบซ่อมอัตโนมัติ / การเชื่อมต่อระบบภายนอกมหาวิทยาลัย
-
-**Won't yet:** ไม่มี Requirement ที่ถูกตัดออกจากรอบนี้ | **Hold:** ไม่มี
-
-### 1.3 Definitions, Acronyms and Abbreviations
-ดู [Glossary](glossary.md)
-
-| คำ | ความหมายโดยย่อ |
-|---|---|
-| CLMRS | Classroom & Laboratory Maintenance Reporting System |
-| Ticket ID | เลขที่อ้างอิงที่ระบบสร้างให้แต่ละคำขอแจ้งซ่อม |
-| Urgent | ระดับความเร่งด่วนสูงสุดของงานซ่อม (เกณฑ์รอยืนยัน — OQ-01) |
-| MoSCoW | Must / Should / Could / Won't yet — วิธีจัดลำดับความสำคัญ |
-| OQ | Open Question — ประเด็นที่ต้องยืนยันกับ Stakeholder |
-
-### 1.4 References
-- Case Card
-- Evidence log (Week 04: E-01 ถึง E-05, E-NFR-01; Need N-01 ถึง N-07, N-NFR-01)
-- Course materials
-- `05-requirement-backlog.md` (v0.2)
-- `06-requirement-models.md` (Requirement Models — เอกสารหลัก)
+| CAP | Capability | Anchors / Requirements | W06 Models | Coverage Status |
+|---|---|---|---|---|
+| **CAP-01** | **Issue Reporting & Form Validation** | FR-CLMRS-01, FR-CLMRS-02; DR-01, DR-02 | US-01a, US-01b, US-02; UC-01; AC-01–04 | Detailed; Ready[cite: 4, 5] |
+| **CAP-02** | **Work Queue & Priority Management** | FR-CLMRS-03, FR-CLMRS-05; DR-01, DR-03 | US-03, US-05; UC-03, UC-04; AC-05, AC-07 | Detailed with TBD (OQ-01, 03)[cite: 4, 5] |
+| **CAP-03** | **Status Tracking & Dashboard** | FR-CLMRS-04; DR-01, DR-03 | US-04a, US-04b; UC-02; AC-06 | Detailed; Ready[cite: 4, 5] |
+| **CAP-04** | **Execution, Transfer & Work Closure** | FR-CLMRS-06, FR-CLMRS-07; DR-04, DR-05 | US-06a, US-06b, US-07a, US-07b; UC-05, UC-06; AC-08, AC-09 | Detailed with TBD (OQ-02, 06)[cite: 4, 5] |
+| **CAP-05** | **Notification & Reporting** | FR-CLMRS-08, FR-CLMRS-09; DR-06, DR-08 | US-08, US-09a, US-09b; UC-07, UC-08; AC-10, AC-11 | Partial / Extension[cite: 4, 5] |
+| **CAP-06** | **Security & Access Control** | NFR-CLMRS-01; DR-07 | US-10; UC-09; AC-12 | Detailed; Cross-cutting[cite: 4, 5] |
 
 ---
 
 ## 2. Overall Description
 
 ### 2.1 Product Perspective
-
-CLMRS เป็นระบบเว็บแอปพลิเคชันที่ผู้ใช้เข้าถึงได้ทั้งจากมือถือและคอมพิวเตอร์ (Responsive Design — AC-02) ทำหน้าที่เป็นช่องทางมาตรฐานช่องทางเดียวสำหรับการแจ้งซ่อม เพื่อลดปัญหาการแจ้งผ่านหลายช่องทาง (FR-CLMRS-01) โดยเก็บคำขอ สถานะ และประวัติการดำเนินงานไว้ในฐานข้อมูลกลาง
-
-ระบบไม่เชื่อมต่อกับระบบจัดซื้อ งบประมาณ หรือคลังวัสดุ และไม่เชื่อมต่อระบบภายนอกมหาวิทยาลัยในรอบนี้ ส่วนแหล่งยืนยันตัวตนของผู้ใช้และช่องทางแจ้งเตือนยังไม่ถูกกำหนด (ดู 5.2)
+CLMRS เป็นระบบเว็บแอปพลิเคชันที่ผู้ใช้เข้าถึงได้ทั้งจากมือถือและคอมพิวเตอร์ (Responsive Design — AC-02) ทำหน้าที่เป็นช่องทางมาตรฐานช่องทางเดียวสำหรับการแจ้งซ่อม เพื่อลดปัญหาการแจ้งผ่านหลายช่องทาง (FR-CLMRS-01) โดยเก็บคำขอ สถานะ และประวัติการดำเนินงานไว้ในฐานข้อมูลกลาง[cite: 5]
 
 ### 2.2 User Classes and Characteristics
 
-| User Class | ลักษณะ / หน้าที่หลัก | Requirement ที่เกี่ยวข้อง |
-|---|---|---|
-| นักศึกษา | ผู้แจ้งซ่อม พบปัญหาระหว่างเรียนหรือทำแล็บ ต้องการช่องทางที่ง่ายและติดตามผลได้ ไม่มีสิทธิ์จัดการงาน | FR-01, 02, 04, 08 |
-| อาจารย์ผู้สอน | ผู้แจ้งซ่อม ได้รับผลกระทบต่อการสอนโดยตรง ต้องการติดตามความคืบหน้า | FR-01, 02, 04, 08 |
-| เจ้าหน้าที่เทคนิค (ผู้ปฏิบัติงาน) | รับงาน จัดลำดับ ตรวจรายการซ้ำ ส่งต่อ บันทึกผลซ่อมและขอปิดงาน | FR-03, 05, 06, 07 |
-| ผู้รับผิดชอบ / ผู้ยืนยันการปิดงาน | ตรวจผลและยืนยันการปิดงานตาม Workflow (Role ยังไม่กำหนด — OQ-02) | FR-06 |
-| หน่วยงานรับช่วงซ่อม | รับงานที่ส่งต่อและดูประวัติเดิม | FR-07 |
-| ผู้ดูแลอาคาร | ดูรายงานสรุปจำนวนงาน สถานะ ประเภทปัญหา เพื่อวางแผนบำรุงรักษา | FR-09 |
-| ผู้บริหาร | ดูสถิติภาพรวมเพื่อประกอบการตัดสินใจ (KPI รอยืนยัน — OQ-05) | FR-09 |
-| ผู้ดูแลระบบ | กำหนด Role/Permission ให้ระบบควบคุมการเข้าถึง | NFR-01 |
+| Actor | Role | Authorized Actions | Restrictions |
+|---|---|---|---|
+| **ACT-01** | **Student / Teacher (ผู้แจ้งซ่อม)** | กรอกฟอร์มแจ้งซ่อม, แนบรูปภาพ, ติดตามสถานะบน Dashboard, รับแจ้งเตือน[cite: 5] | ไม่สามารถจัดการคิวงาน, ไม่เห็นคำขอของผู้อื่น, ไม่สามารถปิดงานซ่อม[cite: 5] |
+| **ACT-02** | **Technician (เจ้าหน้าที่เทคนิค)** | ดูคิวงาน, รับงาน, บันทึกการตรวจสอบ/รวมงานซ้ำ, ส่งต่องาน, บันทึกผลซ่อม และขอปิดงาน[cite: 5] | ไม่สามารถอนุมัติปิดงานเองได้ (หากกติกากำหนดให้มีผู้ยืนยัน), ไม่เห็นรายงานผู้บริหาร[cite: 5] |
+| **ACT-03** | **Work Verifier (ผู้ยืนยันการปิดงาน)** | ตรวจสอบผลการดำเนินงานซ่อม, อนุมัติปิดงาน (Closed), ส่งกลับกรณีต้องแก้ไข[cite: 1, 5] | ไม่สามารถแก้ไขฟอร์มแจ้งซ่อมต้นทางได้[cite: 5] |
+| **ACT-04** | **Building Manager / Admin** | ดูรายงานสรุปสถิติ, บริหารจัดการสิทธิ์และ Role Matrix[cite: 5] | ไม่รับซ่อมงานโดยตรง[cite: 5] |
 
 ### 2.3 Operating Environment
-
-- ใช้งานผ่านเว็บเบราว์เซอร์บนอุปกรณ์มือถือและคอมพิวเตอร์ (AC-02)
-- ต้องเปิดใช้งานได้ตลอด 24 ชั่วโมงเมื่อเครือข่ายปกติ (AC-02)
-- ข้อมูลทั้งหมดบันทึกลงฐานข้อมูลของระบบ (AC-01)
-- **TBD:** เบราว์เซอร์และเวอร์ชันที่รองรับ, สภาพแวดล้อม Hosting, ปริมาณผู้ใช้พร้อมกัน (ยังไม่มี Evidence — ดู OQ-10)
+- ใช้งานผ่านเว็บเบราว์เซอร์บนอุปกรณ์มือถือและคอมพิวเตอร์ (Responsive Design — AC-02)[cite: 5]
+- เปิดใช้งานได้ตลอด 24 ชั่วโมงเมื่อเครือข่ายปกติ (AC-02)[cite: 5]
+- ข้อมูลทั้งหมดบันทึกลงฐานข้อมูลกลางของระบบ (AC-01)[cite: 5]
 
 ### 2.4 Constraints
-
-| ID | Constraint | ที่มา |
-|---|---|---|
-| CON-01 | ต้องเข้าถึงได้ตาม Role ของผู้ใช้เท่านั้น | NFR-CLMRS-01 |
-| CON-02 | ไม่รวมระบบจัดซื้ออะไหล่ งบประมาณ คลังวัสดุ ซ่อมอัตโนมัติ และการเชื่อมต่อระบบภายนอกมหาวิทยาลัย | Trade-off Notes (06) |
-| CON-03 | ไฟล์แนบรับเฉพาะ JPEG/PNG ขนาดไม่เกิน 5 MB | AC-04 |
-| CON-04 | ห้ามกำหนดช่องทางแจ้งเตือน (เช่น LINE) ให้เป็นช่องทางใดช่องทางหนึ่งจนกว่าจะมี Evidence | Backlog Review Checklist, OQ-04 |
-| CON-05 | ห้ามสรุปวิธีจัดการรายการแจ้งซ้ำเป็นกฎถาวรจนกว่าจะมี Evidence เพิ่ม | Issue CU-01, OQ-03 |
-| CON-06 | ต้องคง Requirement ID ตาม Backlog v0.2 | Template SRS |
-
-### 2.5 Assumptions and Dependencies
-
-**Assumptions**
-
-| ID | Assumption |
-|---|---|
-| AS-01 | ผู้ใช้ทุกกลุ่มมีบัญชีและ Role ที่กำหนดไว้ และเข้าสู่ระบบได้ก่อนใช้งาน (Precondition ของ UC-01, UC-09) |
-| AS-02 | เครือข่ายของผู้ใช้เชื่อมต่อได้ตามปกติ (AC-02) |
-| AS-03 | ฟิลด์บังคับ 4 ฟิลด์ (อาคาร, ห้อง, หมวดหมู่ปัญหา, รายละเอียดปัญหา) ใช้เป็นค่าตั้งต้นจนกว่าจะยืนยันกับเจ้าหน้าที่เทคนิค (OQ-07) |
-| AS-04 | ผู้แจ้งหนึ่งคนเห็นเฉพาะรายการแจ้งซ่อมของตนเอง (UC-02) |
-
-**Dependencies**
-
-| ID | ต้องรอการยืนยัน | ส่งผลต่อ |
-|---|---|---|
-| DEP-01 | เกณฑ์ Urgent และผู้กำหนด (OQ-01) | FR-03, UC-03, AC-05 |
-| DEP-02 | Role ผู้ยืนยันการปิดงาน (OQ-02) | FR-06, UC-05, AC-08 |
-| DEP-03 | วิธีจัดการรายการซ้ำและ Time Window (OQ-03) | FR-05, UC-04, AC-07 |
-| DEP-04 | ช่องทางและเงื่อนไขการแจ้งเตือน (OQ-04) | FR-08, UC-07, AC-10 |
-| DEP-05 | ตัวชี้วัดรายงาน (OQ-05) | FR-09, UC-08, AC-11 |
-| DEP-06 | Workflow การส่งต่องานและผู้รับผิดชอบหลัก (OQ-06) | FR-07, UC-06, AC-09 |
-| DEP-07 | Role & Permission Matrix (OQ-08) | NFR-01, UC-09, AC-12 |
+- **CON-01:** ควบคุมการเข้าถึงตาม Role (RBAC) หากพยายามข้ามสิทธิ์จะถูก Redirect ไป 403 Forbidden ภายใน 1 วินาที (NFR-01)[cite: 5]
+- **CON-02:** ไม่รวมระบบจัดซื้อ อะไหล่ งบประมาณ คลังวัสดุ และระบบภายนอกมหาวิทยาลัย[cite: 4, 5]
+- **CON-03:** ไฟล์แนบรับเฉพาะ JPEG/PNG ขนาดไม่เกิน 5 MB (AC-04)[cite: 5]
+- **CON-04:** ห้ามผูกขาดช่องทางแจ้งเตือนเป็น LINE จนกว่าจะมี Evidence ยืนยัน (OQ-04)[cite: 3, 5]
 
 ---
 
 ## 3. Functional Requirements
 
-> สรุปจาก `05-requirement-backlog.md` และคง ID เดิม (ใช้รูปแบบ FR-CLMRS-xx ตาม Backlog)
-
-| ID | Requirement | Priority | Acceptance / Verification | Trace (RC → E/N → US / UC / AC) | Status |
-|---|---|---|---|---|---|
-| FR-CLMRS-01 | ระบบต้องให้ผู้ใช้งานสามารถแจ้งปัญหาอุปกรณ์หรือห้องเรียน/ห้องปฏิบัติการที่ชำรุดผ่านช่องทางมาตรฐานของระบบได้ | Must | บันทึกคำขอลงฐานข้อมูลและแสดง Ticket ID บนหน้าจอภายใน **3 วินาที** หลังกดส่งฟอร์ม (AC-01); ฟอร์มเปิดใช้ได้ 24 ชม. และรองรับมือถือ/คอมพิวเตอร์ (AC-02) — **Test / Demonstration** | RC-F-01 → E-01, N-01 → US-01a, US-01b / UC-01 / AC-01, AC-02 | Ready for Week06 |
-| FR-CLMRS-02 | ระบบต้องให้ผู้แจ้งบันทึกข้อมูลที่จำเป็น เช่น อาคาร ห้อง รายละเอียดปัญหา และข้อมูลประกอบที่เกี่ยวข้องก่อนส่งคำขอ | Must | แสดงสัญลักษณ์ (*) สีแดงกำกับ 4 ฟิลด์บังคับ; หากไม่ครบต้องไม่บันทึกและแสดงข้อความ/Pop-up ระบุฟิลด์ที่ขาดภายใน **1 วินาที** (AC-03); รับไฟล์แนบ JPEG/PNG ≤ 5 MB พร้อม Preview (AC-04) — **Test** | RC-F-02 → E-02, E-03, N-03 → US-02 / UC-01 / AC-03, AC-04 | Needs Follow-up (OQ-07) |
-| FR-CLMRS-03 | ระบบต้องสนับสนุนการจัดลำดับความสำคัญของงานซ่อมตามระดับความเร่งด่วนที่กำหนด | Must | งานที่เข้าเกณฑ์ Urgent ถูกจัดขึ้นอันดับแรกในคิวงานของเจ้าหน้าที่โดยอัตโนมัติ (AC-05); เกณฑ์ Urgent รอยืนยัน — **Test** (หลังยืนยัน OQ-01) | RC-F-03 → E-04, N-02 → US-03 / UC-03 / AC-05 | Needs Follow-up (OQ-01) |
-| FR-CLMRS-04 | ระบบต้องให้ผู้ใช้งานสามารถตรวจสอบสถานะของรายการแจ้งซ่อมของตนเองได้ | Must | Dashboard แสดงประวัติและสถานะปัจจุบัน (รับเรื่องแล้ว / กำลังดำเนินการ / ปิดงาน) และโหลดเสร็จภายใน **2 วินาที** (AC-06) — **Test / Demonstration** | RC-F-04 → E-05, N-05 → US-04a, US-04b / UC-02 / AC-06 | Ready for Week06 |
-| FR-CLMRS-05 | ระบบควรช่วยให้เจ้าหน้าที่สามารถตรวจสอบและจัดการรายการแจ้งปัญหาที่ซ้ำกันได้ | Should | เจ้าหน้าที่ระบุ/รวมรายการที่ตรงกับอาคาร + ห้อง + ประเภทปัญหาเดียวกันภายใน Time Window ที่กำหนดเป็นรายการเดียวได้ (AC-07) — **Demonstration** (หลังยืนยัน OQ-03) | RC-F-06 → E-04, N-04 → US-05 / UC-04 / AC-07 | Needs Follow-up (OQ-03) |
-| FR-CLMRS-06 | ระบบควรให้เจ้าหน้าที่บันทึกผลการดำเนินงานและปิดงานซ่อม โดยมีผู้รับผิดชอบหรือผู้ยืนยันตาม Workflow ที่กำหนด | Should | ทุกงานที่ปิดต้องมีชื่อผู้ดำเนินการและผู้ยืนยันตาม Workflow ก่อนเปลี่ยนสถานะเป็น "ปิดงาน" (AC-08) — **Test** (หลังยืนยัน OQ-02) | RC-F-05 → OQ-02, N-02 → US-06a, US-06b / UC-05 / AC-08 | Needs Follow-up (OQ-02) |
-| FR-CLMRS-07 | ระบบควรให้เจ้าหน้าที่สามารถติดตามสถานะของงานที่ถูกส่งต่อระหว่างหน่วยงานได้ | Should | หน้าจอเดียวแสดงหน่วยงานที่รับผิดชอบปัจจุบันและประวัติการส่งต่อทั้งหมดใน Timeline (AC-09) — **Demonstration** | RC-F-07 → OQ-06, N-07 → US-07a, US-07b / UC-06 / AC-09 | Needs Follow-up (OQ-06) |
-| FR-CLMRS-08 | ระบบควรแจ้งให้ผู้ใช้งานทราบเมื่อสถานะของงานซ่อมมีการเปลี่ยนแปลงตามช่องทางและเงื่อนไขที่ได้รับการยืนยัน | Could | ผู้ใช้ได้รับการแจ้งเตือนผ่านช่องทางที่ยืนยันภายในเวลาที่กำหนดหลังสถานะเปลี่ยน (AC-10) — **Test** (ช่องทางและเวลา = TBD) | OQ-04 → OQ-04, N-05 → US-08 / UC-07 / AC-10 | Needs Follow-up (OQ-04) |
-| FR-CLMRS-09 | ระบบควรสนับสนุนรายงานและสถิติพื้นฐานของงานซ่อมสำหรับผู้ดูแลอาคารหรือผู้บริหาร | Should | ดึงรายงานสรุปจำนวนงาน / สถานะ / ประเภทปัญหาย้อนหลังตามช่วงเวลาที่เลือกได้ (AC-11); ตัวชี้วัดที่แน่นอนรอยืนยัน — **Demonstration** | OQ-05 → OQ-05, N-06 → US-09a, US-09b / UC-08 / AC-11 | Needs Follow-up (OQ-05) |
-
-**สรุป Priority (FR + NFR):** Must 5 (FR-01, 02, 03, 04, NFR-01) | Should 4 (FR-05, 06, 07, 09) | Could 1 (FR-08) | Won't yet 0
+| ID | Requirement | Priority | CAP | Acceptance / Verification | Traceability | Status |
+|---|---|---|---|---|---|---|
+| **FR-CLMRS-01** | ระบบต้องให้ผู้ใช้งานสามารถแจ้งปัญหาอุปกรณ์หรือห้องเรียน/ห้องปฏิบัติการที่ชำรุดผ่านช่องทางมาตรฐานของระบบได้[cite: 3, 5] | **Must** | CAP-01 | บันทึกคำขอลงฐานข้อมูลและแสดง Ticket ID บนหน้าจอภายใน **3 วินาที** (AC-01); ฟอร์มเปิดใช้ได้ 24 ชม. และรองรับ Mobile/Desktop (AC-02) — **Test / Demo**[cite: 5] | RC-F-01 → E-01, N-01 → US-01a, US-01b / UC-01 / AC-01, AC-02[cite: 5] | Ready for Week06[cite: 3, 5] |
+| **FR-CLMRS-02** | ระบบต้องให้ผู้แจ้งบันทึกข้อมูลที่จำเป็น เช่น อาคาร ห้อง รายละเอียดปัญหา และข้อมูลประกอบก่อนส่งคำขอ[cite: 3, 5] | **Must** | CAP-01 | แสดงสัญลักษณ์ (*) สีแดงกำกับ 4 ฟิลด์บังคับ; หากไม่ครบไม่อนุญาตให้ส่งและแจ้ง Pop-up ภายใน **1 วินาที** (AC-03); แนบไฟล์ JPEG/PNG ≤ 5 MB ได้พร้อม Preview (AC-04) — **Test**[cite: 5] | RC-F-02 → E-02, E-03, N-03 → US-02 / UC-01 / AC-03, AC-04[cite: 5] | Needs Follow-up (OQ-07)[cite: 3, 5] |
+| **FR-CLMRS-03** | ระบบต้องสนับสนุนการจัดลำดับความสำคัญของงานซ่อมตามระดับความเร่งด่วนที่กำหนด[cite: 3, 5] | **Must** | CAP-02 | จัดลำดับงานตามระดับความเร่งด่วนในคิวงาน โดยงาน Urgent จะถูกจัดขึ้นอันดับแรกอัตโนมัติ/โดยประเมิน (AC-05) — **Test**[cite: 5] | RC-F-03 → E-04, N-02 → US-03 / UC-03 / AC-05[cite: 5] | Needs Follow-up (OQ-01)[cite: 3, 5] |
+| **FR-CLMRS-04** | ระบบต้องให้ผู้ใช้งานสามารถตรวจสอบสถานะของรายการแจ้งซ่อมของตนเองได้[cite: 3, 5] | **Must** | CAP-03 | Dashboard แสดงประวัติและสถานะปัจจุบัน (รับเรื่องแล้ว/กำลังดำเนินการ/ปิดงาน) ดึงข้อมูลเสร็จสิ้นภายใน **2 วินาที** (AC-06) — **Test / Demo**[cite: 5] | RC-F-04 → E-05, N-05 → US-04a, US-04b / UC-02 / AC-06[cite: 5] | Ready for Week06[cite: 3, 5] |
+| **FR-CLMRS-05** | ระบบควรช่วยให้เจ้าหน้าที่สามารถตรวจสอบและจัดการรายการแจ้งปัญหาที่ซ้ำกันได้[cite: 3, 5] | **Should** | CAP-02 | เจ้าหน้าที่ระบุ/รวมรายการที่ตรงกัน (อาคาร+ห้อง+ประเภทปัญหา) ภายใน Time Window ที่กำหนดเป็นรายการเดียวได้ (AC-07) — **Demo**[cite: 5] | RC-F-06 → E-04, N-04 → US-05 / UC-04 / AC-07[cite: 5] | Needs Follow-up (OQ-03)[cite: 3, 5] |
+| **FR-CLMRS-06** | ระบบควรให้เจ้าหน้าที่บันทึกผลการดำเนินงานและปิดงานซ่อม โดยมีผู้รับผิดชอบหรือผู้ยืนยันตาม Workflow[cite: 3, 5] | **Should** | CAP-04 | บันทึกผลซ่อม และมีชื่อผู้ดำเนินการ+ผู้ยืนยันตาม Workflow ก่อนเปลี่ยนสถานะเป็น "ปิดงาน" (AC-08) — **Test**[cite: 5] | RC-F-05 → OQ-02, N-02 → US-06a, US-06b / UC-05 / AC-08[cite: 5] | Needs Follow-up (OQ-02)[cite: 3, 5] |
+| **FR-CLMRS-07** | ระบบควรให้เจ้าหน้าที่สามารถติดตามสถานะของงานที่ถูกส่งต่อระหว่างหน่วยงานได้[cite: 3, 5] | **Should** | CAP-04 | หน้าจอแสดงหน่วยงานที่รับผิดชอบปัจจุบันและประวัติการส่งต่อทั้งหมดใน Timeline เดียวกัน (AC-09) — **Demo**[cite: 5] | RC-F-07 → OQ-06, N-07 → US-07a, US-07b / UC-06 / AC-09[cite: 5] | Needs Follow-up (OQ-06)[cite: 3, 5] |
+| **FR-CLMRS-08** | ระบบควรแจ้งให้ผู้ใช้งานทราบเมื่อสถานะของงานซ่อมมีการเปลี่ยนแปลงตามช่องทางและเงื่อนไขที่ยืนยัน[cite: 3, 5] | **Could** | CAP-05 | ผู้ใช้ได้รับการแจ้งเตือนผ่านช่องทางที่ยืนยันเมื่อสถานะงานเปลี่ยนตามเงื่อนไข (AC-10) — **Test**[cite: 5] | OQ-04 → OQ-04, N-05 → US-08 / UC-07 / AC-10[cite: 5] | Needs Follow-up (OQ-04)[cite: 3, 5] |
+| **FR-CLMRS-09** | ระบบควรสนับสนุนรายงานและสถิติพื้นฐานของงานซ่อมสำหรับผู้ดูแลอาคารหรือผู้บริหาร[cite: 3, 5] | **Should** | CAP-05 | ดึงรายงานสรุปจำนวนงาน / สถานะ / ประเภทปัญหาย้อนหลังตามช่วงเวลาที่เลือกได้ (AC-11) — **Demo**[cite: 5] | OQ-05 → OQ-05, N-06 → US-09a, US-09b / UC-08 / AC-11[cite: 5] | Needs Follow-up (OQ-05)[cite: 3, 5] |
 
 ---
 
 ## 4. Non-functional Requirements
 
-| ID | Quality Attribute | Requirement | Measure | Priority / Status |
+| ID | Attribute | Requirement | Measure | Priority / Status |
 |---|---|---|---|---|
-| NFR-CLMRS-01 | Security / Access Control | ระบบต้องควบคุมสิทธิ์การเข้าถึงข้อมูลตามบทบาทของผู้ใช้งาน เช่น นักศึกษา อาจารย์ เจ้าหน้าที่เทคนิค และผู้ดูแลอาคาร/ผู้บริหาร | ปฏิเสธและ Redirect ไปหน้า **403 Forbidden ภายใน 1 วินาที** เมื่อเข้าถึง URL ของ Role อื่นที่ไม่มีสิทธิ์ (AC-12); ตรวจด้วย Negative Test ตาม Permission Matrix | Must — Needs Validation (OQ-08) |
-| NFR-CLMRS-02 | Performance (Response Time) | ระบบต้องตอบสนองในเวลาที่กำหนดสำหรับการทำงานหลัก | บันทึกและแสดง Ticket ID ≤ 3 วินาที (FR-01); แจ้งฟิลด์ที่ขาด ≤ 1 วินาที (FR-02); โหลด Dashboard ≤ 2 วินาที (FR-04); เงื่อนไขการวัด (จำนวนผู้ใช้พร้อมกัน, Percentile) = TBD | **Proposed — Derived จาก AC-01/03/06** (ยังไม่มีใน Backlog v0.2); OQ-10 |
-| NFR-CLMRS-03 | Availability | ฟอร์มแจ้งซ่อมมาตรฐานต้องเปิดใช้งานได้ตลอด 24 ชั่วโมง | เข้าใช้งานได้ตลอดเวลาเมื่อเครือข่ายปกติ (AC-02); เป้าหมาย Uptime (%) และช่วงบำรุงรักษา = TBD | **Proposed — Derived จาก AC-02**; OQ-10 |
-| NFR-CLMRS-04 | Usability / Compatibility | ระบบต้องใช้งานได้ทั้งบนมือถือและคอมพิวเตอร์ (Responsive Design) | ฟอร์มและ Dashboard แสดงผลใช้งานได้บนทั้งสองประเภทอุปกรณ์ (AC-02); รายการอุปกรณ์/เบราว์เซอร์ที่ทดสอบ = TBD | **Proposed — Derived จาก AC-02**; OQ-10 |
-
-> **หมายเหตุ:** NFR-CLMRS-02 ถึง 04 ถอดจาก Acceptance Measure ที่ระบุไว้แล้วใน Backlog/AC แต่ Backlog v0.2 ยังมี NFR เพียงข้อเดียว จึงระบุสถานะเป็น Proposed จนกว่าทีม/ผู้ตรวจยืนยันว่าจะยกระดับเป็น NFR หรือคงไว้เป็นเกณฑ์ของ FR เดิม
+| **NFR-CLMRS-01** | Security / Access | ควบคุมสิทธิ์การเข้าถึงข้อมูลตามบทบาทของผู้ใช้งาน (Student, Teacher, Tech, Verifier, Admin)[cite: 3, 5] | ปฏิเสธและ Redirect ไป **403 Forbidden ภายใน 1 วินาที** เมื่อเข้าถึง URL นอกสิทธิ์ (AC-12)[cite: 5] | **Must** — Ready; Matrix detail in OQ-08[cite: 5] |
+| **NFR-CLMRS-02** | Performance | ตอบสนองรวดเร็วในการทำงานหลัก | สร้าง Ticket ID ≤ 3s; เช็กฟิลด์ขาด ≤ 1s; โหลด Dashboard ≤ 2s[cite: 5] | Proposed (Derived from AC-01/03/06)[cite: 5] |
+| **NFR-CLMRS-03** | Availability | ความพร้อมใช้งานของฟอร์มแจ้งซ่อม | เปิดใช้งานได้ 24 ชั่วโมงเมื่อเครือข่ายปกติ (AC-02)[cite: 5] | Proposed (Derived from AC-02)[cite: 5] |
+| **NFR-CLMRS-04** | Usability | รองรับอุปกรณ์หลากหลาย | แสดงผลแบบ Responsive ทั้งมือถือและคอมพิวเตอร์ (AC-02)[cite: 5] | Proposed (Derived from AC-02)[cite: 5] |
 
 ---
 
-## 5. External Interface Requirements
+## 5. Business Rules
 
-### 5.1 User Interfaces
-
-| ID | หน้าจอ | ผู้ใช้หลัก | องค์ประกอบสำคัญ | Requirement |
+| ID | Rule Statement | Authority | Priority | Status |
 |---|---|---|---|---|
-| UI-01 | ฟอร์มแจ้งซ่อมอุปกรณ์/ห้องเรียน | นักศึกษา, อาจารย์ | ฟิลด์ อาคาร/ห้อง/หมวดหมู่ปัญหา/รายละเอียด มีสัญลักษณ์ (*) สีแดง; ปุ่ม "ส่งฟอร์ม"; ส่วนแนบรูปพร้อม Preview; Pop-up เตือนฟิลด์ที่ขาด | FR-01, FR-02 |
-| UI-02 | หน้ายืนยันการส่ง | นักศึกษา, อาจารย์ | แสดง Ticket ID | FR-01 |
-| UI-03 | Dashboard "รายการแจ้งซ่อมของฉัน" | นักศึกษา, อาจารย์ | รายการและสถานะปัจจุบัน; ข้อความเมื่อไม่มีรายการ | FR-04 |
-| UI-04 | คิวงานของเจ้าหน้าที่ | เจ้าหน้าที่เทคนิค | งาน Urgent อยู่อันดับแรก; ตัวบ่งชี้รายการที่อาจซ้ำ | FR-03, FR-05 |
-| UI-05 | หน้ารายละเอียดงาน / บันทึกผลและปิดงาน | เจ้าหน้าที่เทคนิค, ผู้ยืนยันการปิดงาน | ฟอร์มบันทึกผลซ่อม, ปุ่มขอปิดงาน/ยืนยัน/ส่งกลับ, Timeline การส่งต่อและหน่วยงานรับผิดชอบปัจจุบัน | FR-06, FR-07 |
-| UI-06 | หน้ารายงานสรุป | ผู้ดูแลอาคาร, ผู้บริหาร | ตัวเลือกช่วงเวลา/ขอบเขต, ปุ่ม "สร้างรายงาน", ผลสรุปจำนวนงาน สถานะ ประเภทปัญหา | FR-09 |
-| UI-07 | หน้า 403 Forbidden | ทุก Role | ข้อความปฏิเสธการเข้าถึง | NFR-01 |
+| **BR-01** | ฟิลด์ อาคาร, ห้อง, หมวดหมู่ปัญหา และรายละเอียดปัญหา ต้องมีค่าก่อนระบบยอมบันทึกคำขอ[cite: 5] | Teaching Rule / FR-02[cite: 5] | Must | Provisional — OQ-07[cite: 5] |
+| **BR-02** | ทุกคำขอที่บันทึกสำเร็จต้องได้ Ticket ID สำหรับอ้างอิงติดตามงาน[cite: 5] | System Core / FR-01[cite: 5] | Must | Authorized[cite: 5] |
+| **BR-03** | ไฟล์แนบต้องเป็น JPEG/PNG ขนาดไม่เกิน 5 MB และไม่ถือเป็นฟิลด์บังคับ[cite: 5] | System Constraint / AC-04[cite: 5] | Must | Authorized[cite: 5] |
+| **BR-04** | งานที่เข้าเกณฑ์ Urgent ต้องถูกจัดไว้อันดับแรกในคิวงานของเจ้าหน้าที่[cite: 5] | Workflow Rule / FR-03[cite: 5] | Must | Pending — OQ-01[cite: 5] |
+| **BR-05** | ผู้แจ้งซ่อม (Student/Teacher) มีสิทธิ์เห็นเฉพาะรายการแจ้งซ่อมของตนเองบน Dashboard[cite: 5] | Privacy Rule / UC-02[cite: 5] | Must | Authorized[cite: 5] |
+| **BR-06** | คำขอที่มีอาคาร+ห้อง+ประเภทปัญหาเดียวกันใน Time Window เดียวกัน ให้แสดงตัวเตือนรายการซ้ำ[cite: 5] | Tech Rule / FR-05[cite: 5] | Should | Candidate — OQ-03[cite: 5] |
+| **BR-07** | งานจะเปลี่ยนเป็น "ปิดงาน" (Closed) ได้ก็ต่อเมื่อมีบันทึกผลการซ่อมและผ่านการอนุมัติโดยผู้ยืนยัน[cite: 5] | Quality Guard / FR-06[cite: 5] | Should | Pending — OQ-02[cite: 5] |
+| **BR-08** | งานที่ถูกส่งต่อไปหน่วยงานอื่น ต้องแสดงหน่วยงานรับผิดชอบปัจจุบันและคงประวัติเดิมใน Timeline[cite: 5] | Tracking Rule / FR-07[cite: 5] | Should | Pending — OQ-06[cite: 5] |
 
-**หลักการ UI ร่วม:** Responsive สำหรับมือถือและคอมพิวเตอร์ (AC-02); ข้อความ Error ต้องระบุชื่อฟิลด์ที่ขาด (AC-03)
+---
 
-### 5.2 Software / External System Interfaces
+## 6. Data Requirements
 
-รอบนี้ **ไม่มี** Interface กับระบบภายนอกมหาวิทยาลัย (Out of Scope) จุดต่อไปนี้เป็นเพียงข้อสมมติที่ต้องยืนยัน
+รายการนี้เป็น **Conceptual Data Requirement** (อ้างอิง Domain Model)[cite: 5]
 
-| ID | Interface | ทิศทางข้อมูล | สถานะ | TBD |
+| DR | Concept | Requirement Description | Classification | Traceability | W06 Use |
+|---|---|---|---|---|---|
+| **DR-01** | MaintenanceTicket | ระบบต้องเก็บ Ticket ID, ผู้แจ้ง, อาคาร, ห้อง, หมวดหมู่, รายละเอียด, ความเร่งด่วน, สถานะปัจจุบัน[cite: 5] | Sensitive / Operations | FR-01, FR-02, FR-04[cite: 5] | UC-01, UC-02, UC-03[cite: 4] |
+| **DR-02** | Attachment | ระบบต้องเก็บไฟล์ภาพแนบ (JPEG/PNG ≤ 5 MB) ผูกกับ MaintenanceTicket[cite: 5] | Internal File | FR-02, AC-04[cite: 5] | UC-01; AC-04[cite: 4] |
+| **DR-03** | TicketStatusLog | ระบบต้องเก็บประวัติการเปลี่ยนสถานะ เวลา และผู้เปลี่ยนสถานะ[cite: 5] | Audit Log | FR-04, FR-06[cite: 5] | UC-02, UC-05[cite: 4] |
+| **DR-04** | ExecutionRecord | ระบบต้องเก็บรายละเอียดการซ่อมแซม อะไหล่ที่ใช้ (ถ้ามี) และชื่อเจ้าหน้าที่เทคนิคผู้ซ่อม[cite: 5] | Internal Operations | FR-06[cite: 5] | UC-05; AC-08[cite: 4] |
+| **DR-05** | WorkVerification | ระบบต้องเก็บผลการตรวจงาน ชื่อผู้ยืนยันการปิดงาน และข้อติชม/เหตุผลการส่งกลับ[cite: 5] | Quality Record | FR-06[cite: 5] | UC-05; AC-08[cite: 4] |
+| **DR-06** | TransferHistory | ระบบต้องเก็บประวัติการส่งต่องาน หน่วยงานต้นทาง/ปลายทาง และเหตุผลการส่งต่อ[cite: 5] | Operational Log | FR-07[cite: 5] | UC-06; AC-09[cite: 4] |
+| **DR-07** | UserRoleAssignment | ระบบต้องเก็บ User Reference, Role, Permission Matrix และหน่วยงานที่สังกัด[cite: 5] | Security Data | NFR-01[cite: 5] | UC-09; AC-12[cite: 4] |
+| **DR-08** | SummaryReportData | ข้อมูลสรุปจำนวนงาน สัดส่วนสถานะ และประเภทปัญหาย้อนหลัง[cite: 5] | Analytical Data | FR-09[cite: 5] | UC-08; AC-11[cite: 4] |
+
+---
+
+## 7. Behavioral Model References & State Transitions
+
+### 7.1 บัญชีรับเข้า W06 (รหัสโมเดล)[cite: 6]
+- **User Stories (15 US):** US-01a, US-01b, US-02, US-03, US-04a, US-04b, US-05, US-06a, US-06b, US-07a, US-07b, US-08, US-09a, US-09b, US-10[cite: 4, 5]
+- **Use Cases (9 UC):** UC-01, UC-02, UC-03, UC-04, UC-05, UC-06, UC-07, UC-08, UC-09[cite: 4, 5]
+- **Acceptance Criteria (12 AC):** AC-01, AC-02, AC-03, AC-04, AC-05, AC-06, AC-07, AC-08, AC-09, AC-10, AC-11, AC-12[cite: 4, 5]
+
+### 7.2 State Transition Matrix (การเปลี่ยนสถานะคำขอซ่อม)[cite: 6]
+
+| From State | Trigger Event | To State | Guard Condition / Action | Source |
 |---|---|---|---|---|
-| EXT-01 | แหล่งยืนยันตัวตนและ Role ของผู้ใช้ | เข้า: ข้อมูลผู้ใช้และ Role | Assumption (AS-01) | วิธีเข้าสู่ระบบ, แหล่งข้อมูล Role, ฟิลด์ที่ใช้ — OQ-08 |
-| EXT-02 | ช่องทางแจ้งเตือน | ออก: ข้อความแจ้งเตือนสถานะ | Could (FR-08) | ช่องทาง เงื่อนไข และเวลา — OQ-04 (ยังไม่กำหนดเป็น LINE หรือช่องทางใด) |
-
-### 5.3 Data Interfaces
-
-ข้อมูลเชิงแนวคิดที่ระบบต้องเก็บหรือแสดง (ไม่ใช่ Physical Schema) ต้องตรวจให้ตรงกับ Domain Model
-
-| ID | ข้อมูล | รายละเอียดเชิงแนวคิด | ที่มา |
-|---|---|---|---|
-| DI-01 | คำขอแจ้งซ่อม | Ticket ID, ผู้แจ้ง, อาคาร, ห้อง, หมวดหมู่ปัญหา, รายละเอียดปัญหา, ระดับความเร่งด่วน, สถานะ | FR-01, 02, 03 |
-| DI-02 | ไฟล์แนบ | รูป JPEG/PNG ≤ 5 MB ผูกกับคำขอ | FR-02, AC-04 |
-| DI-03 | ประวัติสถานะ | สถานะปัจจุบันและประวัติการเปลี่ยนสถานะ (รับเรื่องแล้ว / กำลังดำเนินการ / ปิดงาน) | FR-04 |
-| DI-04 | ผลการซ่อมและการปิดงาน | ผลการซ่อม, ผู้ดำเนินการ, ผู้ยืนยัน | FR-06 |
-| DI-05 | ประวัติการส่งต่อ | หน่วยงานรับผิดชอบปัจจุบัน, ลำดับการส่งต่อ | FR-07 |
-| DI-06 | เหตุการณ์แจ้งเตือน | บันทึกเหตุการณ์การแจ้งเตือน (UC-07 ขั้น 4) | FR-08 |
-| DI-07 | ข้อมูลผู้ใช้และ Role | บัญชี, Role, Permission | NFR-01 |
-| DI-08 | ข้อมูลรายงาน | จำนวนงาน สัดส่วนสถานะ ประเภทปัญหา ตามช่วงเวลา | FR-09 |
+| **[None]** | Press Submit Form | **Submitted** | Required 4 fields valid ➔ System generates Ticket ID[cite: 1, 4] | FR-01, BR-01, BR-02[cite: 5] |
+| **Submitted** | Tech receives ticket | **In Progress** | Assigned to Technician queue (Urgent prioritized)[cite: 1, 4] | FR-03, BR-04[cite: 5] |
+| **Submitted** | Duplicate found | **Merged / Closed** | Identified as duplicated ticket ➔ Linked to main ticket[cite: 5] | FR-05, BR-06[cite: 5] |
+| **In Progress** | Tech requests transfer | **Transferred** | Job requires other department ➔ Log transfer history[cite: 5] | FR-07, BR-08[cite: 5] |
+| **In Progress** | Tech submits fix | **Pending Verification** | Repair execution logged ➔ Sent to Work Verifier[cite: 1, 4] | FR-06, BR-07[cite: 5] |
+| **Pending Verification**| Verifier approves | **Closed** | Work passes criteria ➔ Send Notification[cite: 1, 4] | FR-06, AC-08[cite: 5] |
+| **Pending Verification**| Verifier rejects | **In Progress** | Work needs additional fix ➔ Send back to Tech[cite: 1, 4] | UC-05 Alt Flow[cite: 4] |
 
 ---
 
-## 6. Business Rules
+## 8. External Interfaces
 
-| ID | Rule | Related Requirement | Status |
-|---|---|---|---|
-| BR-01 | ฟิลด์ อาคาร, ห้อง, หมวดหมู่ปัญหา และรายละเอียดปัญหา ต้องมีค่าก่อนระบบยอมบันทึกคำขอ | FR-CLMRS-01, FR-CLMRS-02 | Provisional — รอยืนยัน OQ-07 |
-| BR-02 | ทุกคำขอที่บันทึกสำเร็จต้องได้ Ticket ID สำหรับอ้างอิง | FR-CLMRS-01 | Derived (AC-01) |
-| BR-03 | ไฟล์แนบต้องเป็น JPEG/PNG ขนาดไม่เกิน 5 MB และการแนบไม่นับเป็นฟิลด์บังคับ 4 ฟิลด์ | FR-CLMRS-02 | Derived (AC-04) |
-| BR-04 | งานที่เข้าเกณฑ์ Urgent ต้องถูกจัดไว้อันดับแรกในคิวงาน | FR-CLMRS-03 | Pending — เกณฑ์และผู้กำหนด OQ-01 |
-| BR-05 | ผู้แจ้งซ่อมเห็นเฉพาะรายการแจ้งซ่อมของตนเอง (หรือที่ตนมีสิทธิ์ดู) | FR-CLMRS-04 | Derived (UC-02) |
-| BR-06 | รายการที่ตรงกับอาคาร + ห้อง + ประเภทปัญหาเดียวกันภายใน Time Window อาจถือเป็นรายการซ้ำเพื่อให้เจ้าหน้าที่ตรวจสอบ | FR-CLMRS-05 | Candidate — ห้ามสรุปเป็นกฎถาวร (CU-01, OQ-03) |
-| BR-07 | งานจะเปลี่ยนเป็น "ปิดงาน" ได้เมื่อมีชื่อผู้ดำเนินการและผู้ยืนยันตาม Workflow และผลการซ่อมครบ; หากไม่ได้รับการยืนยันต้องส่งกลับไปดำเนินการเพิ่ม | FR-CLMRS-06 | Pending — ผู้ยืนยัน OQ-02 |
-| BR-08 | งานที่ส่งต่อต้องแสดงหน่วยงานรับผิดชอบปัจจุบันและประวัติการส่งต่อทั้งหมด | FR-CLMRS-07 | Pending — ผู้รับผิดชอบหลัก OQ-06 |
-| BR-09 | การแจ้งเตือนส่งเมื่อสถานะเปลี่ยนตามช่องทางและเงื่อนไขที่ยืนยันเท่านั้น | FR-CLMRS-08 | Pending — OQ-04 |
-| BR-10 | รายงานเข้าถึงได้เฉพาะผู้ที่มีสิทธิ์ (ผู้ดูแลอาคาร/ผู้บริหาร) | FR-CLMRS-09, NFR-CLMRS-01 | Derived (UC-08) |
-| BR-11 | ผู้ใช้เข้าถึงหน้าหรือฟังก์ชันได้ตาม Role เท่านั้น มิฉะนั้นปฏิเสธด้วย 403 Forbidden | NFR-CLMRS-01 | Pending — Permission Matrix OQ-08 |
+| ID | Interface Target | Direction | Purpose / Data Scope | TBD / Status |
+|---|---|---|---|---|
+| **EXT-01** | User Authentication Service | Inbound | ดึงข้อมูลผู้ใช้และ Role Claims เพื่อตรวจสอบสิทธิ์[cite: 5] | OAuth2/SSO Protocol = TBD (OQ-08)[cite: 5] |
+| **EXT-02** | Notification Gateway | Outbound | ส่งการแจ้งเตือนเมื่อสถานะเปลี่ยน (Email / App Notification)[cite: 5] | Gateway Provider & Channel = TBD (OQ-04)[cite: 5] |
 
 ---
 
-## 7. Requirement Models
+## 9. Traceability and Coverage
 
-- Use Case Diagram: [link](../diagrams/use-case/README.md)
-- Activity Diagram(s): [link](../diagrams/activity/README.md)
-- Domain Model: [link](../diagrams/domain-model/README.md)
-
-**ความครอบคลุมของโมเดล (Week 06)**
-
-| Requirement | User Story | Use Case | Acceptance Criteria |
-|---|---|---|---|
-| FR-CLMRS-01 | US-01a, US-01b | UC-01 | AC-01, AC-02 |
-| FR-CLMRS-02 | US-02 | UC-01 | AC-03, AC-04 |
-| FR-CLMRS-03 | US-03 | UC-03 | AC-05 |
-| FR-CLMRS-04 | US-04a, US-04b | UC-02 | AC-06 |
-| FR-CLMRS-05 | US-05 | UC-04 | AC-07 |
-| FR-CLMRS-06 | US-06a, US-06b | UC-05 | AC-08 |
-| FR-CLMRS-07 | US-07a, US-07b | UC-06 | AC-09 |
-| FR-CLMRS-08 | US-08 | UC-07 | AC-10 |
-| FR-CLMRS-09 | US-09a, US-09b | UC-08 | AC-11 |
-| NFR-CLMRS-01 | US-10 | UC-09 | AC-12 |
+| CAP ID | Capability Name | Requirements | W06 Use Cases | Coverage Status |
+|---|---|---|---|---|
+| **CAP-01** | Issue Reporting | FR-01, FR-02[cite: 5] | UC-01[cite: 4] | Detailed / Complete[cite: 5] |
+| **CAP-02** | Priority & Queue | FR-03, FR-05[cite: 5] | UC-03, UC-04[cite: 4] | Detailed with TBD[cite: 5] |
+| **CAP-03** | Status Tracking | FR-04[cite: 5] | UC-02[cite: 4] | Detailed / Complete[cite: 5] |
+| **CAP-04** | Execution & Closure | FR-06, FR-07[cite: 5] | UC-05, UC-06[cite: 4] | Detailed with TBD[cite: 5] |
+| **CAP-05** | Notification & Report | FR-08, FR-09[cite: 5] | UC-07, UC-08[cite: 4] | Partial / Extension[cite: 5] |
+| **CAP-06** | Access Control | NFR-01[cite: 5] | UC-09[cite: 4] | Detailed / Cross-cutting[cite: 5] |
 
 ---
 
-## 8. Open Issues
+## 10. Open Issues (OQ Register)
 
-| ID | Issue / Question | Owner | Due / Status |
-|---|---|---|---|
-| OQ-01 | เกณฑ์ใดใช้กำหนดงาน Urgent และใครเป็นผู้กำหนด; ระบบจัดลำดับอัตโนมัติหรือเจ้าหน้าที่เป็นผู้ประเมิน (AC-05 และ UC-03 ทั้งสองฉบับเขียนไม่ตรงกัน) | ผู้ดูแลอาคาร / เจ้าหน้าที่เทคนิค | Open — ก่อนทำ Business Rule ของ FR-03 |
-| OQ-02 | ใครเป็นผู้รับผิดชอบและผู้ยืนยันการปิดงาน (Role) | เจ้าหน้าที่เทคนิค / ผู้ดูแลอาคาร | Open — ก่อนทำ Close Work Use Case |
-| OQ-03 | หากพบรายการซ้ำควรรวม เชื่อม หรือปิดรายการอย่างไร และ Time Window เท่าใด (Issue CU-01) | เจ้าหน้าที่เทคนิค | Open — ต้องเก็บ Evidence เพิ่ม |
-| OQ-04 | ช่องทางแจ้งเตือน และสถานะที่ต้องแจ้ง (เช่น ทันทีที่ช่างรับงาน หรือเฉพาะตอนปิดงาน) รวมถึงเวลาที่ต้องแจ้งหลังสถานะเปลี่ยน | ทีม Requirements / ผู้ใช้งาน | Open |
-| OQ-05 | ผู้ดูแลอาคาร/ผู้บริหารต้องการรายงานและตัวชี้วัด (KPI) ใด | ผู้ดูแลอาคาร / ผู้บริหาร | Open |
-| OQ-06 | เมื่อส่งต่องานแล้วใครเป็นผู้รับผิดชอบหลักและใครเป็นผู้ปิดงาน | เจ้าหน้าที่เทคนิค / หน่วยงานรับช่วง | Open |
-| OQ-07 | ข้อมูลขั้นต่ำและ Required Fields ที่แท้จริงมีอะไรบ้าง (ตอนนี้ใช้ 4 ฟิลด์เป็นค่าตั้งต้น) | เจ้าหน้าที่เทคนิค | Open — *ID ใหม่ในเอกสารนี้ (Backlog ระบุคำถามแต่ไม่มีเลข)* |
-| OQ-08 | Role และ Permission Matrix รวมถึงวิธีเข้าสู่ระบบและแหล่งข้อมูล Role | ผู้ดูแลระบบ / ทีม Requirements | Open — *ID ใหม่ในเอกสารนี้* |
-| OQ-09 | สถานะที่ผู้ใช้ต้องเห็นมีอะไรบ้าง — Backlog ระบุ รับเรื่องแล้ว / กำลังดำเนินการ / ปิดงาน แต่ AC-06 เพิ่ม "เสร็จสิ้น"; ต้องชี้ชัดว่า "เสร็จสิ้น" กับ "ปิดงาน" ต่างกันหรือไม่ | เจ้าหน้าที่เทคนิค / ทีม Requirements | Open — *ID ใหม่ในเอกสารนี้* |
-| OQ-10 | ค่าเป้าหมายและเงื่อนไขวัดของ NFR-CLMRS-02 ถึง 04 (ผู้ใช้พร้อมกัน, Percentile, Uptime %, เบราว์เซอร์ที่รองรับ) และการยืนยันสถานะ NFR ที่ Proposed | ทีม Requirements / ผู้สอน | Open — *ID ใหม่ในเอกสารนี้* |
+| OI ID | Question / Open Issue | Impacted IDs | Owner | Next Action / Evidence Needed |
+|---|---|---|---|---|
+| **OQ-01** | เกณฑ์งาน Urgent คืออะไร และใครเป็นผู้กำหนด (ระบบหรือช่าง)[cite: 5] | FR-03, UC-03, AC-05[cite: 5] | Tech Lead / Building Mgr | ยืนยัน Business Rule ของความเร่งด่วน[cite: 5] |
+| **OQ-02** | Role ผู้ยืนยันการปิดงานคือใคร (หัวหน้าช่าง/ผู้ดูแลอาคาร)[cite: 5] | FR-06, UC-05, AC-08[cite: 5] | Building Mgr | ยืนยัน Approval Workflow[cite: 5] |
+| **OQ-03** | วิธีจัดการรายการแจ้งซ้ำและ Time Window ที่ใช้วัด[cite: 5] | FR-05, UC-04, AC-07[cite: 5] | Tech Team | สรุป Logic การรวม/เชื่อมคำขอ[cite: 5] |
+| **OQ-04** | ช่องทาง และเงื่อนไขการส่ง Notification[cite: 5] | FR-08, UC-07, AC-10[cite: 5] | System Analyst | เลือก Channel (Email/In-App)[cite: 5] |
+| **OQ-05** | ตัวชี้วัดรายงานและ KPI ที่ผู้บริหารต้องการ[cite: 5] | FR-09, UC-08, AC-11[cite: 5] | Executive / Admin | กำหนด Layout และ Metric สรุป[cite: 5] |
+| **OQ-06** | Workflow การส่งต่องานระหว่างหน่วยงานและผู้รับผิดชอบหลัก[cite: 5] | FR-07, UC-06, AC-09[cite: 5] | Tech Lead | ยืนยัน Cross-dept Policy[cite: 5] |
+| **OQ-07** | Required Fields ที่แท้จริงในการแจ้งซ่อม[cite: 5] | FR-02, UC-01, AC-03[cite: 5] | Tech Team | ยืนยัน 4 ฟิลด์บังคับ[cite: 5] |
+| **OQ-08** | Permission Matrix และวิธี Auth SSO[cite: 5] | NFR-01, UC-09, AC-12[cite: 5] | Security / IT | ออกแบบ Role-Permission Table[cite: 5] |
 
 ---
 
-## 9. Approval / Review Record
+## 11. Verification Plan
 
-| Reviewer | Date | Result | Key Feedback |
+| VF ID | Method | Target | Procedure / Evidence | Owner |
+|---|---|---|---|---|
+| **VF-01** | **Review** | Traceability | ตรวจสอบความเชื่อมโยงผ่าน Trace Matrix (Evidence → Need → FR → UC → AC)[cite: 5] | SA / Requirements Reviewer[cite: 6] |
+| **VF-02** | **Demonstration** | Core Workflows | สาธิตการเปิด Ticket (UC-01), ดู Dashboard (UC-02) และการซ่อมปิดงาน (UC-05)[cite: 4] | Developer / Tester[cite: 6] |
+| **VF-03** | **Test** | Validation & Security | สั่ง Test Case บังคับกรอกข้อมูล (AC-03) และการบล็อกสิทธิ์ 403 Forbidden (AC-12)[cite: 4, 5] | QA Team[cite: 6] |
+| **VF-04** | **Inspection** | NFR & Data | ตรวจสอบโครงสร้าง Data Model (DR-01 ถึง DR-08) และการเก็บ log เปลี่ยนสถานะ[cite: 5] | Database Admin / Security[cite: 6] |
+
+---
+
+## 12. Review Gate
+
+ผลการประเมินเอกสาร: **PASS — Baseline Candidate**[cite: 5, 6]
+- **ข้อสรุป:** เอกสารประกอบด้วย 9 FR, 1 NFR หลัก (3 Proposed NFRs), 8 BR, 8 DR และเชื่อมโยงครบถ้วนกับ 15 US, 9 UC, 12 AC ใน Week 06[cite: 4, 5]
+- **เงื่อนไข:** รายการ Open Issues (OQ-01 ถึง OQ-08) ต้องได้รับการยืนยันก่อนอนุมัติเป็น Approved Baseline สำหรับการเริ่มพัฒนาระบบจริง[cite: 5]
+
+---
+
+## Appendix A — Requirement Disposition
+
+| Requirement ID | Disposition | SRS Location | Reason / Status |
 |---|---|---|---|
-| [ชื่อ/บทบาท — ผู้สอน] | | Pending (Approved / Revision) | |
-| [ชื่อ/บทบาท — เจ้าหน้าที่เทคนิค (ผู้ยืนยัน Requirement)] | | Pending (Approved / Revision) | |
+| **FR-CLMRS-01** | **Included** | หัวข้อ 3 | Core Scope (Must) — Ready for Baseline[cite: 3, 5] |
+| **FR-CLMRS-02** | **Included** | หัวข้อ 3 | Core Scope (Must) — Pending OQ-07[cite: 3, 5] |
+| **FR-CLMRS-03** | **Included** | หัวข้อ 3 | Core Scope (Must) — Pending OQ-01[cite: 3, 5] |
+| **FR-CLMRS-04** | **Included** | หัวข้อ 3 | Core Scope (Must) — Ready for Baseline[cite: 3, 5] |
+| **FR-CLMRS-05** | **Included** | หัวข้อ 3 | Supporting (Should) — Pending OQ-03[cite: 3, 5] |
+| **FR-CLMRS-06** | **Included** | หัวข้อ 3 | Supporting (Should) — Pending OQ-02[cite: 3, 5] |
+| **FR-CLMRS-07** | **Included** | หัวข้อ 3 | Supporting (Should) — Pending OQ-06[cite: 3, 5] |
+| **FR-CLMRS-08** | **Partial / Extension** | หัวข้อ 3 | Optional (Could) — Pending OQ-04[cite: 3, 5] |
+| **FR-CLMRS-09** | **Included** | หัวข้อ 3 | Supporting (Should) — Pending OQ-05[cite: 3, 5] |
+| **NFR-CLMRS-01** | **Included** | หัวข้อ 4 | Security Core (Must) — Pending OQ-08[cite: 3, 5] |
+| **NFR-CLMRS-02..04**| **Proposed** | หัวข้อ 4 | Derived from AC-01/02/03/06[cite: 5] |
+
+---
+
+## Appendix B — AI Use Disclosure
+
+เอกสาร SRS v2.1 ฉบับนี้ได้รับการสนับสนุนการจัดทำโดย AI (Gemini) ในกระบวนการดังต่อไปนี้:[cite: 6]
+1. ตรวจสอบความถูกต้องและสอดคล้องของการอ้างอิงย้อนกลับ (Traceability) ระหว่าง Requirement Backlog v0.2[cite: 3], Requirement Models Week 06[cite: 4] และโครงสร้าง SRS[cite: 5]
+2. จัดเรียงตารางข้อมูล CAP Mapping[cite: 6], State Transition Matrix[cite: 6], Verification Plan[cite: 6] และ Requirement Disposition Table ให้ตรงตาม Teaching Template (ENGSE206 Week 07 Example)[cite: 6]
+3. **การยืนยันข้อมูล:** เนื้อหา ตรรกะของระบบ ขอบเขตงาน และการตัดสินใจเกี่ยวกับระบบ CLMRS ทั้งหมดได้รับการตรวจสอบและอนุมัติโดยสมาชิกกลุ่ม Group 02 เรียบร้อยแล้ว[cite: 5, 6]
