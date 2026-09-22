@@ -74,7 +74,7 @@ SRS ฉบับนี้มีสถานะ **Baseline Candidate** ยัง�
 ### 2.1 Product Perspective
 CLMRS เป็นระบบเว็บแอปพลิเคชันที่ผู้ใช้เข้าถึงได้ทั้งจากมือถือและคอมพิวเตอร์ (Responsive Design — AC-02) ทำหน้าที่เป็นช่องทางมาตรฐานช่องทางเดียวสำหรับการแจ้งซ่อม เพื่อลดปัญหาการแจ้งผ่านหลายช่องทาง (FR-CLMRS-01) โดยเก็บคำขอ สถานะ และประวัติการดำเนินงานไว้ในฐานข้อมูลกลาง[cite: 5]
 
-### 2.2 User Classes and Characteristics
+### 2.2 User Classes and Authority
 
 | Actor | Role | Authorized Actions | Restrictions |
 |---|---|---|---|
