@@ -1,5 +1,5 @@
 # Activity Diagrams
-
+![Activity Diagram](Activity%20Diagram.png)
 ใส่ workflow หลักและ alternate flow ที่สำคัญ
 
 ## Checklist

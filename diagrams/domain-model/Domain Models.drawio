@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="หน้า-1" id="g1VeaZt05BIm5EBBeZGP">
+    <mxGraphModel dx="1269" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontSize=14;" value="&lt;b&gt;Conceptual Domain Model: CLMRS&lt;/b&gt;&lt;br&gt;(Classroom &amp; Laboratory Maintenance Reporting System)" vertex="1">
+          <mxGeometry height="50" width="440" x="360" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="User" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;fillColor=#dae8fc;strokeColor=#6c8ebf;collapsible=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;UserAccount&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="220" x="80" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="UbIyey1Pvu0tzkCGv2F3-3" parent="User" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="+ userId&lt;br&gt;+ name&lt;br&gt;+ role (Student/Teacher/Tech/Verifier)&lt;br&gt;+ department" vertex="1">
+          <mxGeometry height="80" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ticket" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;fillColor=#d5e8d4;strokeColor=#82b366;collapsible=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;MaintenanceTicket&lt;/b&gt;" vertex="1">
+          <mxGeometry height="160" width="240" x="460" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UbIyey1Pvu0tzkCGv2F3-1" parent="Ticket" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="+ ticketId&lt;br&gt;+ building&lt;br&gt;+ room&lt;br&gt;+ category&lt;br&gt;+ description&lt;br&gt;+ priority (Urgent/Normal)&lt;br&gt;+ currentStatus" vertex="1">
+          <mxGeometry height="130" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Attachment" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;fillColor=#d5e8d4;strokeColor=#82b366;collapsible=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Attachment&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="840" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="StatusLog" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;fillColor=#ffe6cc;strokeColor=#d79b00;collapsible=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;TicketStatusLog&lt;/b&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Execution" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;fillColor=#ffe6cc;strokeColor=#d79b00;collapsible=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;ExecutionRecord&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="480" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="Transfer" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;fillColor=#ffe6cc;strokeColor=#d79b00;collapsible=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;TransferHistory&lt;/b&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="840" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Verification" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;fillColor=#e1d5e7;strokeColor=#9673a6;collapsible=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;WorkVerification&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="480" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="User" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="Ticket" value="submits (1..*)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="310" y="180" as="sourcePoint" />
+            <mxPoint x="450" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="Ticket" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="Attachment" value="has (0..*)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="710" y="180" as="sourcePoint" />
+            <mxPoint x="830" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="Ticket" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" target="StatusLog" value="tracks (1..*)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="225" />
+              <mxPoint x="380" y="373" />
+            </Array>
+            <mxPoint x="450" y="230" as="sourcePoint" />
+            <mxPoint x="310" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="User" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="StatusLog" value="changed by (1)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="190" y="260" as="sourcePoint" />
+            <mxPoint x="190" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="Ticket" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Execution" value="has execution (0..1)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="580" y="280" as="sourcePoint" />
+            <mxPoint x="580" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="StatusLog" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Execution" value="performed by (1)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="310" y="395" as="sourcePoint" />
+            <mxPoint x="470" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="Ticket" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="Transfer" value="transferred via (0..*)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="225" />
+              <mxPoint x="760" y="376" />
+            </Array>
+            <mxPoint x="710" y="225" as="sourcePoint" />
+            <mxPoint x="830" y="376" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="Execution" style="endArrow=open;html=1;endSize=12;startArrow=none;horizontal=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Verification" value="verified by (0..1)">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="580" y="460" as="sourcePoint" />
+            <mxPoint x="580" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UbIyey1Pvu0tzkCGv2F3-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="+ attachmentId&lt;br&gt;+ filePath&lt;br&gt;+ fileType (JPEG/PNG)&lt;br&gt;+ fileSize (&amp;lt;= 5MB)" vertex="1">
+          <mxGeometry height="80" width="200" x="840" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UbIyey1Pvu0tzkCGv2F3-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="+ logId&lt;br&gt;+ previousStatus&lt;br&gt;+ newStatus&lt;br&gt;+ changedAt" vertex="1">
+          <mxGeometry height="70" width="180" x="100" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="UbIyey1Pvu0tzkCGv2F3-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="+ recordId&lt;br&gt;+ repairDetails&lt;br&gt;+ partsUsed&lt;br&gt;+ completedAt" vertex="1">
+          <mxGeometry height="80" width="200" x="480" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="UbIyey1Pvu0tzkCGv2F3-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="+ transferId&lt;br&gt;+ fromDepartment&lt;br&gt;+ toDepartment&lt;br&gt;+ reason&lt;br&gt;+ transferredAt" vertex="1">
+          <mxGeometry height="90" width="200" x="840" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="UbIyey1Pvu0tzkCGv2F3-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="+ verificationId&lt;br&gt;+ isApproved&lt;br&gt;+ remarks&lt;br&gt;+ verifiedAt" vertex="1">
+          <mxGeometry height="80" width="200" x="480" y="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

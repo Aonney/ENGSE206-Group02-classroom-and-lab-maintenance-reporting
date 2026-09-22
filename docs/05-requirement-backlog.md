@@ -1,6 +1,6 @@
 # 05 — Requirement Backlog v0.2: Classroom & Laboratory Maintenance Reporting System
 
-> **Case:** Classroom & Laboratory Maintenance Reporting System (CLMRS)
+> **Case:** ระบบแจ้งซ่อมอุปกรณ์ในห้องเรียนและห้องปฏิบัติการ Classroom & Laboratory Maintenance Reporting System (CLMRS)
 >
 > **Source:** Week 04 Evidence Log, Need Summary และ Initial Requirement Candidates
 >
