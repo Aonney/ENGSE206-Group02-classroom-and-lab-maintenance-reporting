@@ -30,7 +30,7 @@
 
 SRS ฉบับนี้มีสถานะ **Baseline Candidate** ยังไม่ใช่ Approved Baseline เนื่องจากยังมี Open Issues ที่ต้องยืนยันกับ Stakeholder (ดูหัวข้อ 10)[cite: 5]
 
-### 1.2 Problem and Goals
+### 1.2 Goals
 
 | Goal | Outcome | Source | Status |
 |---|---|---|---|
@@ -41,7 +41,7 @@ SRS ฉบับนี้มีสถานะ **Baseline Candidate** ยัง�
 | G-05 | กระบวนการซ่อมแซมและการปิดงานตรวจสอบย้อนหลังได้พร้อมผู้รับผิดชอบและผู้ยืนยัน | OQ-02 → N-02[cite: 3] | Accepted[cite: 5] |
 | G-06 | ป้องกันการเข้าถึงข้อมูลและฟังก์ชันข้ามสิทธิ์ของแต่ละบทบาท (Role-based Access) | E-NFR-01 → N-NFR-01[cite: 3] | Accepted[cite: 5] |
 
-### 1.3 Product Scope
+### 1.3 Scope
 
 **Core/Supporting Scope:**
 - การกรอกและส่งฟอร์มแจ้งซ่อมมาตรฐานพร้อมไฟล์แนบ (FR-01, FR-02)[cite: 5]
@@ -74,7 +74,7 @@ SRS ฉบับนี้มีสถานะ **Baseline Candidate** ยัง�
 ### 2.1 Product Perspective
 CLMRS เป็นระบบเว็บแอปพลิเคชันที่ผู้ใช้เข้าถึงได้ทั้งจากมือถือและคอมพิวเตอร์ (Responsive Design — AC-02) ทำหน้าที่เป็นช่องทางมาตรฐานช่องทางเดียวสำหรับการแจ้งซ่อม เพื่อลดปัญหาการแจ้งผ่านหลายช่องทาง (FR-CLMRS-01) โดยเก็บคำขอ สถานะ และประวัติการดำเนินงานไว้ในฐานข้อมูลกลาง[cite: 5]
 
-### 2.2 User Classes and Authority
+### 2.2 User Classes and Characteristics
 
 | Actor | Role | Authorized Actions | Restrictions |
 |---|---|---|---|
