@@ -54,7 +54,7 @@ SRS ฉบับนี้มีสถานะ **Baseline Candidate** ยัง�
 - การควบคุมสิทธิ์การเข้าถึงแบบ Role-Based (NFR-01)
 
 **Out of Scope:** ระบบจัดซื้ออะไหล่ / ระบบบริหารงบประมาณ / ระบบคลังวัสดุ / ระบบซ่อมอัตโนมัติ / การเชื่อมต่อระบบภายนอกมหาวิทยาลัย  
-**Won't yet:** ไม่มี Requirement ที่ถูกตัดออกจากรอบนี้ | **Hold:** ไม่มี[cite: 3, 4, 5]
+**Won't yet:** ไม่มี Requirement ที่ถูกตัดออกจากรอบนี้ | **Hold:** ไม่มี
 
 ### 1.4 Capabilities Summary (CAP)
 
@@ -166,13 +166,13 @@ CLMRS เป็นระบบเว็บแอปพลิเคชันท�
 
 | From State | Trigger Event | To State | Guard Condition / Action | Source |
 |---|---|---|---|---|
-| **[None]** | Press Submit Form | **Submitted** | Required 4 fields valid ➔ System generates Ticket ID[cite: 1, 4] | FR-01, BR-01, BR-02 |
-| **Submitted** | Tech receives ticket | **In Progress** | Assigned to Technician queue (Urgent prioritized)[cite: 1, 4] | FR-03, BR-04 |
+| **[None]** | Press Submit Form | **Submitted** | Required 4 fields valid ➔ System generates Ticket ID | FR-01, BR-01, BR-02 |
+| **Submitted** | Tech receives ticket | **In Progress** | Assigned to Technician queue (Urgent prioritized) | FR-03, BR-04 |
 | **Submitted** | Duplicate found | **Merged / Closed** | Identified as duplicated ticket ➔ Linked to main ticket | FR-05, BR-06 |
 | **In Progress** | Tech requests transfer | **Transferred** | Job requires other department ➔ Log transfer history | FR-07, BR-08 |
-| **In Progress** | Tech submits fix | **Pending Verification** | Repair execution logged ➔ Sent to Work Verifier[cite: 1, 4] | FR-06, BR-07 |
-| **Pending Verification**| Verifier approves | **Closed** | Work passes criteria ➔ Send Notification[cite: 1, 4] | FR-06, AC-08 |
-| **Pending Verification**| Verifier rejects | **In Progress** | Work needs additional fix ➔ Send back to Tech[cite: 1, 4] | UC-05 Alt Flow |
+| **In Progress** | Tech submits fix | **Pending Verification** | Repair execution logged ➔ Sent to Work Verifier | FR-06, BR-07 |
+| **Pending Verification**| Verifier approves | **Closed** | Work passes criteria ➔ Send Notification | FR-06, AC-08 |
+| **Pending Verification**| Verifier rejects | **In Progress** | Work needs additional fix ➔ Send back to Tech | UC-05 Alt Flow |
 
 ---
 
@@ -253,10 +253,10 @@ CLMRS เป็นระบบเว็บแอปพลิเคชันท�
 ## Appendix B — AI Use Disclosure
 
 <<<<<<< HEAD
-เอกสาร SRS v2.1 ฉบับนี้ได้รับการสนับสนุนการจัดทำโดย AI (Gemini) ในกระบวนการดังต่อไปนี้:[cite: 6]
-1. ตรวจสอบความถูกต้องและสอดคล้องของการอ้างอิงย้อนกลับ (Traceability) ระหว่าง Requirement Backlog v0.2[cite: 3], Requirement Models Week 06[cite: 4] และโครงสร้าง SRS[cite: 5]
-2. จัดเรียงตารางข้อมูล CAP Mapping[cite: 6], State Transition Matrix[cite: 6], Verification Plan[cite: 6] และ Requirement Disposition Table ให้ตรงตาม Teaching Template (ENGSE206 Week 07 Example)[cite: 6]
-3. **การยืนยันข้อมูล:** เนื้อหา ตรรกะของระบบ ขอบเขตงาน และการตัดสินใจเกี่ยวกับระบบ CLMRS ทั้งหมดได้รับการตรวจสอบและอนุมัติโดยสมาชิกกลุ่ม Group 02 เรียบร้อยแล้ว[cite: 5, 6]
+เอกสาร SRS v2.1 ฉบับนี้ได้รับการสนับสนุนการจัดทำโดย AI (Gemini) ในกระบวนการดังต่อไปนี้:
+1. ตรวจสอบความถูกต้องและสอดคล้องของการอ้างอิงย้อนกลับ (Traceability) ระหว่าง Requirement Backlog v0.2, Requirement Models Week 06 และโครงสร้าง SRS
+2. จัดเรียงตารางข้อมูล CAP Mapping, State Transition Matrix, Verification Plan และ Requirement Disposition Table ให้ตรงตาม Teaching Template (ENGSE206 Week 07 Example)
+3. **การยืนยันข้อมูล:** เนื้อหา ตรรกะของระบบ ขอบเขตงาน และการตัดสินใจเกี่ยวกับระบบ CLMRS ทั้งหมดได้รับการตรวจสอบและอนุมัติโดยสมาชิกกลุ่ม Group 02 เรียบร้อยแล้ว
 =======
 เอกสาร SRS v2.1 ฉบับนี้ได้รับการสนับสนุนการจัดทำโดย AI (Gemini) ในกระบวนการดังต่อไปนี้:
 1. ตรวจสอบความถูกต้องและสอดคล้องของการอ้างอิงย้อนกลับ (Traceability) ระหว่าง Requirement Backlog v0.2, Requirement Models Week 06 และโครงสร้าง SRS
