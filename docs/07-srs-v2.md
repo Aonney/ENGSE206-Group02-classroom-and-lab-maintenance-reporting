@@ -185,7 +185,7 @@ CLMRS เป็นระบบเว็บแอปพลิเคชันท�
 
 ---
 
-## 9. Traceability and Coverage
+## 9.Capability Portfolio
 
 | CAP ID | Capability Name | Requirements | W06 Use Cases | Coverage Status |
 |---|---|---|---|---|
