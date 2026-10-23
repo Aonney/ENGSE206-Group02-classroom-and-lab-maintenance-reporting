@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="หน้า-1" id="nulFVotaalN19CnPUf4y">
+    <mxGraphModel dx="614" dy="829" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys_boundary" parent="1" style="shape=rect;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fontStyle=1;fontSize=16;fillColor=#f8f9fa;strokeColor=#3c4043;strokeWidth=2;dashed=0;" value="Classroom &amp; Laboratory Maintenance Reporting System (CLMRS)" vertex="1">
+          <mxGeometry height="480" width="560" x="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_student" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1f5fe;strokeColor=#0288d1;" value="นักศึกษา&#xa;(Student)" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_teacher" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1f5fe;strokeColor=#0288d1;" value="อาจารย์ผู้สอน&#xa;(Teacher)" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_technician" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff3e0;strokeColor=#f57c00;" value="เจ้าหน้าที่เทคนิค&#xa;(Technician)" vertex="1">
+          <mxGeometry height="80" width="40" x="960" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_verifier" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff3e0;strokeColor=#f57c00;" value="ผู้ยืนยันการปิดงาน&#xa;(Work Verifier)" vertex="1">
+          <mxGeometry height="80" width="40" x="960" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_01" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a73e8;fontStyle=1;" value="UC-01: แจ้งปัญหาอุปกรณ์ / ห้องเรียน" vertex="1">
+          <mxGeometry height="60" width="280" x="450" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_02" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a73e8;fontStyle=1;" value="UC-02: ติดตามสถานะงานซ่อม" vertex="1">
+          <mxGeometry height="50" width="280" x="445" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_03" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;fontStyle=1;" value="UC-03: จัดลำดับงานซ่อม" vertex="1">
+          <mxGeometry height="50" width="280" x="445" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_05" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;fontStyle=1;" value="UC-05: บันทึกผลและปิดงานซ่อม" vertex="1">
+          <mxGeometry height="50" width="280" x="450" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_st_uc01" edge="1" parent="1" source="actor_student" target="uc_01">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_st_uc02" edge="1" parent="1" source="actor_student" target="uc_02">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_tc_uc01" edge="1" parent="1" source="actor_teacher" target="uc_01">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_tc_uc02" edge="1" parent="1" source="actor_teacher" target="uc_02">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_tech_uc03" edge="1" parent="1" source="actor_technician" target="uc_03">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_tech_uc05" edge="1" parent="1" source="actor_technician" target="uc_05">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_ver_uc05" edge="1" parent="1" source="actor_verifier" target="uc_05">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

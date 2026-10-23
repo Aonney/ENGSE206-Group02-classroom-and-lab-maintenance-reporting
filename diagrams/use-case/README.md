@@ -1,5 +1,5 @@
 # Use Case Diagrams
-
+![Use Case Diagram](Use%20Case%20Diagram%20V2.png)
 ใส่ use case diagram และเชื่อมกับ UC-ID ใน docs/06
 
 ## Checklist
