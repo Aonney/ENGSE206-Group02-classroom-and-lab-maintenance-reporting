@@ -79,7 +79,7 @@
                         <mxPoint x="1650" y="910" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="notes" parent="1" style="text;html=0;fontSize=18;align=left;whiteSpace=wrap;" value="API ตรวจ NFR-CLMRS-01, BR-05, กติกางานซ่อม, ความยินยอม BR-09 และความเป็นส่วนตัว BR-10 / NFR-CLMRS-05&#xa;Reminder Job เรียก API ได้โดยไม่ต้องเปิดเว็บหรือมีผู้ใช้กด | รอบและระยะเวลา TBD (OQ-09) | ผู้รับเตือน TBD (OQ-12)&#xa;เส้นประสีส้ม = ส่วนขยายภายนอกที่รอคำตอบ | สภาพแวดล้อมที่รันเป็นข้อเสนอ รายละเอียดโฮสติ้งและการเชื่อมต่อยังเป็น TBD&#xa;ฐานอ้างอิง: SRS v2.1 และ shared-ids ฉบับร่าง | ก่อนส่งต้องตรวจขอบเขตรุ่นแรกและ Design Spine ให้ตรงกับ G3" vertex="1">
+                <mxCell id="notes" parent="1" style="text;html=0;fontSize=18;align=left;whiteSpace=wrap;" value="API ตรวจ NFR-CLMRS-01, BR-05, กติกางานซ่อม, ความยินยอม BR-09 และความเป็นส่วนตัว BR-10 / NFR-CLMRS-05&#xa;Reminder Job เรียก API ได้โดยไม่ต้องเปิดเว็บหรือมีผู้ใช้กด | รอบและระยะเวลา TBD (OQ-09) | ผู้รับเตือน TBD (OQ-12)&#xa;เส้นประสีส้ม = ส่วนขยายภายนอกที่รอคำตอบ | สภาพแวดล้อมที่รันเป็นข้อเสนอ รายละเอียดโฮสติ้งและการเชื่อมต่อยังเป็น TBD&#xa;ฐานอ้างอิง: SRS v2.1 (Baseline Candidate)" vertex="1">
                     <mxGeometry height="130" width="2000" x="50" y="1350" as="geometry"/>
                 </mxCell>
             </root>

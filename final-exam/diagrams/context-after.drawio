@@ -82,7 +82,7 @@
                         <mxPoint x="1450" y="860" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="notes" parent="1" style="text;html=0;fontSize=18;align=left;whiteSpace=wrap;" value="เส้นทึบ = ความสัมพันธ์หลักที่เสนอ | เส้นประสีส้ม = ส่วนขยายภายนอก ยังไม่ทำในรุ่นแรกและรอคำตอบ&#xa;CR-FX-01: Pending | OQ-09 เวลาเตือน | OQ-10 ช่องทางและขอบเขต | OQ-11 ฟิลด์ที่ส่งได้ | OQ-12 ผู้รับเตือน&#xa;ฐานอ้างอิง: SRS v2.1 (Baseline Candidate) และ shared-ids ฉบับร่าง | ป้ายลูกศรระบุคำขอและข้อมูลตอบกลับ" vertex="1">
+                <mxCell id="notes" parent="1" style="text;html=0;fontSize=18;align=left;whiteSpace=wrap;" value="เส้นทึบ = ความสัมพันธ์หลักที่เสนอ | เส้นประสีส้ม = ส่วนขยายภายนอก ยังไม่ทำในรุ่นแรกและรอคำตอบ&#xa;CR-FX-01: Pending | OQ-09 เวลาเตือน | OQ-10 ช่องทางและขอบเขต | OQ-11 ฟิลด์ที่ส่งได้ | OQ-12 ผู้รับเตือน&#xa;ฐานอ้างอิง: SRS v2.1 (Baseline Candidate) | ป้ายลูกศรระบุคำขอและข้อมูลตอบกลับ" vertex="1">
                     <mxGeometry height="130" width="1800" x="50" y="1110" as="geometry"/>
                 </mxCell>
             </root>
