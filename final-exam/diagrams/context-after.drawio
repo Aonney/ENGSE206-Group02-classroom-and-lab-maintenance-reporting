@@ -1,0 +1,91 @@
+<mxfile host="65bd71144e">
+    <diagram name="context-after-th" id="NJjmPBoy-DTsSeZZydlS">
+        <mxGraphModel dx="1871" dy="2071" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1260" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=0;fontSize=28;align=left;fontStyle=1;" value="context-after-th | CLMRS - Case 02 | แบบเสนอ (Proposed)" vertex="1">
+                    <mxGeometry height="70" width="1820" x="40" y="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="u1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#64748b;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="ACT-01 ผู้แจ้งซ่อม&#xa;นักศึกษา / อาจารย์&#xa;แจ้งซ่อมและติดตามงานของตน&#xa;เลือกยินยอมรับแจ้งเตือนภายนอก" vertex="1">
+                    <mxGeometry height="175" width="405" x="65" y="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="u2" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#64748b;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="ACT-02 เจ้าหน้าที่เทคนิค&#xa;รับงานและดำเนินการซ่อม&#xa;บันทึกผลซ่อม / ส่งต่องาน" vertex="1">
+                    <mxGeometry height="175" width="405" x="65" y="510" as="geometry"/>
+                </mxCell>
+                <mxCell id="u3" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#64748b;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="ACT-03 ผู้ยืนยันการปิดงาน&#xa;ตรวจสอบผลการซ่อม&#xa;อนุมัติปิดงาน / ส่งกลับให้แก้ไข" vertex="1">
+                    <mxGeometry height="175" width="405" x="65" y="820" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#075985;strokeColor=#075985;fontColor=#ffffff;fontSize=20;fontFamily=Tahoma;spacing=15;" value="CLMRS&#xa;[ระบบซอฟต์แวร์]&#xa;จัดการใบแจ้งซ่อมและติดตามสถานะ&#xa;แจ้งเมื่อสถานะเปลี่ยน / เตือนตามเวลา" vertex="1">
+                    <mxGeometry height="245" width="460" x="740" y="485" as="geometry"/>
+                </mxCell>
+                <mxCell id="u4" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#64748b;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="ACT-04 ผู้ดูแลอาคาร / Admin&#xa;จัดการสิทธิ์และดูรายงานสรุป&#xa;ยืนยันนโยบายการเตือน (TBD)" vertex="1">
+                    <mxGeometry height="175" width="420" x="760" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f1f5f9;strokeColor=#64748b;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="Authentication Service&#xa;[ระบบภายนอก | Core | TBD]&#xa;EXT-01: ยืนยันตัวตนและบทบาท&#xa;วิธีเชื่อมต่อ TBD - OQ-08" vertex="1">
+                    <mxGeometry height="190" width="385" x="1450" y="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="gate" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff7ed;strokeColor=#c2410c;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="Notification Gateway&#xa;[ระบบภายนอก | Extension | TBD]&#xa;EXT-02: ส่งแจ้งเตือนภายนอก&#xa;ช่องทาง / วิธีเชื่อมต่อ TBD - OQ-10" vertex="1">
+                    <mxGeometry height="200" width="385" x="1450" y="770" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge0" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ส่งข้อมูลแจ้งซ่อม / ตั้งค่าความยินยอม&#xa;รับผลและสถานะงานของตน">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="610" y="280"/>
+                            <mxPoint x="610" y="535"/>
+                        </Array>
+                        <mxPoint x="470" y="280" as="sourcePoint"/>
+                        <mxPoint x="740" y="535" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge1" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ส่งผลซ่อม / ข้อมูลส่งต่อ&#xa;รับคิวงาน สถานะ และการเตือน">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="470" y="590" as="sourcePoint"/>
+                        <mxPoint x="740" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge2" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ส่งผลตรวจ / คำตัดสินปิดงาน&#xa;รับสถานะงานและการเตือน">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="620" y="900"/>
+                            <mxPoint x="620" y="680"/>
+                        </Array>
+                        <mxPoint x="470" y="900" as="sourcePoint"/>
+                        <mxPoint x="740" y="680" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge3" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ส่งคำขอจัดการสิทธิ์ / ดูรายงาน&#xa;รับผลและรายงานสรุป">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="970" y="355" as="sourcePoint"/>
+                        <mxPoint x="970" y="485" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge4" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ขอยืนยันตัวตน /&#xa;รับข้อมูลบทบาท (TBD)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1320" y="535"/>
+                            <mxPoint x="1320" y="430"/>
+                        </Array>
+                        <mxPoint x="1200" y="535" as="sourcePoint"/>
+                        <mxPoint x="1450" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge5" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#c2410c;dashed=1;" value="ส่งผู้รับและข้อความเท่าที่จำเป็นเมื่อยินยอม&#xa;รับผลการส่งแจ้งเตือน">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1320" y="680"/>
+                            <mxPoint x="1320" y="860"/>
+                        </Array>
+                        <mxPoint x="1200" y="680" as="sourcePoint"/>
+                        <mxPoint x="1450" y="860" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="notes" parent="1" style="text;html=0;fontSize=18;align=left;whiteSpace=wrap;" value="เส้นทึบ = ความสัมพันธ์หลักที่เสนอ | เส้นประสีส้ม = ส่วนขยายภายนอก ยังไม่ทำในรุ่นแรกและรอคำตอบ&#xa;CR-FX-01: Pending | OQ-09 เวลาเตือน | OQ-10 ช่องทางและขอบเขต | OQ-11 ฟิลด์ที่ส่งได้ | OQ-12 ผู้รับเตือน&#xa;ฐานอ้างอิง: SRS v2.1 (Baseline Candidate) และ shared-ids ฉบับร่าง | ป้ายลูกศรระบุคำขอและข้อมูลตอบกลับ" vertex="1">
+                    <mxGeometry height="130" width="1800" x="50" y="1110" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,88 @@
+<mxfile host="65bd71144e">
+    <diagram name="container-after-th" id="9C0LSDn09KuJTgtrlO0e">
+        <mxGraphModel dx="2071" dy="2293" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1500" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=0;fontSize=28;align=left;fontStyle=1;" value="container-after-th | CLMRS - Case 02 | แบบเสนอ (Proposed)" vertex="1">
+                    <mxGeometry height="70" width="2020" x="40" y="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="boundary" parent="1" style="rounded=1;fillColor=none;strokeColor=#94a3b8;verticalAlign=top;align=left;spacing=15;fontSize=20;" value="ขอบเขตระบบ CLMRS" vertex="1">
+                    <mxGeometry height="1025" width="1080" x="450" y="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="users" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#64748b;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="ผู้ใช้งาน CLMRS&#xa;[บุคคล - ACT-01 ถึง ACT-04]&#xa;ผู้แจ้งซ่อม / เจ้าหน้าที่เทคนิค&#xa;ผู้ยืนยันปิดงาน / ผู้ดูแลอาคาร&#xa;ใช้งานตามสิทธิ์ของแต่ละบทบาท" vertex="1">
+                    <mxGeometry height="260" width="340" x="55" y="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="web" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e0f2fe;strokeColor=#0369a1;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="CLMRS Web App&#xa;[เว็บแอปในเบราว์เซอร์ | React]&#xa;รันบนเบราว์เซอร์ของผู้ใช้&#xa;หน้าจอแจ้งซ่อม / ตั้งค่าความยินยอม&#xa;แสดงสถานะและแจ้งเตือนในระบบ" vertex="1">
+                    <mxGeometry height="240" width="385" x="530" y="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e0f2fe;strokeColor=#0369a1;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="CLMRS API&#xa;[โปรแกรมฝั่งเซิร์ฟเวอร์]&#xa;[Node.js + Express]&#xa;รันบนเซิร์ฟเวอร์ที่ทีมดูแล&#xa;ตรวจสิทธิ์ เจ้าของงาน และกติกา&#xa;สร้างแจ้งเตือน / ตรวจความยินยอม&#xa;จำกัดข้อมูลส่วนบุคคลที่ส่ง" vertex="1">
+                    <mxGeometry height="285" width="390" x="1070" y="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e0f2fe;strokeColor=#0369a1;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="CLMRS Database&#xa;[ฐานข้อมูลเชิงสัมพันธ์ | PostgreSQL]&#xa;รันในสภาพแวดล้อมที่ทีมดูแล&#xa;เก็บงานซ่อม ไฟล์แนบ ประวัติสถานะ&#xa;DR-09 การตั้งค่ารับแจ้งเตือน&#xa;DR-10 บันทึกการแจ้งเตือน" vertex="1">
+                    <mxGeometry height="255" width="390" x="1070" y="930" as="geometry"/>
+                </mxCell>
+                <mxCell id="job" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e0f2fe;strokeColor=#0369a1;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="Reminder Job&#xa;[งานตามเวลา | Node.js]&#xa;รันบนเซิร์ฟเวอร์ที่ทีมดูแล&#xa;เริ่มเองตามเวลา ไม่ต้องมีคนกด&#xa;FR-CLMRS-10 / UC-10&#xa;ระยะเวลาเตือน TBD - OQ-09" vertex="1">
+                    <mxGeometry height="265" width="385" x="530" y="930" as="geometry"/>
+                </mxCell>
+                <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f1f5f9;strokeColor=#64748b;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="Authentication Service&#xa;[ระบบภายนอก | Core | TBD]&#xa;EXT-01: ยืนยันตัวตนและบทบาท&#xa;วิธีเชื่อมต่อ TBD - OQ-08" vertex="1">
+                    <mxGeometry height="200" width="385" x="1650" y="285" as="geometry"/>
+                </mxCell>
+                <mxCell id="gate" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff7ed;strokeColor=#c2410c;fontColor=#172033;fontSize=20;fontFamily=Tahoma;spacing=15;" value="Notification Gateway&#xa;[ระบบภายนอก | Extension | TBD]&#xa;EXT-02: ส่งแจ้งเตือนภายนอก&#xa;ช่องทาง / วิธีเชื่อมต่อ: OQ-10&#xa;ยังไม่ทำในวิชานี้ (รอคำตอบ)&#xa;รอการตัดสินขอบเขต" vertex="1">
+                    <mxGeometry height="260" width="385" x="1650" y="780" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge0" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ใช้งานหน้าจอ /&#xa;ดูผลลัพธ์">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="395" y="475" as="sourcePoint"/>
+                        <mxPoint x="530" y="475" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge1" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ส่งคำขอ / ความยินยอม&#xa;รับสถานะ / แจ้งเตือน&#xa;วิธีเชื่อมต่อ TBD">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="915" y="460" as="sourcePoint"/>
+                        <mxPoint x="1070" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge2" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ขอยืนยันตัวตน / รับบทบาท&#xa;วิธีเชื่อมต่อ TBD (OQ-08)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="1460" y="390" as="sourcePoint"/>
+                        <mxPoint x="1650" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge3" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="อ่าน / เขียนงานซ่อมและความยินยอม&#xa;ประวัติสถานะและบันทึกแจ้งเตือน&#xa;ผ่านการเชื่อมต่อ PostgreSQL&#xa;รายละเอียดการเข้าถึง TBD">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="1310" y="635" as="sourcePoint"/>
+                        <mxPoint x="1310" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge4" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#475569;" value="ขอประเมินงานที่ถึงเกณฑ์เตือน&#xa;API ตรวจนโยบายและสร้างการเตือน&#xa;วิธีเชื่อมต่อภายใน TBD">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="722" y="765"/>
+                            <mxPoint x="1120" y="765"/>
+                        </Array>
+                        <mxPoint x="722" y="930" as="sourcePoint"/>
+                        <mxPoint x="1120" y="635" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge5" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=18;fontFamily=Tahoma;labelBackgroundColor=#f8fafc;strokeColor=#c2410c;dashed=1;" value="ส่งเฉพาะผู้รับที่ยินยอมและข้อมูลจำเป็น&#xa;รับผลการส่ง / วิธีเชื่อมต่อ TBD">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1580" y="555"/>
+                            <mxPoint x="1580" y="910"/>
+                        </Array>
+                        <mxPoint x="1460" y="555" as="sourcePoint"/>
+                        <mxPoint x="1650" y="910" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="notes" parent="1" style="text;html=0;fontSize=18;align=left;whiteSpace=wrap;" value="API ตรวจ NFR-CLMRS-01, BR-05, กติกางานซ่อม, ความยินยอม BR-09 และความเป็นส่วนตัว BR-10 / NFR-CLMRS-05&#xa;Reminder Job เรียก API ได้โดยไม่ต้องเปิดเว็บหรือมีผู้ใช้กด | รอบและระยะเวลา TBD (OQ-09) | ผู้รับเตือน TBD (OQ-12)&#xa;เส้นประสีส้ม = ส่วนขยายภายนอกที่รอคำตอบ | สภาพแวดล้อมที่รันเป็นข้อเสนอ รายละเอียดโฮสติ้งและการเชื่อมต่อยังเป็น TBD&#xa;ฐานอ้างอิง: SRS v2.1 และ shared-ids ฉบับร่าง | ก่อนส่งต้องตรวจขอบเขตรุ่นแรกและ Design Spine ให้ตรงกับ G3" vertex="1">
+                    <mxGeometry height="130" width="2000" x="50" y="1350" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
