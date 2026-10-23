@@ -9,7 +9,7 @@
 | CR เสริมที่เลือก | CR-FX-02A ใช้งานหน้างาน: สแกน QR + สัญญาณไม่เสถียร |
 | Branch | `final-exam` |
 | Pull Request | `submit(final): change-to-design take-home` |
-| Commit hash สุดท้าย (ก่อน T0 + 24 ชั่วโมง) | [กรอกตอนส่ง] |
+| Commit hash สุดท้าย (ก่อน T0 + 24 ชั่วโมง) | `0c16c99` (commit สุดท้ายของเนื้อหางาน · commit ถัดไปแก้เฉพาะบรรทัดนี้) |
 | สถานะ SRS ที่ใช้เป็นฐาน | Baseline Candidate (SRS v2.1) |
 
 ## งานเดิมที่ใช้เป็นฐาน
