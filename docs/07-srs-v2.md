@@ -252,14 +252,7 @@ CLMRS เป็นระบบเว็บแอปพลิเคชันท�
 
 ## Appendix B — AI Use Disclosure
 
-<<<<<<< HEAD
 เอกสาร SRS v2.1 ฉบับนี้ได้รับการสนับสนุนการจัดทำโดย AI (Gemini) ในกระบวนการดังต่อไปนี้:
 1. ตรวจสอบความถูกต้องและสอดคล้องของการอ้างอิงย้อนกลับ (Traceability) ระหว่าง Requirement Backlog v0.2, Requirement Models Week 06 และโครงสร้าง SRS
 2. จัดเรียงตารางข้อมูล CAP Mapping, State Transition Matrix, Verification Plan และ Requirement Disposition Table ให้ตรงตาม Teaching Template (ENGSE206 Week 07 Example)
 3. **การยืนยันข้อมูล:** เนื้อหา ตรรกะของระบบ ขอบเขตงาน และการตัดสินใจเกี่ยวกับระบบ CLMRS ทั้งหมดได้รับการตรวจสอบและอนุมัติโดยสมาชิกกลุ่ม Group 02 เรียบร้อยแล้ว
-=======
-เอกสาร SRS v2.1 ฉบับนี้ได้รับการสนับสนุนการจัดทำโดย AI (Gemini) ในกระบวนการดังต่อไปนี้:
-1. ตรวจสอบความถูกต้องและสอดคล้องของการอ้างอิงย้อนกลับ (Traceability) ระหว่าง Requirement Backlog v0.2, Requirement Models Week 06 และโครงสร้าง SRS
-2. จัดเรียงตารางข้อมูล CAP Mapping, State Transition Matrix, Verification Plan และ Requirement Disposition Table ให้ตรงตาม Teaching Template (ENGSE206 Week 07 Example)
-3. **การยืนยันข้อมูล:** เนื้อหา ตรรกะของระบบ ขอบเขตงาน และการตัดสินใจเกี่ยวกับระบบ CLMRS ทั้งหมดได้รับการตรวจสอบและอนุมัติโดยสมาชิกกลุ่ม Group 02 เรียบร้อยแล้ว
->>>>>>> 8762929 (Implement feature X to enhance user experience and optimize performance)
